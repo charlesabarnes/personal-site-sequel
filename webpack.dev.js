@@ -1,7 +1,8 @@
+/* eslint-disable */
 
-const { merge } = require('webpack-merge')
-const common = require('./webpack.common.js')
-const path = require('path')
+const { merge } = require('webpack-merge');
+const common = require('./webpack.common.js');
+const path = require('path');
 
 module.exports = merge(common, {
     mode: 'development',
@@ -11,5 +12,5 @@ module.exports = merge(common, {
             directory: path.join(__dirname, './dist'),
         },
         hot: true,
-    },
-})
+    }, 
+});

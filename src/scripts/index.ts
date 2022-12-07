@@ -1,4 +1,4 @@
-import * as THREE from 'three'
+import * as THREE from 'three'; 
 
 const scene = new THREE.Scene();
 
@@ -43,4 +43,4 @@ function render() {
     renderer.render(scene, camera);
 }
 
-animate()
+animate();
