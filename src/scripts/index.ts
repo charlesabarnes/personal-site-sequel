@@ -1,4 +1,4 @@
-import { Scene, PerspectiveCamera, WebGL1Renderer, BoxGeometry, WebGLRenderer, MeshBasicMaterial, Mesh, Shape} from 'three'; 
+import { Scene, PerspectiveCamera, WebGLRenderer} from 'three'; 
 import { Player } from './entities/player';
 
 const scene = new Scene();
@@ -30,8 +30,8 @@ function onWindowResize() {
 function animate() {
   requestAnimationFrame(animate);
 
-  player.mesh.rotation.x += 0.0001;
-  player.mesh.rotation.y += 0.01;
+  player.mesh.rotation.x += 0.01;
+  player.mesh.rotation.y += 0.00000001;
 
   render();
 }
