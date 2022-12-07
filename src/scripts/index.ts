@@ -1,46 +1,43 @@
-import * as THREE from 'three'; 
+import { Scene, PerspectiveCamera, WebGL1Renderer, BoxGeometry, WebGLRenderer, MeshBasicMaterial, Mesh, Shape} from 'three'; 
+import { Player } from './entities/player';
 
-const scene = new THREE.Scene();
+const scene = new Scene();
 
-const camera = new THREE.PerspectiveCamera(
-    75,
-    window.innerWidth / window.innerHeight,
-    0.1,
-    1000
+const camera = new PerspectiveCamera(
+  75,
+  window.innerWidth / window.innerHeight,
+  0.1,
+  1000
 );
-camera.position.z = 10;
+camera.position.z = 40;
 
-const renderer = new THREE.WebGLRenderer();
+const renderer = new WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
-const geometry = new THREE.BoxGeometry();
-const material = new THREE.MeshBasicMaterial({
-    color: '#f40000',
-});
 
-const cube = new THREE.Mesh(geometry, material);
-scene.add(cube);
+const player = new Player('#ffffff');
+scene.add(player.mesh);
 
 window.addEventListener('resize', onWindowResize, false);
 function onWindowResize() {
-    camera.aspect = window.innerWidth / window.innerHeight;
-    camera.updateProjectionMatrix();
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    render();
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  render();
 }
 
 function animate() {
-    requestAnimationFrame(animate);
+  requestAnimationFrame(animate);
 
-    cube.rotation.x += 0.01;
-    cube.rotation.y += 0.01;
+  player.mesh.rotation.x += 0.0001;
+  player.mesh.rotation.y += 0.01;
 
-    render();
+  render();
 }
 
 function render() {
-    renderer.render(scene, camera);
+  renderer.render(scene, camera);
 }
 
 animate();
