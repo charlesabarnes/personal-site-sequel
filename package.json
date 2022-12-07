@@ -1,0 +1,33 @@
+{
+  "name": "personal-site-sequel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack serve --config ./webpack.dev.js --port 8085",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/charlesabarnes/personal-site-sequel.git"
+  },
+  "author": "Charles Barnes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/charlesabarnes/personal-site-sequel/issues"
+  },
+  "homepage": "https://github.com/charlesabarnes/personal-site-sequel#readme",
+  "dependencies": {
+    "three": "^0.147.0"
+  },
+  "devDependencies": {
+    "@types/three": "^0.146.0",
+    "html-webpack-plugin": "^5.5.0",
+    "ts-loader": "^9.4.2",
+    "typescript": "^4.9.3",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1",
+    "webpack-merge": "^5.8.0"
+  }
+}
