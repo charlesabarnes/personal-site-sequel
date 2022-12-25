@@ -3,7 +3,7 @@ import { ExtrudeGeometry, Mesh, MeshBasicMaterial, Path, Shape, Vector3 } from '
 export class Player {
   height = 3;
   width = 2.5;
-  thickness = .8;
+  thickness = .9;
   color = '#f40000';
   shape: Shape;
   geometry: ExtrudeGeometry;
