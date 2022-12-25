@@ -2,8 +2,8 @@ import { ExtrudeGeometry, Mesh, MeshBasicMaterial, Path, Shape, Vector3 } from '
 
 export class Player {
   height = 3;
-  width = 2.5;
-  thickness = .9;
+  width = 3;
+  thickness = .96;
   color = '#f40000';
   shape: Shape;
   geometry: ExtrudeGeometry;
@@ -38,14 +38,14 @@ export class Player {
 
     const distanceBetweenPoints = pt1.distanceTo(holePt1);
     // TODO: calculate inner points
-    const holePt2 = new Vector3(distanceBetweenPoints, distanceBetweenPoints-.3, 0);
-    const holePt3 = new Vector3(this.width - distanceBetweenPoints, distanceBetweenPoints -.3, 0);
+    const holePt2 = new Vector3(distanceBetweenPoints, distanceBetweenPoints-.1, 0);
+    const holePt3 = new Vector3(this.width - distanceBetweenPoints, distanceBetweenPoints -.1, 0);
 
     console.log(distanceBetweenPoints);
     console.log(pt3.distanceTo(holePt3));
 
 
-    const inner = new Shape( this.vectorsToCurvedPoints([holePt1, holePt2, holePt3], radius * this.thickness));
+    const inner = new Shape( this.vectorsToCurvedPoints([holePt1, holePt2, holePt3], radius *.9 ));
     outershape.holes.push(inner);
     return  outershape;
   }
