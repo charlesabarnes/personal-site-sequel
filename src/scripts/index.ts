@@ -59,7 +59,9 @@ function render() {
 const interval ={};
 document.addEventListener('keydown', onDocumentKeyDown, false);
 function onDocumentKeyDown(event) {
-  const moveRate = 0.2;
+  const speedMultiplier = 5;
+  const moveRate = 0.3/speedMultiplier;
+  const rotateRate = 0.09/speedMultiplier;
 
   if (interval[event.key]) {
     return;
@@ -72,11 +74,11 @@ function onDocumentKeyDown(event) {
       player.mesh.position.y -= moveRate * Math.cos(player.mesh.rotation.z);
       player.mesh.position.x += moveRate * Math.sin(player.mesh.rotation.z);
     } else if (event.key == 'left' || event.key == 'ArrowLeft') {
-      player.mesh.rotation.z += moveRate;
+      player.mesh.rotation.z += rotateRate;
     }else if (event.key == 'right' || event.key == 'ArrowRight') {
-      player.mesh.rotation.z -= moveRate;
+      player.mesh.rotation.z -= rotateRate;
     }
-  }, 1000/60);
+  }, (1000/250)); // 250 fps
 }
 document.addEventListener('keyup', onDocumentKeyUp, false);
 
