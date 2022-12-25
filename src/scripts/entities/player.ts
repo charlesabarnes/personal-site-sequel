@@ -12,7 +12,6 @@ export class Player {
 
   private readonly extrudeSettings = {
     depth: 1,
-    
   };
     
 
@@ -20,6 +19,7 @@ export class Player {
     this.color = color;
     this.shape = this.createShape();
     this.geometry = new ExtrudeGeometry(this.shape, this.extrudeSettings);
+    this.geometry.center();
     this.material = new MeshBasicMaterial({ color: this.color, wireframe: false });
     this.mesh = new Mesh(this.geometry, this.material);
     return this; 

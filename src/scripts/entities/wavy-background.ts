@@ -46,15 +46,14 @@ export class WavyBackground {
 
       for ( let j = 0; j < length; j ++ ) {
 
-        const x = (i* (width/length) / length) - 0.5; 
+        const x = (i* ((width/length) *.8) / length) - 0.5; 
         const y = .05;
-        const z = (j / length * 1.4) - 0.5;
+        const z = (j / length * 1.2) - 0.5;
 
         positions[ 3 * k ] = x;
         positions[ 3 * k + 1 ] = y;
         positions[ 3 * k + 2 ] = z;
 
-        const intensity = .5;
         colors[ 3 * k ] = 1;
         colors[ 3 * k + 1 ] = 1;
         colors[ 3 * k + 2 ] = 1;

@@ -1,4 +1,4 @@
-import { Scene, PerspectiveCamera, WebGLRenderer, Color} from 'three'; 
+import { Scene, PerspectiveCamera, WebGLRenderer} from 'three'; 
 import { Player } from './entities/player';
 import { WavyBackground } from './entities/wavy-background';
 
@@ -19,8 +19,9 @@ document.body.appendChild(renderer.domElement);
 
 const player = new Player('#ffffff');
 scene.add(player.mesh);
-player.mesh.position.z = -200;
-player.mesh.position.y = -12;
+player.mesh.position.z = -250;
+player.mesh.position.x = -.4;
+player.mesh.position.y = -15;
 
 const background = new WavyBackground(scene, window.innerWidth/10, window.innerHeight/10);
 
@@ -53,6 +54,35 @@ function animate() {
 
 function render() {
   renderer.render(scene, camera);
+}
+
+const interval ={};
+document.addEventListener('keydown', onDocumentKeyDown, false);
+function onDocumentKeyDown(event) {
+  const moveRate = 0.2;
+
+  if (interval[event.key]) {
+    return;
+  }
+  interval[event.key] = setInterval(() => {
+    if (event.key == 'up' || event.key == 'ArrowUp') {
+      player.mesh.position.y += moveRate * Math.cos(player.mesh.rotation.z);
+      player.mesh.position.x -= moveRate * Math.sin(player.mesh.rotation.z);
+    } else if (event.key == 'down' || event.key == 'ArrowDown') {
+      player.mesh.position.y -= moveRate * Math.cos(player.mesh.rotation.z);
+      player.mesh.position.x += moveRate * Math.sin(player.mesh.rotation.z);
+    } else if (event.key == 'left' || event.key == 'ArrowLeft') {
+      player.mesh.rotation.z += moveRate;
+    }else if (event.key == 'right' || event.key == 'ArrowRight') {
+      player.mesh.rotation.z -= moveRate;
+    }
+  }, 1000/60);
+}
+document.addEventListener('keyup', onDocumentKeyUp, false);
+
+function onDocumentKeyUp(event) {
+  clearInterval(interval[event.key]);
+  delete interval[event.key];
 }
 
 animate();
