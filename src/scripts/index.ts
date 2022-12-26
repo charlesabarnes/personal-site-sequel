@@ -54,6 +54,22 @@ function animate() {
 
 function render() {
   renderer.render(scene, camera);
+  background.pointclouds.forEach((pointcloud) => {
+    pointcloud.geometry.attributes.position.array =pointcloud.geometry.attributes.position.array.map((point, i) => {
+      const x = 2;
+      const y = 0;
+      const z = 1;
+      if(i % 3 == x) {
+        return point += .00001;
+      }
+      if(i % 3 == y) {
+        return point += .00001;
+      }
+      return point;
+    });
+  });
+  background.pointclouds[0].geometry.attributes.position.needsUpdate = true;
+
 }
 
 const interval ={};
@@ -66,6 +82,7 @@ function onDocumentKeyDown(event) {
   if (interval[event.key]) {
     return;
   }
+
   interval[event.key] = setInterval(() => {
     if (event.key == 'up' || event.key == 'ArrowUp') {
       player.mesh.position.y += moveRate * Math.cos(player.mesh.rotation.z);
