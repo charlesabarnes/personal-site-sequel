@@ -90,9 +90,24 @@ body {
   color: var(--color-primary);
 }
 
+.header-row.menu-row {
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+}
+
 @media screen and (max-width: 1130px) {
   .menu {
     display: none;
+  }
+  .header-row.menu-row {
+    display: flex;
+    animation-fill-mode: forwards;
+    visibility: visible;
+    opacity: 1;
+    animation: show 0.3s;
+    align-items: flex-start;
+    justify-content: flex-start;
   }
   
 }
@@ -113,6 +128,17 @@ body {
   box-shadow: 4px 4px 0px #333333;
   border-radius: 10px;
   border: 1px solid #333333;
+}
+
+button.menu-button {
+  font-size: 16px;
+  font-family: Kanit;
+  font-weight: 400;
+  color: #333333;
+  text-align: center;
+  cursor: pointer;
+  background: none;
+  border-radius: 2px;
 }
 
 .icons {
@@ -177,4 +203,64 @@ ul {
 
 a.no-decoration {
   text-decoration: none;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.menu-popup {
+  position: absolute;
+  z-index: -9999;
+  opacity: 0;
+  display: none;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.menu-popup.show {
+  display: flex;
+  animation-fill-mode: forwards;
+  visibility: visible;
+  opacity: 1;
+  animation: show 0.3s;
+}
+
+.menu-container {
+  background-color: var(--background);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 0px #333333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.menu-container .menu-item, .menu-container .button {
+  font-size: 36px;
+  font-family: Kanit;
+  font-weight: 400;
+  color: #333333;
+  text-align: center;
 }
