@@ -101,12 +101,12 @@ body.dark .button, body.dark .icon {
 }
 
 .name span:not(.name-special) {
-  text-shadow: 2px 3px 0px #333;
+  text-shadow: 2px 3px 0px var(--shadow-color);
 }
 
 .name:hover span:not(.name-special) {
   transition: 0.3s;
-  text-shadow: 3px 5px 0px #333;
+  text-shadow: 3px 5px 0px var(--shadow-color);
 }
 
 .name-special {
