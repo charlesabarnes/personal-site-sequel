@@ -108,3 +108,19 @@ body {
   display: flex;
   align-items: center;
 }
+
+h3 {
+  font-size: 24px;
+  font-family: Kanit;
+  font-weight: 400;
+  color: #333333;
+  text-align: center;
+}
+
+ul {
+  font-family: kanit;
+}
+
+a.no-decoration {
+  text-decoration: none;
+}
