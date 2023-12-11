@@ -13,7 +13,7 @@
       <meta name="keywords" content="HTML,CSS,JavaScript,Charles,Barnes,web,developer,website,development,Missouri,Charles Barnes,Saint Louis Developer,St louis">
       <meta name="author" content="Charles Barnes">
       <script>
-        console.warn('%cExtremely WIP!', `
+        console.warn('%cExtremely Large WIP!', `
           background: #f4f4f4;
           border: 1px solid #333333;
           color: grey;
@@ -40,13 +40,15 @@
             <a href="https://docs.google.com/document/d/1mLlgfgEcluKGUZUdBI-66TI1iELUYmQ4zEQTNF4LRE0/edit?usp=sharing" class="menu-item no-decoration" target="_blank">Resume</a>
             <a href="/portfolio" class="menu-item no-decoration">Portfolio</a>
           </div>
-          <div class="name">
-            <span>Ch</span>
-            <span>arles</span>
-            <span class="name-special">“chuck”</span>
-            <span>B</span>
-            <span>arnes</span>
-          </div>
+          <a class="no-decoration" href="/">
+            <div class="name">
+              <span>Ch</span>
+              <span>arles</span>
+              <span class="name-special">“chuck”</span>
+              <span>B</span>
+              <span>arnes</span>
+            </div>
+          </a>
           <div class="menu end">
             <a onclick="showNotImplemented()" class="menu-item">Blog</a>
             <a onclick="showNotImplemented()" class="menu-item">Photography</a>
@@ -215,6 +217,16 @@
       </div>
     </div>
 
+    <script>
+      document.querySelectorAll('.icon').forEach((icon) => {
+        icon.addEventListener('click', () => {
+          icon.classList.add('shake');
+          setTimeout(() => {
+            icon.classList.remove('shake');
+          }, 300);
+        });
+      });
+    </script>
   </body>
 
 </html>

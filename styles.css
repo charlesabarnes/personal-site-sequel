@@ -70,6 +70,11 @@ body {
   text-shadow: 2px 3px 0px #333;
 }
 
+.name:hover span:not(.name-special) {
+  transition: 0.3s;
+  text-shadow: 3px 5px 0px #333;
+}
+
 .name-special {
   color: #333333;
   font-family: Kristi;
@@ -87,7 +92,7 @@ body {
 }
 
 .icons {
-  padding: 36px 50px;
+  margin: 80px 0;
   gap: 90px;
   flex-wrap: wrap;
   width: 100%;
@@ -107,6 +112,31 @@ body {
   font-size: 32px;
   display: flex;
   align-items: center;
+  cursor: pointer;
+}
+
+.icon:hover, .button:hover {
+  transition: 0.3s;
+  box-shadow: 6px 6px 0px #333333;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+}
+
+.icon.shake {
+  animation: shake 0.3s;
 }
 
 h3 {
