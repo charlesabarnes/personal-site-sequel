@@ -34,20 +34,26 @@ body {
 }
 
 .header-row {
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
 }
 
 .menu {
   flex: 1;
   gap: 30px;
-  margin: 0 5vw;
   min-width: 310px;
+}
+
+.menu.start {
+  margin-left: 5vw;
 }
 
 .menu.end {
   justify-content: flex-end;
+  margin-right: 5vw;
 }
+
+
 
 .menu-item, .button, .subtitle, .icon {
   color: #333333;
@@ -66,6 +72,7 @@ body {
   text-align: center;
   -webkit-text-stroke: 1px var(--color-primary)
 }
+
 .name span:not(.name-special) {
   text-shadow: 2px 3px 0px #333;
 }
@@ -81,6 +88,23 @@ body {
   -webkit-text-stroke: 0px;
   text-shadow: unset;
   color: var(--color-primary);
+}
+
+@media screen and (max-width: 1130px) {
+  .menu {
+    display: none;
+  }
+  
+}
+
+@media screen and (max-width: 600px) {
+  .name {
+    font-size: 25px;
+  }
+  .name:hover span:not(.name-special) {
+    transition: 0.3s;
+    text-shadow: 2px 4px 0px #333;
+  }
 }
 
 .button {
