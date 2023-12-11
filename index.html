@@ -7,6 +7,7 @@
       <link href="/assets/fontawesome/css/fontawesome.min.css" rel="stylesheet">
       <link href="/assets/fontawesome/css/brands.min.css" rel="stylesheet">
       <link href="/assets/fontawesome/css/regular.min.css" rel="stylesheet">
+      <script src="script.js"></script>
       <meta name="description" content="Charles Barnes - Developer in St. Louis, Mo | charles@charlesabarnes.com">
       <meta property="og:description" content="Developer in St. Louis, Mo" />
       <meta name="keywords" content="HTML,CSS,JavaScript,Charles,Barnes,web,developer,website,development,Missouri,Charles Barnes,Saint Louis Developer,St louis">
@@ -36,20 +37,20 @@
       <div class="header">
         <div class="header-row">
           <div class="menu start">
-            <div class="menu-item">Resume</div>
-            <div class="menu-item">Portfolio</div>
+            <a href="https://docs.google.com/document/d/1mLlgfgEcluKGUZUdBI-66TI1iELUYmQ4zEQTNF4LRE0/edit?usp=sharing" class="menu-item">Resume</a>
+            <a onclick="showNotImplemented()" class="menu-item">Portfolio</a>
           </div>
           <div class="name">
-            <div>Ch</div>
-            <div>arles</div>
-            <div class="name-special">“chuck”</div>
-            <div>B</div>
-            <div>arnes</div>
+            <span>Ch</span>
+            <span>arles</span>
+            <span class="name-special">“chuck”</span>
+            <span>B</span>
+            <span>arnes</span>
           </div>
           <div class="menu end">
-            <div class="menu-item">Blog</div>
-            <div class="menu-item">Photography</div>
-            <div class="button">Contact</div>
+            <a onclick="showNotImplemented()" class="menu-item">Blog</a>
+            <a onclick="showNotImplemented()" class="menu-item">Photography</a>
+            <a href="mailto:charles@charlesabarnes.com" class="button">Contact</a>
           </div>
         </div>
         <div class="subtitle">Software Engineer x UX Designer</div>
@@ -60,6 +61,9 @@
         </div>
         <div class="icon">
           <i class="fa-regular fa-truck-monster"></i>
+        </div>
+        <div class="icon">
+          <i class="fa-brands fa-discord"></i>
         </div>
         <div class="icon">
           <i class="fa-regular fa-flag-usa"></i>
@@ -201,9 +205,6 @@
         </div>
         <div class="icon">
           <i class="fa-regular fa-kitchen-set"></i>
-        </div>
-        <div class="icon">
-          <i class="fa-brands fa-discord"></i>
         </div>
         <div class="icon">
           <i class="fa-brands fa-npm"></i>
