@@ -18,8 +18,30 @@ const setTheme = (theme) => {
   localStorage.setItem('theme', theme);
   if (theme === 'dark') {
     document.body.classList.add('dark');
+    // set css variables
+    document.documentElement.style.setProperty('--color-primary', '#FFFAF3');
+    document.documentElement.style.setProperty('--color-secondary', '#333333');
+    document.documentElement.style.setProperty('--black', '#000000');
+    document.documentElement.style.setProperty('--background', 'var(--color-secondary)');
+    document.documentElement.style.setProperty('--icon-background', 'var(--color-primary)');
+    document.documentElement.style.setProperty('--shadow-color', 'var(--black)');
+    document.documentElement.style.setProperty('--border-color', 'var(--black)');
+    document.documentElement.style.setProperty('--text-color', 'var(--color-primary)');
+
   } else {
-    document.body.classList.remove('dark');
+    if(document.body.classList) {
+      document.body.classList.remove('dark');
+    }
+    // set css variables
+    document.documentElement.style.setProperty('--color-primary', '#333333');
+    document.documentElement.style.setProperty('--color-secondary', '#FFFAF3');
+    document.documentElement.style.setProperty('--black', '#000000');
+    document.documentElement.style.setProperty('--background', 'var(--color-secondary)');
+    document.documentElement.style.setProperty('--icon-background', 'var(--color-secondary)');
+    document.documentElement.style.setProperty('--shadow-color', 'var(--color-primary)');
+    document.documentElement.style.setProperty('--border-color', 'var(--color-primary)');
+    document.documentElement.style.setProperty('--text-color', 'var(--color-primary)');
+
   }
 }
 
