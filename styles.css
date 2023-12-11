@@ -72,7 +72,7 @@ body.dark {
 button.menu-button {
   border: 1px solid;
   padding: 10px;
-  border-radius:  10px;
+  border-radius: 10px !important;
   box-shadow: 4px 4px 0px var(--shadow-color);
 }
 
