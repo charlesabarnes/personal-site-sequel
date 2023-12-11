@@ -8,8 +8,43 @@ function showMenu (e) {
   menu.classList.toggle('show');
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-  const backdrop = document.querySelector('.menu-popup');
-  backdrop.addEventListener('click', ()=> backdrop.classList.remove('show'));
-}
+document.addEventListener('DOMContentLoaded', () => {
+    const backdrop = document.querySelector('.menu-popup');
+    backdrop.addEventListener('click', ()=> backdrop.classList.remove('show'));
+  }
 );
+
+const setTheme = (theme) => {
+  localStorage.setItem('theme', theme);
+  if (theme === 'dark') {
+    document.body.classList.add('dark');
+  } else {
+    document.body.classList.remove('dark');
+  }
+}
+
+const getDefaultTheme = () => {
+  const theme = localStorage.getItem('theme');
+  if (theme) {
+    setTheme(theme);
+  } else {
+    // get user's theme
+    const userPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (userPrefersDark) {
+      setTheme('dark');
+    } else {
+      setTheme('light');
+    }
+  }
+}
+
+getDefaultTheme();
+
+function toggleTheme() {
+  const theme = localStorage.getItem('theme');
+  if (theme === 'dark') {
+    setTheme('light');
+  } else {
+    setTheme('dark');
+  }
+}
