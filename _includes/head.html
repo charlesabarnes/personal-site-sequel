@@ -1,0 +1,40 @@
+<meta charset="utf-8">
+<title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+<link href="{{ '/assets/fontawesome/css/fontawesome.min.css' | relative_url }}" rel="stylesheet">
+<link href="{{ '/assets/fontawesome/css/brands.min.css' | relative_url }}" rel="stylesheet">
+<link href="{{ '/assets/fontawesome/css/regular.min.css' | relative_url }}" rel="stylesheet">
+<script src="{{ '/assets/js/script.js' | relative_url }}"></script>
+
+<!-- Primary Meta Tags -->
+<meta name="title" content="{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}">
+<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% elsif page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+<meta name="author" content="{% if page.author %}{{ page.author }}{% else %}Charles Barnes{% endif %}">
+<meta name="keywords" content="{% if page.tags %}{{ page.tags | join: ',' }}{% else %}HTML,CSS,JavaScript,Charles,Barnes,web,developer,website,development,Missouri,Charles Barnes,Saint Louis Developer,St louis{% endif %}">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+<meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% elsif page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+<meta property="og:image" content="{% if page.image %}{{ page.image }}{% else %}{{ '/assets/images/default-share.jpg' | absolute_url }}{% endif %}">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="{{ page.url | absolute_url }}">
+<meta property="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+<meta property="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% elsif page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+<meta property="twitter:image" content="{% if page.image %}{{ page.image }}{% else %}{{ '/assets/images/default-share.jpg' | absolute_url }}{% endif %}">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+
+<!-- RSS feed -->
+<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | absolute_url }}">
+
+{% seo %}
+
+<!-- Glad you are taking a look at the HTML. 
+  Built by Charles Anthony Barnes. 
+  Let me know what you think! me@chkb.net -->

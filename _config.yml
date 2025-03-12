@@ -3,13 +3,23 @@ email: charles@charlesabarnes.com
 description: >- 
   Charles Barnes - Developer in St. Louis, Mo | charles@charlesabarnes.com
 url: "https://chkb.net"
+baseurl: ""
 github_username: charlesabarnes
+lang: en_US
+author: Charles Barnes
+logo: /assets/images/logo.png
+social:
+  name: Charles Barnes
+  links:
+    - https://github.com/charlesabarnes
+    - https://www.linkedin.com/in/charlesanthonybarnes
 
 # Build settings
 markdown: kramdown
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 # Collections
 collections:

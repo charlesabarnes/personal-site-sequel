@@ -1,22 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
-    <link href="{{ '/assets/fontawesome/css/fontawesome.min.css' | relative_url }}" rel="stylesheet">
-    <link href="{{ '/assets/fontawesome/css/brands.min.css' | relative_url }}" rel="stylesheet">
-    <link href="{{ '/assets/fontawesome/css/regular.min.css' | relative_url }}" rel="stylesheet">
-    <script src="{{ '/assets/js/script.js' | relative_url }}"></script>
-    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-    <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
-    <meta name="keywords" content="HTML,CSS,JavaScript,Charles,Barnes,web,developer,website,development,Missouri,Charles Barnes,Saint Louis Developer,St louis">
-    <meta name="author" content="Charles Barnes">
-    {% seo %}
-    <!-- Glad you are taking a look at the HTML. 
-      Built by Charles Anthony Barnes. 
-      Let me know what you think! me@chkb.net -->
+    {% include head.html %}
   </head>
   <body>
     <div class="container">
