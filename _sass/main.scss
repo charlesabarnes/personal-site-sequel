@@ -1,17 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kristi&display=swap');
 
 body {
-  font-family: 'Bungee', cursive;
+  /* Typography */
   font-family: 'Kanit', sans-serif;
-  font-family: 'Kristi', cursive;
-  /* variables */
+  line-height: 1.6;
+  
+  /* Original color variables */
   --color-primary: #333333;
   --color-secondary: #FFFAF3;
+  --color-highlight: #333333;
+  
+  /* Theme variables */
   --background: var(--color-secondary);
   --icon-background: var(--color-secondary);
   --shadow-color: var(--color-primary);
   --border-color: var(--color-primary);
   --text-color: var(--color-primary);
+  
   color: var(--text-color);
   background-color: var(--background);
   margin: 0;
@@ -21,19 +26,21 @@ body {
 body.dark {
   --color-primary: #FFFAF3;
   --color-secondary: #333333;
+  --color-highlight: #FFFAF3;
   --black: #000000;
+  
   --background: var(--color-secondary);
   --icon-background: var(--color-primary);
   --shadow-color: var(--black);
   --border-color: var(--black);
   --text-color: var(--color-primary);
-  color: var(--text-color);
-  background-color: var(--background);
 }
 
 .container {
   width: 100%;
-  height: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,7 +48,7 @@ body.dark {
 
 .header {
   width: 100%;
-  height: 100px;
+  padding: 1.5rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -59,7 +66,7 @@ body.dark {
 
 .menu {
   flex: 1;
-  gap: 30px;
+  gap: 2rem;
   min-width: 310px;
 }
 
@@ -73,24 +80,39 @@ body.dark {
 }
 
 button.menu-button {
-  border: 1px solid;
-  padding: 10px;
-  border-radius: 10px !important;
-  box-shadow: 4px 4px 0px var(--shadow-color);
+  border: 1px solid var(--border-color);
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem !important;
+  box-shadow: 3px 3px 0px var(--shadow-color);
+  transition: all 0.2s ease;
 }
 
-.menu-item, .button, .subtitle, .icon {
+.menu-item, .button, .subtitle {
   color: var(--text-color);
-  font-size: 16px;
-  font-family: Kanit;
+  font-size: 1rem;
+  font-family: 'Kanit', sans-serif;
   font-weight: 400;
   word-wrap: break-word;
 }
 
-body.dark .button, body.dark .icon {
+.icon {
+  color: var(--text-color);
+  font-size: 1.25rem;
+}
+
+body.dark .button {
   color: var(--shadow-color);
 }
 
+body.dark .icon {
+  color: var(--shadow-color);
+}
+
+body.dark .theme-toggle-button i {
+  color: var(--border-color);
+}
+
+/* Keep the name/logo intact as requested */
 .name {
   display: flex;
   padding-top: 8px;
@@ -111,11 +133,10 @@ body.dark .button, body.dark .icon {
 }
 
 .name-special {
-  color: #333333;
+  color: var(--text-color);
   font-family: Kristi;
   -webkit-text-stroke: 0px;
   text-shadow: unset;
-  color: var(--text-color);
 }
 
 .header-row.menu-row {
@@ -137,7 +158,6 @@ body.dark .button, body.dark .icon {
     align-items: flex-start;
     justify-content: flex-start;
   }
-  
 }
 
 @media screen and (max-width: 600px) {
@@ -146,57 +166,109 @@ body.dark .button, body.dark .icon {
   }
   .name:hover span:not(.name-special) {
     transition: 0.3s;
-    text-shadow: 2px 4px 0px #333;
+    text-shadow: 2px 4px 0px var(--shadow-color);
   }
 }
 
 .button {
-  padding: 7px 16px;
+  padding: 0.625rem 1.25rem;
   background: var(--icon-background);
-  box-shadow: 4px 4px 0px var(--shadow-color);
-  border-radius: 10px;
+  box-shadow: 3px 3px 0px var(--shadow-color);
+  border-radius: 0.5rem;
   border: 1px solid var(--border-color);
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
 }
 
 button.menu-button {
-  font-size: 16px;
-  font-family: Kanit;
+  font-size: 1rem;
+  font-family: 'Kanit', sans-serif;
   font-weight: 400;
-  color: var(--text-color);
+  color: var(--border-color);
   text-align: center;
   cursor: pointer;
-  background: none;
-  border-radius: 2px;
+  background: var(--icon-background);
+}
+
+.icons-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 3rem auto 5rem;
+  padding: 0 1.5rem;
+}
+
+.icons-title {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  font-weight: 500;
+  font-size: 2rem;
 }
 
 .icons {
-  margin: 80px 0;
-  gap: 90px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 2rem;
   width: 100%;
   justify-content: center;
 }
 
+.icon-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.icon-link:hover {
+  transform: translateY(-5px);
+  text-decoration: none;
+}
+
 .icon {
-  width: 50px;
-  height: 50px;
+  width: 5rem;
+  height: 5rem;
   background: var(--icon-background);
-  box-shadow: 4px 4px 0px var(--shadow-color);
-  border-radius: 4px;
+  box-shadow: 3px 3px 0px var(--shadow-color);
+  border-radius: 0.5rem;
   border: 1px solid var(--border-color);
-  color: var(--shadow-color);
+  color: var(--text-color);
   justify-content: center;
   text-align: center;
   font-family: Font Awesome 6 Pro;
-  font-size: 32px;
+  font-size: 2rem;
   display: flex;
   align-items: center;
   cursor: pointer;
+  transition: all 0.2s ease;
+  margin-bottom: 0.75rem;
+}
+
+.icon-label {
+  font-family: 'Kanit', sans-serif;
+  font-size: 1rem;
+  color: var(--text-color);
+  text-align: center;
+}
+
+.icon-link.featured .icon {
+  background: var(--color-primary);
+  color: var(--color-secondary);
+}
+
+.icon-link.featured .icon-label {
+  font-weight: 500;
 }
 
 .icon:hover, .button:hover {
-  transition: 0.3s;
-  box-shadow: 6px 6px 0px var(--shadow-color);
+  transform: translateY(-2px);
+  box-shadow: 4px 4px 0px var(--shadow-color);
+}
+
+.button:active, .icon:active {
+  transform: translateY(1px);
+  box-shadow: 2px 2px 0px var(--shadow-color);
 }
 
 @keyframes shake {
@@ -218,19 +290,63 @@ button.menu-button {
   animation: shake 0.3s;
 }
 
-h3 {
-  font-size: 24px;
-  font-family: Kanit;
-  font-weight: 400;
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Kanit', sans-serif;
   color: var(--text-color);
-  text-align: center;
+}
+
+h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+p {
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
 }
 
 ul {
-  font-family: kanit;
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 a.no-decoration {
+  text-decoration: none;
+}
+
+a.no-decoration:hover {
   text-decoration: none;
 }
 
@@ -246,7 +362,7 @@ a.no-decoration {
 }
 
 .menu-popup {
-  position: absolute;
+  position: fixed;
   z-index: -9999;
   opacity: 0;
   display: none;
@@ -255,8 +371,8 @@ a.no-decoration {
   left: 0;
   width: 100%;
   height: 100%;
-  backdrop-filter: blur(5px);
-  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  background-color: rgba(0, 0, 0, 0.7);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -275,20 +391,20 @@ a.no-decoration {
 
 .menu-container {
   background-color: var(--background);
-  padding: 40px;
-  border-radius: 10px;
+  padding: 2.5rem;
+  border-radius: 0.75rem;
   box-shadow: 4px 4px 0px var(--shadow-color);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 100;
   flex-direction: column;
-  gap: 30px;
+  gap: 1.5rem;
+  max-width: 90%;
 }
 
 .menu-container .menu-item, .menu-container .button {
-  font-size: 36px;
-  font-family: Kanit;
+  font-size: 1.5rem;
   font-weight: 400;
   color: var(--text-color);
   text-align: center;

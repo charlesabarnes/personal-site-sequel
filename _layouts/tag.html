@@ -1,14 +1,13 @@
 ---
 layout: default
-title: Charles Barnes - Blog
 ---
 
 <div class="blog-list">
-  <h1>Blog</h1>
+  <h1>Posts tagged: {{ page.tag }}</h1>
   
-  {% if site.posts.size > 0 %}
+  {% if site.tags[page.tag].size > 0 %}
     <div class="posts-grid">
-      {% for post in site.posts %}
+      {% for post in site.tags[page.tag] %}
         <div class="blog-post-item">
           {% if post.image %}
             <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" class="blog-post-image">
@@ -46,6 +45,6 @@ title: Charles Barnes - Blog
       {% endfor %}
     </div>
   {% else %}
-    <p>No blog posts yet. Check back soon!</p>
+    <p>No posts with this tag yet.</p>
   {% endif %}
 </div>

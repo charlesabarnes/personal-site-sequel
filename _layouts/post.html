@@ -18,6 +18,12 @@ layout: default
     </div>
   </div>
 
+  {% if page.image %}
+  <div class="post-featured-image">
+    <img src="{{ page.image }}" alt="{{ page.title }}">
+  </div>
+  {% endif %}
+
   <div class="post-content">
     {{ content }}
   </div>
@@ -25,7 +31,7 @@ layout: default
   {% if page.tags.size > 0 %}
   <div class="post-tags">
     {% for tag in page.tags %}
-    <span class="post-tag">{{ tag }}</span>
+    <a href="{{ '/tag/' | append: tag | relative_url }}" class="post-tag">{{ tag }}</a>
     {% endfor %}
   </div>
   {% endif %}
