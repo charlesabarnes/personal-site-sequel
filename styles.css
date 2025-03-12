@@ -79,7 +79,7 @@ button.menu-button {
 
 
 .menu-item, .button, .subtitle, .icon {
-  color: var(--text-color);
+  color: var(--text-level-1);
   font-size: 16px;
   font-family: Kanit;
   font-weight: 400;

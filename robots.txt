@@ -1,0 +1,6 @@
+# Allow all user agents
+User-agent: *
+Allow: /
+
+# Define sitemap location
+Sitemap: https://chkb.net/sitemap.xml
