@@ -10,18 +10,39 @@ function showMenu(e) {
 
 document.addEventListener('DOMContentLoaded', () => {
     getDefaultTheme();
+    updateThemeButton();
     const backdrop = document.querySelector('.menu-popup');
     backdrop.addEventListener('click', () => backdrop.classList.remove('show'));
   }
 );
 
+function updateThemeButton() {
+  const themeButton = document.querySelector('.theme-toggle-button i');
+  const theme = localStorage.getItem('theme');
+  if (themeButton) {
+    if (theme === 'dark') {
+      themeButton.className = 'fa-regular fa-moon';
+    } else {
+      themeButton.className = 'fa-regular fa-sun';
+    }
+  }
+}
+
 const setTheme = (theme) => {
   localStorage.setItem('theme', theme);
+  const themeButton = document.querySelector('.theme-toggle-button i');
+  
   if (theme === 'dark') {
     document.body.classList.add('dark');
+    if (themeButton) {
+      themeButton.className = 'fa-regular fa-moon';
+    }
   } else {
     if(document.body.classList) {
       document.body.classList.remove('dark');
+    }
+    if (themeButton) {
+      themeButton.className = 'fa-regular fa-sun';
     }
   }
 }
