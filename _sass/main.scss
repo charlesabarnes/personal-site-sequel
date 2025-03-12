@@ -319,6 +319,135 @@ h4 {
   margin-bottom: 0.75rem;
 }
 
+/* Latest post preview section */
+.latest-post-preview {
+  width: 100%;
+  max-width: 1200px;
+  margin: 3rem auto 4rem;
+  padding: 0 1.5rem;
+}
+
+.latest-post-heading {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 500;
+  font-size: 2rem;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--border-color);
+  }
+}
+
+.latest-post-container {
+  display: flex;
+  border: 1px solid var(--border-color);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 4px 4px 0px var(--shadow-color);
+  background: var(--icon-background);
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 6px 6px 0px var(--shadow-color);
+  }
+  
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.latest-post-image {
+  flex: 0 0 40%;
+  max-height: 350px;
+  overflow: hidden;
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+    @media (max-width: 768px) {
+      max-height: 250px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    flex: 0 0 auto;
+  }
+}
+
+.latest-post-content {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.latest-post-title {
+  font-size: 1.75rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+  
+  a {
+    color: var(--text-color);
+    text-decoration: none;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.latest-post-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+  font-size: 0.875rem;
+  opacity: 0.8;
+}
+
+.latest-post-excerpt {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+.read-more-button {
+  align-self: flex-start;
+  padding: 0.625rem 1.25rem;
+  background: var(--icon-background);
+  box-shadow: 3px 3px 0px var(--shadow-color);
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-color);
+  transition: all 0.2s ease;
+  text-decoration: none;
+  font-weight: 500;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 4px 4px 0px var(--shadow-color);
+    text-decoration: none;
+  }
+  
+  &:active {
+    transform: translateY(1px);
+    box-shadow: 2px 2px 0px var(--shadow-color);
+  }
+}
+
 p {
   margin-bottom: 1.5rem;
   line-height: 1.7;

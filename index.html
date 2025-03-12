@@ -3,4 +3,41 @@ layout: default
 title: Charles Barnes - Frontend Developer
 ---
 
+<div class="latest-post-preview">
+  <h2 class="latest-post-heading">Latest from the Blog</h2>
+  {% assign latest_post = site.posts.first %}
+  {% if latest_post %}
+    <div class="latest-post-container">
+      <div class="latest-post-image">
+        {% if latest_post.image %}
+          <img src="{{ latest_post.image }}" alt="{{ latest_post.title }}" />
+        {% else %}
+          <img src="https://picsum.photos/800/450?random=1" alt="{{ latest_post.title }}" />
+        {% endif %}
+      </div>
+      <div class="latest-post-content">
+        <h3 class="latest-post-title">
+          <a href="{{ latest_post.url | relative_url }}">{{ latest_post.title }}</a>
+        </h3>
+        <div class="latest-post-meta">
+          {{ latest_post.date | date: "%B %d, %Y" }}
+          {% if latest_post.categories.size > 0 %}
+            <span class="post-categories">
+              {% for category in latest_post.categories %}
+                <span class="post-category">{{ category }}</span>
+              {% endfor %}
+            </span>
+          {% endif %}
+        </div>
+        <div class="latest-post-excerpt">
+          {{ latest_post.excerpt | strip_html | truncatewords: 50 }}
+        </div>
+        <a href="{{ latest_post.url | relative_url }}" class="read-more-button">Read More</a>
+      </div>
+    </div>
+  {% else %}
+    <p>No blog posts available yet. Check back soon!</p>
+  {% endif %}
+</div>
+
 {% include icon_grid.html %}
