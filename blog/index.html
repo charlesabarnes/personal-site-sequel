@@ -1,0 +1,34 @@
+---
+layout: default
+title: Charles Barnes - Blog
+---
+
+<div class="blog-list">
+  <h1>Blog</h1>
+  
+  {% if site.posts.size > 0 %}
+    {% for post in site.posts %}
+      <div class="blog-post-item">
+        <h2 class="blog-post-title">
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </h2>
+        <div class="blog-post-meta">
+          {{ post.date | date: "%B %d, %Y" }}
+          {% if post.categories.size > 0 %}
+          <span class="post-categories">
+            {% for category in post.categories %}
+            <span class="post-category">{{ category }}</span>
+            {% endfor %}
+          </span>
+          {% endif %}
+        </div>
+        <div class="blog-post-excerpt">
+          {{ post.excerpt }}
+        </div>
+        <a href="{{ post.url | relative_url }}" class="blog-post-read-more button">Read More</a>
+      </div>
+    {% endfor %}
+  {% else %}
+    <p>No blog posts yet. Check back soon!</p>
+  {% endif %}
+</div>

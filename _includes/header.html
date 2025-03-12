@@ -1,0 +1,29 @@
+<div class="header">
+  <div class="header-row menu-row">
+    <button class="menu-button" onclick="showMenu()">
+      <i class="fa-regular fa-bars"></i>
+    </button>
+  </div>
+  <div class="header-row">
+    <div class="menu start">
+      <button class="menu-button" onclick="toggleTheme()">
+        <i class="fa-regular fa-sun"></i>
+      </button> 
+      <a href="https://resume.chkb.net/chkb/charles-barnes-frontend-resume-2024" class="menu-item no-decoration" target="_blank">Resume</a>
+      <a href="{{ '/portfolio/' | relative_url }}" class="menu-item no-decoration">Portfolio</a>
+    </div>
+    <a class="no-decoration" href="{{ '/' | relative_url }}">
+      <div class="name">
+        <span>Charles</span>
+        <span class="name-special">"chuck"</span>
+        <span>Barnes</span>
+      </div>
+    </a>
+    <div class="menu end">
+      <a href="{{ '/blog/' | relative_url }}" class="menu-item">Blog</a>
+      <a href="{{ '/photography/' | relative_url }}" class="menu-item">Photography</a>
+      <a href="mailto:charles@charlesabarnes.com" class="button no-decoration">Contact</a>
+    </div>
+  </div>
+  <div class="subtitle">Software Engineer x UX Designer</div>
+</div>

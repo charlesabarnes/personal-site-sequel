@@ -1,0 +1,24 @@
+{
+  "name": "Jekyll Node.js",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm",
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/devcontainers-extra/features/ripgrep:1": {},
+    "ghcr.io/devcontainers/features/ruby:1": {
+      "version": "latest"
+    }
+  },
+  "forwardPorts": [4000],
+  "postCreateCommand": "npm install -g @anthropic-ai/claude-code && gem install bundler jekyll && bundle install",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "sissel.shopify-liquid",
+        "davidanson.vscode-markdownlint",
+        "streetsidesoftware.code-spell-checker",
+        "shd101wyy.markdown-preview-enhanced"
+      ]
+    }
+  }
+} 

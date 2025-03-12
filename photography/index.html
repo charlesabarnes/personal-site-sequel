@@ -1,0 +1,35 @@
+---
+layout: default
+title: Charles Barnes - Photography
+---
+
+<div class="photography-list">
+  <h1>Photography</h1>
+  
+  {% if site.photography.size > 0 %}
+    <div class="gallery-list">
+      {% for album in site.photography %}
+        <div class="gallery-item">
+          <a href="{{ album.url | relative_url }}" class="gallery-link">
+            {% if album.thumbnail %}
+              <img src="{{ album.thumbnail | relative_url }}" alt="{{ album.title }}" class="gallery-thumbnail">
+            {% else %}
+              {% assign first_image = album.images | first %}
+              {% if first_image %}
+                <img src="{{ first_image.path | relative_url }}" alt="{{ album.title }}" class="gallery-thumbnail">
+              {% endif %}
+            {% endif %}
+            <div class="gallery-info">
+              <h2 class="gallery-title">{{ album.title }}</h2>
+              {% if album.date %}
+                <div class="gallery-date">{{ album.date | date: "%B %Y" }}</div>
+              {% endif %}
+            </div>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+  {% else %}
+    <p>No photo albums yet. Check back soon!</p>
+  {% endif %}
+</div>

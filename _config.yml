@@ -1,0 +1,45 @@
+title: Charles Barnes - Frontend Developer
+email: charles@charlesabarnes.com
+description: >- 
+  Charles Barnes - Developer in St. Louis, Mo | charles@charlesabarnes.com
+url: "https://chkb.net"
+github_username: charlesabarnes
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Collections
+collections:
+  photography:
+    output: true
+    permalink: /photography/:path/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "photography"
+    values:
+      layout: "photo_album"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+# Exclude from processing
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/

@@ -1,0 +1,25 @@
+---
+layout: default
+---
+<div class="photo-album">
+  <h1 class="album-title">{{ page.title }}</h1>
+  
+  {% if page.description %}
+  <div class="album-description">
+    {{ page.description }}
+  </div>
+  {% endif %}
+  
+  <div class="photo-grid">
+    {% for image in page.images %}
+    <div class="photo-item">
+      <a href="{{ image.path | relative_url }}" class="photo-link">
+        <img src="{{ image.path | relative_url }}" alt="{{ image.caption }}" class="photo-image">
+      </a>
+      {% if image.caption %}
+      <div class="photo-caption">{{ image.caption }}</div>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</div>
