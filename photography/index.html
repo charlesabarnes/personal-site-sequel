@@ -11,7 +11,7 @@ title: Charles Barnes - Photography
       {% for album in site.photography %}
         <div class="gallery-item">
           <a href="{{ album.url | relative_url }}" class="gallery-link">
-            <img src="https://picsum.photos/600/400?random={{ forloop.index | plus: 100 }}" alt="{{ album.title }}" class="gallery-thumbnail">
+            <img src="{{ album.thumbnail | relative_url }}" alt="{{ album.title }}" class="gallery-thumbnail">
             <div class="gallery-info">
               <h2 class="gallery-title">{{ album.title }}</h2>
               {% if album.date %}

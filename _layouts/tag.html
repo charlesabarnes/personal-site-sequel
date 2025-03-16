@@ -11,12 +11,8 @@ layout: default
         <div class="blog-post-item">
           {% if post.image %}
             <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" class="blog-post-image">
-          {% elsif post.categories contains 'development' or post.categories contains 'frontend' %}
-            <img src="https://picsum.photos/800/450?random={{ forloop.index }}" alt="{{ post.title }}" class="blog-post-image">
-          {% elsif post.categories contains 'photography' %}
-            <img src="https://picsum.photos/800/450?random={{ forloop.index | plus: 10 }}" alt="{{ post.title }}" class="blog-post-image">
           {% else %}
-            <img src="https://picsum.photos/800/450?random={{ forloop.index | plus: 20 }}" alt="{{ post.title }}" class="blog-post-image">
+            <img src="{{ '/assets/images/blog/default-image.png' | relative_url }}" alt="{{ post.title }}" class="blog-post-image">
           {% endif %}
           
           <div class="blog-post-content">

@@ -13,8 +13,8 @@ layout: default
   <div class="photo-grid">
     {% for image in page.images %}
     <div class="photo-item">
-      <a href="https://picsum.photos/1200/800?random={{ forloop.index | plus: 200 }}" class="photo-link">
-        <img src="https://picsum.photos/1200/800?random={{ forloop.index | plus: 200 }}" alt="{{ image.caption }}" class="photo-image">
+      <a href="{{ image.path | relative_url }}" class="photo-link">
+        <img src="{{ image.path | relative_url }}" alt="{{ image.caption }}" class="photo-image">
       </a>
       {% if image.caption %}
       <div class="photo-caption">{{ image.caption }}</div>
