@@ -10,9 +10,9 @@ title: Charles Barnes - Frontend Developer
     <div class="latest-post-container">
       <div class="latest-post-image">
         {% if latest_post.image %}
-          <img src="{{ latest_post.image }}" alt="{{ latest_post.title }}" />
+          {% include picture.html path=latest_post.image alt=latest_post.title %}
         {% else %}
-          <img src="{{ '/assets/images/blog/default-image.png' | relative_url }}" alt="{{ latest_post.title }}" />
+          {% include picture.html path="/assets/images/blog/default-image.png" alt=latest_post.title %}
         {% endif %}
       </div>
       <div class="latest-post-content">

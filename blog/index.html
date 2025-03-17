@@ -11,9 +11,9 @@ title: Charles Barnes - Blog
       {% for post in site.posts %}
         <div class="blog-post-item">
           {% if post.image %}
-            <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" class="blog-post-image">
+            {% include picture.html path=post.image alt=post.title class="blog-post-image" %}
           {% else %}
-            <img src="{{ '/assets/images/blog/default-image.png' | relative_url }}" alt="{{ post.title }}" class="blog-post-image">
+            {% include picture.html path="/assets/images/blog/default-image.png" alt=post.title class="blog-post-image" %}
           {% endif %}
           
           <div class="blog-post-content">

@@ -6,6 +6,8 @@ gem "logger"
 gem "csv"
 gem "base64"
 gem "bigdecimal"
+gem "observer"
+gem "rmagick", "~> 4.3.0"
 
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"

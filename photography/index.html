@@ -11,7 +11,7 @@ title: Charles Barnes - Photography
       {% for album in site.photography %}
         <div class="gallery-item">
           <a href="{{ album.url | relative_url }}" class="gallery-link">
-            <img src="{{ album.thumbnail | relative_url }}" alt="{{ album.title }}" class="gallery-thumbnail">
+            {% include picture.html path=album.thumbnail alt=album.title class="gallery-thumbnail" sizes="(min-width: 800px) 33vw, 100vw" %}
             <div class="gallery-info">
               <h2 class="gallery-title">{{ album.title }}</h2>
               {% if album.date %}

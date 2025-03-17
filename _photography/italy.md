@@ -25,11 +25,11 @@ images:
     caption: "My first view of Venice after exiting the train station."
   - path: "/assets/images/photography/italy/venice-canal.jpg"
     caption: "A canal in Venice on top of the Rialto Bridge."
-  - path: "/assets/images/photography/italy/David.jpg"
+  - path: "/assets/images/photography/italy/david.jpg"
     caption: "The David statue in Florence."
   - path: "/assets/images/photography/italy/cinque-terre.jpg"
     caption: "The Cinque Terre is a beautiful coastal area in Italy."
-  - path: "/assets/images/photography/italy/cinque-terre-2.jpg"
+  - path: "/assets/images/photography/italy/cinque-terre2.jpg"
     caption: "The Cinque Terre is a beautiful coastal area in Italy."
   
   

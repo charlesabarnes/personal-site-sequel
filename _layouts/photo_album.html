@@ -13,8 +13,8 @@ layout: default
   <div class="photo-grid">
     {% for image in page.images %}
     <div class="photo-item">
-      <a href="{{ image.path | relative_url }}" class="photo-link">
-        <img src="{{ image.path | relative_url }}" alt="{{ image.caption }}" class="photo-image">
+      <a href="{{ image.path | relative_url }}" class="photo-link" data-caption="{{ image.caption }}" onclick="openLightbox(event, '{{ image.path | relative_url }}', '{{ image.caption }}'); return false;">
+        <img src="{{ image.path | relative_url }}" alt="{{ image.caption }}" class="photo-image" loading="lazy" />
       </a>
       {% if image.caption %}
       <div class="photo-caption">{{ image.caption }}</div>
@@ -23,3 +23,49 @@ layout: default
     {% endfor %}
   </div>
 </div>
+
+<div class="photo-lightbox" id="photo-lightbox">
+  <div class="lightbox-content">
+    <img id="lightbox-image" class="lightbox-image" src="" alt="" loading="lazy">
+  </div>
+  <div class="lightbox-caption" id="lightbox-caption"></div>
+  <div class="lightbox-close" onclick="closeLightbox()">×</div>
+</div>
+
+<script>
+function openLightbox(event, imageSrc, caption) {
+  event.preventDefault();
+  const lightbox = document.getElementById('photo-lightbox');
+  const lightboxImage = document.getElementById('lightbox-image');
+  const lightboxCaption = document.getElementById('lightbox-caption');
+  
+  lightboxImage.src = imageSrc;
+  lightboxCaption.textContent = caption;
+  lightbox.classList.add('active');
+  
+  // Disable scroll on body
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+  const lightbox = document.getElementById('photo-lightbox');
+  lightbox.classList.remove('active');
+  
+  // Re-enable scroll on body
+  document.body.style.overflow = '';
+}
+
+// Close lightbox when clicking outside the image
+document.getElementById('photo-lightbox').addEventListener('click', function(event) {
+  if (event.target === this) {
+    closeLightbox();
+  }
+});
+
+// Close lightbox with escape key
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape' && document.getElementById('photo-lightbox').classList.contains('active')) {
+    closeLightbox();
+  }
+});
+</script>

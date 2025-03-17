@@ -1,0 +1,5 @@
+{% if include.path %}
+  {% include responsive-image.html path=include.path alt=include.alt class=include.class %}
+{% else %}
+  {% include responsive-image.html path="/assets/images/blog/default-image.png" alt=include.alt class=include.class %}
+{% endif %}
