@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Movie Review: They Cloned Tyrone (2023)"
-date: 2023-09-19
+date: "2023-09-19"
 categories: [movies]
 tags: [movies, reviews]
 rating: 9

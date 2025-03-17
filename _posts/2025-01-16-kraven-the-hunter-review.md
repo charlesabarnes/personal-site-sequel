@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Movie Review: Kraven the Hunter (2024)"
-date: 2025-01-16
+date: "2025-01-16"
 categories: [movies]
 tags: [movies, reviews]
 rating: 4

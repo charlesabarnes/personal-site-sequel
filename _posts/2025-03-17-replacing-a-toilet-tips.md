@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Replacing a Toilet: Tips for a Smooth DIY Project"
-date: 2024-03-17
+date: "2025-03-17"
 categories: [Home Improvement, Thoughts]
 tags: [home-improvement, thoughts]
 ---

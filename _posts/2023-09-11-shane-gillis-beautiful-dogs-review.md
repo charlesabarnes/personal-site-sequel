@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Movie Review: Shane Gillis: Beautiful Dogs (2023)"
-date: 2023-09-11
+date: "2023-09-11"
 categories: [movies]
 tags: [movies, reviews]
 rating: 9

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Movie Review: Glass Onion (2022)"
-date: 2023-07-31
+date: "2023-07-31"
 categories: [movies]
 tags: [movies, reviews]
 rating: 6

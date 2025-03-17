@@ -529,6 +529,8 @@ def create_post_content(movie):
     """Create Jekyll front matter and content from movie data"""
     # Use the review date from Plex or today's date if not available
     post_date = movie.get('date', datetime.datetime.now().strftime('%Y-%m-%d'))
+    # Ensure date is a string
+    post_date = f'"{post_date}"'
     
     # Create a title for the post
     post_title = f"Movie Review: {movie['title']} ({movie['year']})"

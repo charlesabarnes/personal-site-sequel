@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Movie Review: Saving Private Ryan (1998)"
-date: 2023-07-23
+date: "2023-07-23"
 categories: [movies]
 tags: [movies, reviews]
 rating: 10

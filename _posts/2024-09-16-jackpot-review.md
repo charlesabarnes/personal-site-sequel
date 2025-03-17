@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Movie Review: Jackpot! (2024)"
-date: 2024-09-16
+date: "2024-09-16"
 categories: [movies]
 tags: [movies, reviews]
 rating: 2

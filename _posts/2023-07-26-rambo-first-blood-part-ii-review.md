@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Movie Review: Rambo: First Blood Part II (1985)"
-date: 2023-07-26
+date: "2023-07-26"
 categories: [movies]
 tags: [movies, reviews]
 rating: 5

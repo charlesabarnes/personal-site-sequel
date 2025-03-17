@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Movie Review: Blade Runner 2049 (2017)"
-date: 2023-08-08
+date: "2023-08-08"
 categories: [movies]
 tags: [movies, reviews]
 rating: 10

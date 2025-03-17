@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Movie Review: American Hustle (2013)"
-date: 2023-09-25
+date: "2023-09-25"
 categories: [movies]
 tags: [movies, reviews]
 rating: 7

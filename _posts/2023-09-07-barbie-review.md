@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Movie Review: Barbie (2023)"
-date: 2023-09-07
+date: "2023-09-07"
 categories: [movies]
 tags: [movies, reviews]
 rating: 9

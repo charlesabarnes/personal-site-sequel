@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Movie Review: Icarus (2017)"
-date: 2024-09-16
+date: "2024-09-16"
 categories: [movies]
 tags: [movies, reviews]
 rating: 10

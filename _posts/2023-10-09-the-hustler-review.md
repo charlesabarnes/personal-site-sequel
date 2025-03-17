@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Movie Review: The Hustler (1961)"
-date: 2023-10-09
+date: "2023-10-09"
 categories: [movies]
 tags: [movies, reviews]
 rating: 10

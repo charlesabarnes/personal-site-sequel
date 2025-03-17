@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Movie Review: The Gentlemen (2020)"
-date: 2023-09-24
+date: "2023-09-24"
 categories: [movies]
 tags: [movies, reviews]
 rating: 9

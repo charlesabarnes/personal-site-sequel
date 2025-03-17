@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Movie Review: Only You (1994)"
-date: 2024-09-16
+date: "2024-09-16"
 categories: [movies]
 tags: [movies, reviews]
 rating: 4

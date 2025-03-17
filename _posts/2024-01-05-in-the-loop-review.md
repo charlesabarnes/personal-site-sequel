@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Movie Review: In the Loop (2009)"
-date: 2024-01-05
+date: "2024-01-05"
 categories: [movies]
 tags: [movies, reviews]
 rating: 10

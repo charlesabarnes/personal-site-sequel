@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Movie Review: Argylle (2024)"
-date: 2024-04-02
+date: "2024-04-02"
 categories: [movies]
 tags: [movies, reviews]
 rating: 3

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Movie Review: The Aviator (2004)"
-date: 2024-04-11
+date: "2024-04-11"
 categories: [movies]
 tags: [movies, reviews]
 rating: 9

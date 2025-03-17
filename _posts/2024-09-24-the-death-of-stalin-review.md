@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Movie Review: The Death of Stalin (2017)"
-date: 2024-09-24
+date: "2024-09-24"
 categories: [movies]
 tags: [movies, reviews]
 rating: 10

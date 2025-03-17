@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Movie Review: Carpet Cowboys (2023)"
-date: 2024-09-16
+date: "2024-09-16"
 categories: [movies]
 tags: [movies, reviews]
 rating: 8

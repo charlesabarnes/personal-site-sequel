@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Movie Review: Her (2013)"
-date: 2024-10-29
+date: "2024-10-29"
 categories: [movies]
 tags: [movies, reviews]
 rating: 10

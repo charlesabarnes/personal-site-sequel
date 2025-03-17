@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Movie Review: Transformers One (2024)"
-date: 2024-10-28
+date: "2024-10-28"
 categories: [movies]
 tags: [movies, reviews]
 rating: 8

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Movie Review: Uncut Gems (2019)"
-date: 2024-09-09
+date: "2024-09-09"
 categories: [movies]
 tags: [movies, reviews]
 rating: 10

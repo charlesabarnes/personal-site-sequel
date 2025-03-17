@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Movie Review: The Color of Money (1986)"
-date: 2023-10-11
+date: "2023-10-11"
 categories: [movies]
 tags: [movies, reviews]
 rating: 8

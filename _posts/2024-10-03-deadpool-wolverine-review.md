@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Movie Review: Deadpool & Wolverine (2024)"
-date: 2024-10-03
+date: "2024-10-03"
 categories: [movies]
 tags: [movies, reviews]
 rating: 9

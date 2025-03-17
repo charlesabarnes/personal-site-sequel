@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Movie Review: Ricky Stanicky (2024)"
-date: 2024-10-21
+date: "2024-10-21"
 categories: [movies]
 tags: [movies, reviews]
 rating: 8

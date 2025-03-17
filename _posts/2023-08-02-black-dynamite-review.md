@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Movie Review: Black Dynamite (2009)"
-date: 2023-08-02
+date: "2023-08-02"
 categories: [movies]
 tags: [movies, reviews]
 rating: 10

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Movie Review: Madame Web (2024)"
-date: 2024-04-04
+date: "2024-04-04"
 categories: [movies]
 tags: [movies, reviews]
 rating: 1

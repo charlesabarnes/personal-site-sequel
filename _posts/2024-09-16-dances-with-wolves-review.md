@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Movie Review: Dances with Wolves (1990)"
-date: 2024-09-16
+date: "2024-09-16"
 categories: [movies]
 tags: [movies, reviews]
 rating: 8

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Movie Review: Twisters (2024)"
-date: 2024-09-09
+date: "2024-09-09"
 categories: [movies]
 tags: [movies, reviews]
 rating: 7
