@@ -1,6 +1,22 @@
 <meta charset="utf-8">
 <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Favicon and App Icons -->
+<link rel="apple-touch-icon" href="{{ '/apple-touch-icon.png' | relative_url }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ '/favicon-32x32.png' | relative_url }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ '/favicon-16x16.png' | relative_url }}">
+<link rel="manifest" href="{{ '/site.webmanifest' | relative_url }}">
+<link rel="mask-icon" href="{{ '/safari-pinned-tab.svg' | relative_url }}" color="#333333">
+<link rel="shortcut icon" href="{{ '/favicon.ico' | relative_url }}">
+<meta name="msapplication-TileColor" content="#333333">
+<meta name="msapplication-config" content="{{ '/browserconfig.xml' | relative_url }}">
+<meta name="theme-color" content="#FFFAF3" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#333333" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<!-- Stylesheets -->
 <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
 <link href="{{ '/assets/fontawesome/css/fontawesome.min.css' | relative_url }}" rel="stylesheet">
 <link href="{{ '/assets/fontawesome/css/brands.min.css' | relative_url }}" rel="stylesheet">
@@ -11,22 +27,93 @@
 <!-- Primary Meta Tags -->
 <meta name="title" content="{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}">
 <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% elsif page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-<meta name="author" content="{% if page.author %}{{ page.author }}{% else %}Charles Barnes{% endif %}">
+<meta name="author" content="{% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}">
 <meta name="keywords" content="{% if page.tags %}{{ page.tags | join: ',' }}{% else %}HTML,CSS,JavaScript,Charles,Barnes,web,developer,website,development,Missouri,Charles Barnes,Saint Louis Developer,St louis{% endif %}">
+
+<!-- Schema.org markup for Google -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  {% if page.layout == "post" %}
+  "@type": "BlogPosting",
+  "headline": "{{ page.title }}",
+  "image": "{% if page.image %}{{ page.image | absolute_url }}{% else %}{{ '/assets/images/blog/default-image.png' | absolute_url }}{% endif %}",
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "dateModified": "{{ page.date | date_to_xmlschema }}",
+  {% if page.description %}
+  "description": "{{ page.description }}",
+  {% elsif page.excerpt %}
+  "description": "{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}",
+  {% else %}
+  "description": "{{ site.description }}",
+  {% endif %}
+  "author": {
+    "@type": "Person",
+    "name": "{% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}"
+  },
+  {% if page.categories contains 'movies' %}
+  "review": {
+    "@type": "Review",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "{{ page.rating | default: 5 }}",
+      "bestRating": "10"
+    },
+    "itemReviewed": {
+      "@type": "Movie",
+      "name": "{% if page.movie_title %}{{ page.movie_title }}{% else %}{{ page.title | remove: 'Movie Review: ' | remove: 'Review: ' }}{% endif %}",
+      {% if page.release_year %}
+      "dateCreated": "{{ page.release_year }}-01-01",
+      {% endif %}
+      {% if page.director %}
+      "director": "{{ page.director }}",
+      {% endif %}
+      {% if page.content_rating %}
+      "contentRating": "{{ page.content_rating }}",
+      {% endif %}
+      {% if page.genres %}
+      "genre": [{% for genre in page.genres %}"{{ genre }}"{% unless forloop.last %}, {% endunless %}{% endfor %}]
+      {% endif %}
+    }
+  },
+  {% endif %}
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ site.title }}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ site.logo | absolute_url }}"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ page.url | absolute_url }}"
+  }
+  {% else %}
+  "@type": "WebSite",
+  "name": "{{ site.title }}",
+  "url": "{{ site.url }}",
+  "description": "{{ site.description }}"
+  {% endif %}
+}
+</script>
+
+<!-- Jekyll SEO tag to populate meta tags -->
+{% seo title=false %}
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
 <meta property="og:url" content="{{ page.url | absolute_url }}">
 <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
 <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% elsif page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-<meta property="og:image" content="{% if page.image %}{{ page.image }}{% else %}{{ '/assets/images/default-share.jpg' | absolute_url }}{% endif %}">
+<meta property="og:image" content="{% if page.image %}{{ page.image | absolute_url }}{% else %}{{ '/assets/images/blog/default-image.png' | absolute_url }}{% endif %}">
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:url" content="{{ page.url | absolute_url }}">
 <meta property="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
 <meta property="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% elsif page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-<meta property="twitter:image" content="{% if page.image %}{{ page.image }}{% else %}{{ '/assets/images/default-share.jpg' | absolute_url }}{% endif %}">
+<meta property="twitter:image" content="{% if page.image %}{{ page.image | absolute_url }}{% else %}{{ '/assets/images/blog/default-image.png' | absolute_url }}{% endif %}">
 
 <!-- Canonical URL -->
 <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
@@ -34,7 +121,6 @@
 <!-- RSS feed -->
 <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | absolute_url }}">
 
-{% seo %}
 
 <!-- Glad you are taking a look at the HTML. 
   Built by Charles Anthony Barnes. 

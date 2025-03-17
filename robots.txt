@@ -1,6 +1,12 @@
-# Allow all user agents
+# robots.txt for https://chkb.net
+
 User-agent: *
 Allow: /
 
 # Define sitemap location
 Sitemap: https://chkb.net/sitemap.xml
+
+# Don't index certain paths
+Disallow: /assets/js/
+Disallow: /assets/css/
+Disallow: /assets/fontawesome/
