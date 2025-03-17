@@ -22,9 +22,9 @@ title: Charles Barnes - Frontend Developer
         <div class="latest-post-meta">
           {{ latest_post.date | date: "%B %d, %Y" }}
           {% if latest_post.categories.size > 0 %}
-            <span class="post-categories">
+            <span class="project-tags">
               {% for category in latest_post.categories %}
-                <span class="post-category">{{ category }}</span>
+                <span class="project-tag">{{ category }}</span>
               {% endfor %}
             </span>
           {% endif %}

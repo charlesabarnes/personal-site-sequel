@@ -19,16 +19,16 @@ layout: default
         <i class="fa-regular fa-clock"></i> {{ readingtime }} min read
       </span>
       {% if page.categories.size > 0 %}
-      <span class="post-categories">
+      <span class="project-tags">
         {% for category in page.categories %}
-        <span class="post-category">{{ category }}</span>
+        <span class="project-tag">{{ category }}</span>
         {% endfor %}
       </span>
       {% endif %}
     </div>
   </div>
 
-  {% if page.image %}
+  {% if page.image and page.categories contains 'movies' == false %}
   <div class="post-featured-image">
     <img src="{{ page.image }}" alt="{{ page.title }}">
   </div>
@@ -39,9 +39,9 @@ layout: default
   </div>
 
   {% if page.tags.size > 0 %}
-  <div class="post-tags">
+  <div class="project-tags">
     {% for tag in page.tags %}
-    <a href="{{ '/tag/' | append: tag | relative_url }}" class="post-tag">{{ tag }}</a>
+    <a href="{{ '/tag/' | append: tag | relative_url }}" class="project-tag">{{ tag }}</a>
     {% endfor %}
   </div>
   {% endif %}
