@@ -16,11 +16,13 @@ title: Charles Barnes - Frontend Developer
   {% if latest_post %}
     <div class="latest-post-container">
       <div class="latest-post-image">
-        {% if latest_post.image %}
-          {% include picture.html path=latest_post.image alt=latest_post.title %}
-        {% else %}
-          {% include picture.html path="/assets/images/blog/default-image.png" alt=latest_post.title %}
-        {% endif %}
+        <div style="height: 300px; position: relative; overflow: hidden; background-color: var(--icon-background);">
+          {% if latest_post.image %}
+            {% include picture.html path=latest_post.image alt=latest_post.title class="cover-image" %}
+          {% else %}
+            {% include picture.html path="/assets/images/blog/default-image.png" alt=latest_post.title class="cover-image" %}
+          {% endif %}
+        </div>
       </div>
       <div class="latest-post-content">
         <h3 class="latest-post-title">
