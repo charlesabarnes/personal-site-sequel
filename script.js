@@ -32,13 +32,8 @@ const getDefaultTheme = () => {
   if (theme) {
     setTheme(theme);
   } else {
-    // get user's theme
-    const userPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    if (userPrefersDark) {
-      setTheme('dark');
-    } else {
-      setTheme('light');
-    }
+    // Always default to light theme
+    setTheme('light');
   }
 }
 

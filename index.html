@@ -2,42 +2,52 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>Charles Barnes - Frontend Developer - Charles Barnes - Frontend Developer</title>
+<title>Charles Barnes - Frontend Developer - Charles Barnes</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Favicon and App Icons -->
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#333333">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="msapplication-TileColor" content="#333333">
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="theme-color" content="#FFFAF3" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#333333" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<!-- Stylesheets -->
 <link rel="stylesheet" href="/assets/css/styles.css">
 <link href="/assets/fontawesome/css/fontawesome.min.css" rel="stylesheet">
 <link href="/assets/fontawesome/css/brands.min.css" rel="stylesheet">
 <link href="/assets/fontawesome/css/regular.min.css" rel="stylesheet">
+<link href="/assets/fontawesome/css/solid.min.css" rel="stylesheet">
 <script src="/assets/js/script.js"></script>
 
 <!-- Primary Meta Tags -->
-<meta name="title" content="Charles Barnes - Frontend Developer - Charles Barnes - Frontend Developer">
+<meta name="title" content="Charles Barnes - Frontend Developer - Charles Barnes">
 <meta name="description" content="Charles Barnes - Developer in St. Louis, Mo | charles@charlesabarnes.com">
 <meta name="author" content="Charles Barnes">
 <meta name="keywords" content="HTML,CSS,JavaScript,Charles,Barnes,web,developer,website,development,Missouri,Charles Barnes,Saint Louis Developer,St louis">
 
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://chkb.net/">
-<meta property="og:title" content="Charles Barnes - Frontend Developer">
-<meta property="og:description" content="Charles Barnes - Developer in St. Louis, Mo | charles@charlesabarnes.com">
-<meta property="og:image" content="https://chkb.net/assets/images/default-share.jpg">
+<!-- Schema.org markup for Google -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  
+  "@type": "WebSite",
+  "name": "Charles Barnes",
+  "url": "https://chkb.net",
+  "description": "Charles Barnes - Developer in St. Louis, Mo | charles@charlesabarnes.com"
+  
+}
+</script>
 
-<!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:url" content="https://chkb.net/">
-<meta property="twitter:title" content="Charles Barnes - Frontend Developer">
-<meta property="twitter:description" content="Charles Barnes - Developer in St. Louis, Mo | charles@charlesabarnes.com">
-<meta property="twitter:image" content="https://chkb.net/assets/images/default-share.jpg">
-
-<!-- Canonical URL -->
-<link rel="canonical" href="https://chkb.net/">
-
-<!-- RSS feed -->
-<link rel="alternate" type="application/rss+xml" title="Charles Barnes - Frontend Developer" href="https://chkb.net/feed.xml">
-
+<!-- Jekyll SEO tag to populate meta tags -->
 <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Charles Barnes - Frontend Developer | Charles Barnes - Developer in St. Louis, Mo charles@charlesabarnes.com</title>
 <meta name="generator" content="Jekyll v4.2.2" />
 <meta property="og:title" content="Charles Barnes - Frontend Developer" />
 <meta name="author" content="Charles Barnes" />
@@ -46,13 +56,34 @@
 <meta property="og:description" content="Charles Barnes - Developer in St. Louis, Mo charles@charlesabarnes.com" />
 <link rel="canonical" href="https://chkb.net/" />
 <meta property="og:url" content="https://chkb.net/" />
-<meta property="og:site_name" content="Charles Barnes - Frontend Developer" />
+<meta property="og:site_name" content="Charles Barnes" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Charles Barnes - Frontend Developer" />
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"Charles Barnes"},"description":"Charles Barnes - Developer in St. Louis, Mo charles@charlesabarnes.com","headline":"Charles Barnes - Frontend Developer","name":"Charles Barnes","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://chkb.net/assets/images/logo.png"},"name":"Charles Barnes"},"sameAs":["https://github.com/charlesabarnes","https://www.linkedin.com/in/charlesanthonybarnes"],"url":"https://chkb.net/"}</script>
 <!-- End Jekyll SEO tag -->
+
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://chkb.net/">
+<meta property="og:title" content="Charles Barnes - Frontend Developer">
+<meta property="og:description" content="Charles Barnes - Developer in St. Louis, Mo | charles@charlesabarnes.com">
+<meta property="og:image" content="https://chkb.net/assets/images/blog/default-image.png">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://chkb.net/">
+<meta property="twitter:title" content="Charles Barnes - Frontend Developer">
+<meta property="twitter:description" content="Charles Barnes - Developer in St. Louis, Mo | charles@charlesabarnes.com">
+<meta property="twitter:image" content="https://chkb.net/assets/images/blog/default-image.png">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://chkb.net/">
+
+<!-- RSS feed -->
+<link rel="alternate" type="application/rss+xml" title="Charles Barnes" href="https://chkb.net/feed.xml">
 
 
 <!-- Glad you are taking a look at the HTML. 
@@ -72,7 +103,7 @@
       <button class="menu-button theme-toggle-button" onclick="toggleTheme()">
         <i class="fa-regular fa-sun"></i>
       </button> 
-      <a href="https://resume.chkb.net/chkb/charles-barnes-frontend-resume-2024" class="menu-item no-decoration" target="_blank">Resume</a>
+      <a href="/resume/" class="menu-item no-decoration">Resume</a>
       <a href="/portfolio/" class="menu-item no-decoration">Portfolio</a>
     </div>
     <a class="no-decoration" href="/">
@@ -91,17 +122,58 @@
   <div class="subtitle">Software Engineer x UX Designer</div>
 </div>
       
-      <div class="latest-post-preview">
+      <div class="latest-post-preview" style="padding: 0 10px; box-sizing: border-box;">
   <h2 class="latest-post-heading">Latest from the Blog</h2>
   
   
-    <p>No blog posts available yet. Check back soon!</p>
+  
+  
+    <div class="latest-post-container">
+      <div class="latest-post-image">
+        <div style="height: 300px; position: relative; overflow: hidden; background-color: var(--icon-background);">
+          
+            
+  
+
+
+
+
+
+  <img src="/assets/images/blog/thumbnails/default-image.png" alt="Replacing a Toilet: Tips for a Smooth DIY Project" class="cover-image" loading="lazy" style="max-width: 100%; height: auto;" onerror="this.onerror=null; this.src='/assets/images/blog/default-image.png';">
+
+
+          
+        </div>
+      </div>
+      <div class="latest-post-content">
+        <h3 class="latest-post-title">
+          <a href="/home%20improvement/thoughts/2025/03/17/replacing-a-toilet-tips.html">Replacing a Toilet: Tips for a Smooth DIY Project</a>
+        </h3>
+        <div class="latest-post-meta">
+          March 17, 2025
+          
+            <span class="project-tags">
+              
+                <span class="project-tag">Home Improvement</span>
+              
+                <span class="project-tag">Thoughts</span>
+              
+            </span>
+          
+        </div>
+        <div class="latest-post-excerpt">
+          Replacing a Toilet: Tips for a Smooth DIY Project
+
+        </div>
+        <a href="/home%20improvement/thoughts/2025/03/17/replacing-a-toilet-tips.html" class="read-more-button">Read More</a>
+      </div>
+    </div>
   
 </div>
 
 <div class="icons-container">
   <h2 class="icons-title">Explore My World</h2>
-  <div class="icons">
+  <div class="icons" style="padding: 0 10px;">
     <!-- Technology/Skills -->
     <a href="/tag/react/" class="icon-link">
       <div class="icon">
@@ -132,14 +204,14 @@
     </a>
     
     <!-- Hobbies/Interests -->
-    <a href="/photography/nature" class="icon-link">
+    <a href="/photography" class="icon-link">
       <div class="icon">
         <i class="fa-regular fa-camera-retro"></i>
       </div>
       <span class="icon-label">Photography</span>
     </a>
     
-    <a href="/photography/dog" class="icon-link">
+    <a href="/photography/cobol" class="icon-link">
       <div class="icon">
         <i class="fa-regular fa-dog"></i>
       </div>
@@ -182,7 +254,7 @@
       <span class="icon-label">Coding</span>
     </a>
     
-    <a href="" class="icon-link featured">
+    <a href="/home%20improvement/thoughts/2025/03/17/replacing-a-toilet-tips.html" class="icon-link featured">
       <div class="icon">
         <i class="fa-regular fa-lightbulb-cfl-on"></i>
       </div>
@@ -206,7 +278,7 @@
     <div class="menu-popup">
   <div class="menu-container">
     <div class="menu-item">
-      <a href="https://resume.chkb.net/chkb/charles-barnes-frontend-resume-2024" class="menu-item no-decoration" target="_blank">Resume</a>
+      <a href="/resume/" class="menu-item no-decoration">Resume</a>
     </div>
     <div class="menu-item">
       <a href="/portfolio/" class="menu-item no-decoration">Portfolio</a>
@@ -229,6 +301,7 @@
       <a href="https://www.linkedin.com/in/charlesabarnes/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
       <a href="mailto:me@chkb.net" aria-label="Email"><i class="far fa-envelope"></i></a>
       <a href="https://github.com/charlesabarnes/" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="/feed.xml" target="_blank" aria-label="RSS Feed"><i class="fa-solid fa-square-rss"></i></a>
     </div>
     <div class="copyright">
       &copy; 2025 Charles Barnes

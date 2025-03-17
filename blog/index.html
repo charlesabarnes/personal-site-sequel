@@ -2,42 +2,52 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-<title>Charles Barnes - Blog - Charles Barnes - Frontend Developer</title>
+<title>Charles Barnes - Blog - Charles Barnes</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Favicon and App Icons -->
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#333333">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="msapplication-TileColor" content="#333333">
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="theme-color" content="#FFFAF3" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#333333" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<!-- Stylesheets -->
 <link rel="stylesheet" href="/assets/css/styles.css">
 <link href="/assets/fontawesome/css/fontawesome.min.css" rel="stylesheet">
 <link href="/assets/fontawesome/css/brands.min.css" rel="stylesheet">
 <link href="/assets/fontawesome/css/regular.min.css" rel="stylesheet">
+<link href="/assets/fontawesome/css/solid.min.css" rel="stylesheet">
 <script src="/assets/js/script.js"></script>
 
 <!-- Primary Meta Tags -->
-<meta name="title" content="Charles Barnes - Blog - Charles Barnes - Frontend Developer">
+<meta name="title" content="Charles Barnes - Blog - Charles Barnes">
 <meta name="description" content="Charles Barnes - Developer in St. Louis, Mo | charles@charlesabarnes.com">
 <meta name="author" content="Charles Barnes">
 <meta name="keywords" content="HTML,CSS,JavaScript,Charles,Barnes,web,developer,website,development,Missouri,Charles Barnes,Saint Louis Developer,St louis">
 
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://chkb.net/blog/">
-<meta property="og:title" content="Charles Barnes - Blog">
-<meta property="og:description" content="Charles Barnes - Developer in St. Louis, Mo | charles@charlesabarnes.com">
-<meta property="og:image" content="https://chkb.net/assets/images/default-share.jpg">
+<!-- Schema.org markup for Google -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  
+  "@type": "WebSite",
+  "name": "Charles Barnes",
+  "url": "https://chkb.net",
+  "description": "Charles Barnes - Developer in St. Louis, Mo | charles@charlesabarnes.com"
+  
+}
+</script>
 
-<!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:url" content="https://chkb.net/blog/">
-<meta property="twitter:title" content="Charles Barnes - Blog">
-<meta property="twitter:description" content="Charles Barnes - Developer in St. Louis, Mo | charles@charlesabarnes.com">
-<meta property="twitter:image" content="https://chkb.net/assets/images/default-share.jpg">
-
-<!-- Canonical URL -->
-<link rel="canonical" href="https://chkb.net/blog/">
-
-<!-- RSS feed -->
-<link rel="alternate" type="application/rss+xml" title="Charles Barnes - Frontend Developer" href="https://chkb.net/feed.xml">
-
+<!-- Jekyll SEO tag to populate meta tags -->
 <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Charles Barnes - Blog | Charles Barnes - Frontend Developer</title>
 <meta name="generator" content="Jekyll v4.2.2" />
 <meta property="og:title" content="Charles Barnes - Blog" />
 <meta name="author" content="Charles Barnes" />
@@ -46,13 +56,34 @@
 <meta property="og:description" content="Charles Barnes - Developer in St. Louis, Mo charles@charlesabarnes.com" />
 <link rel="canonical" href="https://chkb.net/blog/" />
 <meta property="og:url" content="https://chkb.net/blog/" />
-<meta property="og:site_name" content="Charles Barnes - Frontend Developer" />
+<meta property="og:site_name" content="Charles Barnes" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Charles Barnes - Blog" />
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Charles Barnes"},"description":"Charles Barnes - Developer in St. Louis, Mo charles@charlesabarnes.com","headline":"Charles Barnes - Blog","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://chkb.net/assets/images/logo.png"},"name":"Charles Barnes"},"url":"https://chkb.net/blog/"}</script>
 <!-- End Jekyll SEO tag -->
+
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://chkb.net/blog/">
+<meta property="og:title" content="Charles Barnes - Blog">
+<meta property="og:description" content="Charles Barnes - Developer in St. Louis, Mo | charles@charlesabarnes.com">
+<meta property="og:image" content="https://chkb.net/assets/images/blog/default-image.png">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://chkb.net/blog/">
+<meta property="twitter:title" content="Charles Barnes - Blog">
+<meta property="twitter:description" content="Charles Barnes - Developer in St. Louis, Mo | charles@charlesabarnes.com">
+<meta property="twitter:image" content="https://chkb.net/assets/images/blog/default-image.png">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://chkb.net/blog/">
+
+<!-- RSS feed -->
+<link rel="alternate" type="application/rss+xml" title="Charles Barnes" href="https://chkb.net/feed.xml">
 
 
 <!-- Glad you are taking a look at the HTML. 
@@ -72,7 +103,7 @@
       <button class="menu-button theme-toggle-button" onclick="toggleTheme()">
         <i class="fa-regular fa-sun"></i>
       </button> 
-      <a href="https://resume.chkb.net/chkb/charles-barnes-frontend-resume-2024" class="menu-item no-decoration" target="_blank">Resume</a>
+      <a href="/resume/" class="menu-item no-decoration">Resume</a>
       <a href="/portfolio/" class="menu-item no-decoration">Portfolio</a>
     </div>
     <a class="no-decoration" href="/">
@@ -95,7 +126,1531 @@
   <h1>Blog</h1>
   
   
-    <p>No blog posts yet. Check back soon!</p>
+    <div class="posts-grid">
+      
+      
+      
+      
+        <div class="blog-post-item">
+          <div class="blog-post-image-container">
+            
+              
+  
+
+
+
+
+
+  <img src="/assets/images/blog/thumbnails/default-image.png" alt="Replacing a Toilet: Tips for a Smooth DIY Project" class="blog-post-image" loading="lazy" style="max-width: 100%; height: auto;" onerror="this.onerror=null; this.src='/assets/images/blog/default-image.png';">
+
+
+            
+          </div>
+          
+          <div class="blog-post-content">
+            <h2 class="blog-post-title">
+              <a href="/home%20improvement/thoughts/2025/03/17/replacing-a-toilet-tips.html">Replacing a Toilet: Tips for a Smooth DIY Project</a>
+            </h2>
+            
+            <div class="blog-post-meta">
+              March 17, 2025
+              
+              <span class="post-categories">
+                
+                <span class="post-category">Home Improvement</span>
+                
+                <span class="post-category">Thoughts</span>
+                
+              </span>
+              
+            </div>
+            
+            <div class="blog-post-excerpt">
+              Replacing a Toilet: Tips for a Smooth DIY Project
+
+            </div>
+            
+            <a href="/home%20improvement/thoughts/2025/03/17/replacing-a-toilet-tips.html" class="blog-post-read-more">Read More</a>
+          </div>
+        </div>
+      
+        <div class="blog-post-item">
+          <div class="blog-post-image-container">
+            
+              
+  
+
+
+
+
+
+  <img src="https://metadata-static.plex.tv/3/gracenote/thumbnails/33fe82fe186055019ef22e6333d78074.jpg" alt="Movie Review: Kraven the Hunter (2024)" class="blog-post-image" loading="lazy" style="max-width: 100%; height: auto;" onerror="this.onerror=null; this.src='https://metadata-static.plex.tv/3/gracenote/33fe82fe186055019ef22e6333d78074.jpg';">
+
+
+            
+          </div>
+          
+          <div class="blog-post-content">
+            <h2 class="blog-post-title">
+              <a href="/movies/2025/01/16/kraven-the-hunter-review.html">Movie Review: Kraven the Hunter (2024)</a>
+            </h2>
+            
+            <div class="blog-post-meta">
+              January 16, 2025
+              
+              <span class="post-categories">
+                
+                <span class="post-category">movies</span>
+                
+              </span>
+              
+            </div>
+            
+            <div class="blog-post-excerpt">
+              Movie Review: Kraven the Hunter (2024)
+
+            </div>
+            
+            <a href="/movies/2025/01/16/kraven-the-hunter-review.html" class="blog-post-read-more">Read More</a>
+          </div>
+        </div>
+      
+        <div class="blog-post-item">
+          <div class="blog-post-image-container">
+            
+              
+  
+
+
+
+
+
+  <img src="https://metadata-static.plex.tv/e/gracenote/thumbnails/ee551910825c1277791da38d68e746e3.jpg" alt="Movie Review: Her (2013)" class="blog-post-image" loading="lazy" style="max-width: 100%; height: auto;" onerror="this.onerror=null; this.src='https://metadata-static.plex.tv/e/gracenote/ee551910825c1277791da38d68e746e3.jpg';">
+
+
+            
+          </div>
+          
+          <div class="blog-post-content">
+            <h2 class="blog-post-title">
+              <a href="/movies/2024/10/29/her-review.html">Movie Review: Her (2013)</a>
+            </h2>
+            
+            <div class="blog-post-meta">
+              October 29, 2024
+              
+              <span class="post-categories">
+                
+                <span class="post-category">movies</span>
+                
+              </span>
+              
+            </div>
+            
+            <div class="blog-post-excerpt">
+              Movie Review: Her (2013)
+
+            </div>
+            
+            <a href="/movies/2024/10/29/her-review.html" class="blog-post-read-more">Read More</a>
+          </div>
+        </div>
+      
+        <div class="blog-post-item">
+          <div class="blog-post-image-container">
+            
+              
+  
+
+
+
+
+
+  <img src="https://metadata-static.plex.tv/3/gracenote/thumbnails/3cda03db420a1ebc6044cada07abc0f2.jpg" alt="Movie Review: Transformers One (2024)" class="blog-post-image" loading="lazy" style="max-width: 100%; height: auto;" onerror="this.onerror=null; this.src='https://metadata-static.plex.tv/3/gracenote/3cda03db420a1ebc6044cada07abc0f2.jpg';">
+
+
+            
+          </div>
+          
+          <div class="blog-post-content">
+            <h2 class="blog-post-title">
+              <a href="/movies/2024/10/28/transformers-one-review.html">Movie Review: Transformers One (2024)</a>
+            </h2>
+            
+            <div class="blog-post-meta">
+              October 28, 2024
+              
+              <span class="post-categories">
+                
+                <span class="post-category">movies</span>
+                
+              </span>
+              
+            </div>
+            
+            <div class="blog-post-excerpt">
+              Movie Review: Transformers One (2024)
+
+            </div>
+            
+            <a href="/movies/2024/10/28/transformers-one-review.html" class="blog-post-read-more">Read More</a>
+          </div>
+        </div>
+      
+        <div class="blog-post-item">
+          <div class="blog-post-image-container">
+            
+              
+  
+
+
+
+
+
+  <img src="https://metadata-static.plex.tv/2/gracenote/thumbnails/21cef5dda5b4ddd617ec786b3f20465e.jpg" alt="Movie Review: Ricky Stanicky (2024)" class="blog-post-image" loading="lazy" style="max-width: 100%; height: auto;" onerror="this.onerror=null; this.src='https://metadata-static.plex.tv/2/gracenote/21cef5dda5b4ddd617ec786b3f20465e.jpg';">
+
+
+            
+          </div>
+          
+          <div class="blog-post-content">
+            <h2 class="blog-post-title">
+              <a href="/movies/2024/10/21/ricky-stanicky-review.html">Movie Review: Ricky Stanicky (2024)</a>
+            </h2>
+            
+            <div class="blog-post-meta">
+              October 21, 2024
+              
+              <span class="post-categories">
+                
+                <span class="post-category">movies</span>
+                
+              </span>
+              
+            </div>
+            
+            <div class="blog-post-excerpt">
+              Movie Review: Ricky Stanicky (2024)
+
+            </div>
+            
+            <a href="/movies/2024/10/21/ricky-stanicky-review.html" class="blog-post-read-more">Read More</a>
+          </div>
+        </div>
+      
+        <div class="blog-post-item">
+          <div class="blog-post-image-container">
+            
+              
+  
+
+
+
+
+
+  <img src="https://metadata-static.plex.tv/3/gracenote/thumbnails/302e4693da7a38903af5580880d43433.jpg" alt="Movie Review: Deadpool & Wolverine (2024)" class="blog-post-image" loading="lazy" style="max-width: 100%; height: auto;" onerror="this.onerror=null; this.src='https://metadata-static.plex.tv/3/gracenote/302e4693da7a38903af5580880d43433.jpg';">
+
+
+            
+          </div>
+          
+          <div class="blog-post-content">
+            <h2 class="blog-post-title">
+              <a href="/movies/2024/10/03/deadpool-wolverine-review.html">Movie Review: Deadpool & Wolverine (2024)</a>
+            </h2>
+            
+            <div class="blog-post-meta">
+              October 03, 2024
+              
+              <span class="post-categories">
+                
+                <span class="post-category">movies</span>
+                
+              </span>
+              
+            </div>
+            
+            <div class="blog-post-excerpt">
+              Movie Review: Deadpool &amp; Wolverine (2024)
+
+            </div>
+            
+            <a href="/movies/2024/10/03/deadpool-wolverine-review.html" class="blog-post-read-more">Read More</a>
+          </div>
+        </div>
+      
+        <div class="blog-post-item">
+          <div class="blog-post-image-container">
+            
+              
+  
+
+
+
+
+
+  <img src="https://metadata-static.plex.tv/5/gracenote/thumbnails/531435ca84053fb9cba65af244bf1327.jpg" alt="Movie Review: The Bikeriders (2024)" class="blog-post-image" loading="lazy" style="max-width: 100%; height: auto;" onerror="this.onerror=null; this.src='https://metadata-static.plex.tv/5/gracenote/531435ca84053fb9cba65af244bf1327.jpg';">
+
+
+            
+          </div>
+          
+          <div class="blog-post-content">
+            <h2 class="blog-post-title">
+              <a href="/movies/2024/09/24/the-bikeriders-review.html">Movie Review: The Bikeriders (2024)</a>
+            </h2>
+            
+            <div class="blog-post-meta">
+              September 24, 2024
+              
+              <span class="post-categories">
+                
+                <span class="post-category">movies</span>
+                
+              </span>
+              
+            </div>
+            
+            <div class="blog-post-excerpt">
+              Movie Review: The Bikeriders (2024)
+
+            </div>
+            
+            <a href="/movies/2024/09/24/the-bikeriders-review.html" class="blog-post-read-more">Read More</a>
+          </div>
+        </div>
+      
+        <div class="blog-post-item">
+          <div class="blog-post-image-container">
+            
+              
+  
+
+
+
+
+
+  <img src="https://metadata-static.plex.tv/4/gracenote/thumbnails/47f5b9a85a2805b191e7bebe2c64d48b.jpg" alt="Movie Review: The Death of Stalin (2017)" class="blog-post-image" loading="lazy" style="max-width: 100%; height: auto;" onerror="this.onerror=null; this.src='https://metadata-static.plex.tv/4/gracenote/47f5b9a85a2805b191e7bebe2c64d48b.jpg';">
+
+
+            
+          </div>
+          
+          <div class="blog-post-content">
+            <h2 class="blog-post-title">
+              <a href="/movies/2024/09/24/the-death-of-stalin-review.html">Movie Review: The Death of Stalin (2017)</a>
+            </h2>
+            
+            <div class="blog-post-meta">
+              September 24, 2024
+              
+              <span class="post-categories">
+                
+                <span class="post-category">movies</span>
+                
+              </span>
+              
+            </div>
+            
+            <div class="blog-post-excerpt">
+              Movie Review: The Death of Stalin (2017)
+
+            </div>
+            
+            <a href="/movies/2024/09/24/the-death-of-stalin-review.html" class="blog-post-read-more">Read More</a>
+          </div>
+        </div>
+      
+        <div class="blog-post-item">
+          <div class="blog-post-image-container">
+            
+              
+  
+
+
+
+
+
+  <img src="https://metadata-static.plex.tv/2/gracenote/thumbnails/2fdfb9a8281a6ae50f54b4956c518cc0.jpg" alt="Movie Review: Carpet Cowboys (2023)" class="blog-post-image" loading="lazy" style="max-width: 100%; height: auto;" onerror="this.onerror=null; this.src='https://metadata-static.plex.tv/2/gracenote/2fdfb9a8281a6ae50f54b4956c518cc0.jpg';">
+
+
+            
+          </div>
+          
+          <div class="blog-post-content">
+            <h2 class="blog-post-title">
+              <a href="/movies/2024/09/16/carpet-cowboys-review.html">Movie Review: Carpet Cowboys (2023)</a>
+            </h2>
+            
+            <div class="blog-post-meta">
+              September 16, 2024
+              
+              <span class="post-categories">
+                
+                <span class="post-category">movies</span>
+                
+              </span>
+              
+            </div>
+            
+            <div class="blog-post-excerpt">
+              Movie Review: Carpet Cowboys (2023)
+
+            </div>
+            
+            <a href="/movies/2024/09/16/carpet-cowboys-review.html" class="blog-post-read-more">Read More</a>
+          </div>
+        </div>
+      
+        <div class="blog-post-item">
+          <div class="blog-post-image-container">
+            
+              
+  
+
+
+
+
+
+  <img src="https://metadata-static.plex.tv/4/gracenote/thumbnails/4b572074c9866fe84d6d9eabc59a325d.jpg" alt="Movie Review: Civil War (2024)" class="blog-post-image" loading="lazy" style="max-width: 100%; height: auto;" onerror="this.onerror=null; this.src='https://metadata-static.plex.tv/4/gracenote/4b572074c9866fe84d6d9eabc59a325d.jpg';">
+
+
+            
+          </div>
+          
+          <div class="blog-post-content">
+            <h2 class="blog-post-title">
+              <a href="/movies/2024/09/16/civil-war-review.html">Movie Review: Civil War (2024)</a>
+            </h2>
+            
+            <div class="blog-post-meta">
+              September 16, 2024
+              
+              <span class="post-categories">
+                
+                <span class="post-category">movies</span>
+                
+              </span>
+              
+            </div>
+            
+            <div class="blog-post-excerpt">
+              Movie Review: Civil War (2024)
+
+            </div>
+            
+            <a href="/movies/2024/09/16/civil-war-review.html" class="blog-post-read-more">Read More</a>
+          </div>
+        </div>
+      
+        <div class="blog-post-item">
+          <div class="blog-post-image-container">
+            
+              
+  
+
+
+
+
+
+  <img src="https://metadata-static.plex.tv/d/gracenote/thumbnails/dbf71f2cf5982c3499cc6211ac00b8a0.jpg" alt="Movie Review: Dances with Wolves (1990)" class="blog-post-image" loading="lazy" style="max-width: 100%; height: auto;" onerror="this.onerror=null; this.src='https://metadata-static.plex.tv/d/gracenote/dbf71f2cf5982c3499cc6211ac00b8a0.jpg';">
+
+
+            
+          </div>
+          
+          <div class="blog-post-content">
+            <h2 class="blog-post-title">
+              <a href="/movies/2024/09/16/dances-with-wolves-review.html">Movie Review: Dances with Wolves (1990)</a>
+            </h2>
+            
+            <div class="blog-post-meta">
+              September 16, 2024
+              
+              <span class="post-categories">
+                
+                <span class="post-category">movies</span>
+                
+              </span>
+              
+            </div>
+            
+            <div class="blog-post-excerpt">
+              Movie Review: Dances with Wolves (1990)
+
+            </div>
+            
+            <a href="/movies/2024/09/16/dances-with-wolves-review.html" class="blog-post-read-more">Read More</a>
+          </div>
+        </div>
+      
+        <div class="blog-post-item">
+          <div class="blog-post-image-container">
+            
+              
+  
+
+
+
+
+
+  <img src="https://metadata-static.plex.tv/c/gracenote/thumbnails/cc9cda8c136c290cc881ea1737ef7e86.jpg" alt="Movie Review: Icarus (2017)" class="blog-post-image" loading="lazy" style="max-width: 100%; height: auto;" onerror="this.onerror=null; this.src='https://metadata-static.plex.tv/c/gracenote/cc9cda8c136c290cc881ea1737ef7e86.jpg';">
+
+
+            
+          </div>
+          
+          <div class="blog-post-content">
+            <h2 class="blog-post-title">
+              <a href="/movies/2024/09/16/icarus-review.html">Movie Review: Icarus (2017)</a>
+            </h2>
+            
+            <div class="blog-post-meta">
+              September 16, 2024
+              
+              <span class="post-categories">
+                
+                <span class="post-category">movies</span>
+                
+              </span>
+              
+            </div>
+            
+            <div class="blog-post-excerpt">
+              Movie Review: Icarus (2017)
+
+            </div>
+            
+            <a href="/movies/2024/09/16/icarus-review.html" class="blog-post-read-more">Read More</a>
+          </div>
+        </div>
+      
+        <div class="blog-post-item">
+          <div class="blog-post-image-container">
+            
+              
+  
+
+
+
+
+
+  <img src="https://metadata-static.plex.tv/d/gracenote/thumbnails/deae724c062322a985f2f87e36b613ad.jpg" alt="Movie Review: Jackpot! (2024)" class="blog-post-image" loading="lazy" style="max-width: 100%; height: auto;" onerror="this.onerror=null; this.src='https://metadata-static.plex.tv/d/gracenote/deae724c062322a985f2f87e36b613ad.jpg';">
+
+
+            
+          </div>
+          
+          <div class="blog-post-content">
+            <h2 class="blog-post-title">
+              <a href="/movies/2024/09/16/jackpot-review.html">Movie Review: Jackpot! (2024)</a>
+            </h2>
+            
+            <div class="blog-post-meta">
+              September 16, 2024
+              
+              <span class="post-categories">
+                
+                <span class="post-category">movies</span>
+                
+              </span>
+              
+            </div>
+            
+            <div class="blog-post-excerpt">
+              Movie Review: Jackpot! (2024)
+
+            </div>
+            
+            <a href="/movies/2024/09/16/jackpot-review.html" class="blog-post-read-more">Read More</a>
+          </div>
+        </div>
+      
+        <div class="blog-post-item">
+          <div class="blog-post-image-container">
+            
+              
+  
+
+
+
+
+
+  <img src="https://metadata-static.plex.tv/3/gracenote/thumbnails/3b99337e79da1cc2440a6baf1aeb7a52.jpg" alt="Movie Review: Love Lies Bleeding (2024)" class="blog-post-image" loading="lazy" style="max-width: 100%; height: auto;" onerror="this.onerror=null; this.src='https://metadata-static.plex.tv/3/gracenote/3b99337e79da1cc2440a6baf1aeb7a52.jpg';">
+
+
+            
+          </div>
+          
+          <div class="blog-post-content">
+            <h2 class="blog-post-title">
+              <a href="/movies/2024/09/16/love-lies-bleeding-review.html">Movie Review: Love Lies Bleeding (2024)</a>
+            </h2>
+            
+            <div class="blog-post-meta">
+              September 16, 2024
+              
+              <span class="post-categories">
+                
+                <span class="post-category">movies</span>
+                
+              </span>
+              
+            </div>
+            
+            <div class="blog-post-excerpt">
+              Movie Review: Love Lies Bleeding (2024)
+
+            </div>
+            
+            <a href="/movies/2024/09/16/love-lies-bleeding-review.html" class="blog-post-read-more">Read More</a>
+          </div>
+        </div>
+      
+        <div class="blog-post-item">
+          <div class="blog-post-image-container">
+            
+              
+  
+
+
+
+
+
+  <img src="https://metadata-static.plex.tv/d/gracenote/thumbnails/dd5a14c38e97e9ffee1df5f66d6e3462.jpg" alt="Movie Review: Only You (1994)" class="blog-post-image" loading="lazy" style="max-width: 100%; height: auto;" onerror="this.onerror=null; this.src='https://metadata-static.plex.tv/d/gracenote/dd5a14c38e97e9ffee1df5f66d6e3462.jpg';">
+
+
+            
+          </div>
+          
+          <div class="blog-post-content">
+            <h2 class="blog-post-title">
+              <a href="/movies/2024/09/16/only-you-review.html">Movie Review: Only You (1994)</a>
+            </h2>
+            
+            <div class="blog-post-meta">
+              September 16, 2024
+              
+              <span class="post-categories">
+                
+                <span class="post-category">movies</span>
+                
+              </span>
+              
+            </div>
+            
+            <div class="blog-post-excerpt">
+              Movie Review: Only You (1994)
+
+            </div>
+            
+            <a href="/movies/2024/09/16/only-you-review.html" class="blog-post-read-more">Read More</a>
+          </div>
+        </div>
+      
+        <div class="blog-post-item">
+          <div class="blog-post-image-container">
+            
+              
+  
+
+
+
+
+
+  <img src="https://metadata-static.plex.tv/1/gracenote/thumbnails/1cfa7eda5ea1c123bd686fd5b31ffe7b.jpg" alt="Movie Review: Hit Man (2024)" class="blog-post-image" loading="lazy" style="max-width: 100%; height: auto;" onerror="this.onerror=null; this.src='https://metadata-static.plex.tv/1/gracenote/1cfa7eda5ea1c123bd686fd5b31ffe7b.jpg';">
+
+
+            
+          </div>
+          
+          <div class="blog-post-content">
+            <h2 class="blog-post-title">
+              <a href="/movies/2024/09/13/hit-man-review.html">Movie Review: Hit Man (2024)</a>
+            </h2>
+            
+            <div class="blog-post-meta">
+              September 13, 2024
+              
+              <span class="post-categories">
+                
+                <span class="post-category">movies</span>
+                
+              </span>
+              
+            </div>
+            
+            <div class="blog-post-excerpt">
+              Movie Review: Hit Man (2024)
+
+            </div>
+            
+            <a href="/movies/2024/09/13/hit-man-review.html" class="blog-post-read-more">Read More</a>
+          </div>
+        </div>
+      
+        <div class="blog-post-item">
+          <div class="blog-post-image-container">
+            
+              
+  
+
+
+
+
+
+  <img src="https://metadata-static.plex.tv/7/gracenote/thumbnails/79f4bf917d212e5b3eb752c24dd639c5.jpg" alt="Movie Review: Twisters (2024)" class="blog-post-image" loading="lazy" style="max-width: 100%; height: auto;" onerror="this.onerror=null; this.src='https://metadata-static.plex.tv/7/gracenote/79f4bf917d212e5b3eb752c24dd639c5.jpg';">
+
+
+            
+          </div>
+          
+          <div class="blog-post-content">
+            <h2 class="blog-post-title">
+              <a href="/movies/2024/09/09/twisters-review.html">Movie Review: Twisters (2024)</a>
+            </h2>
+            
+            <div class="blog-post-meta">
+              September 09, 2024
+              
+              <span class="post-categories">
+                
+                <span class="post-category">movies</span>
+                
+              </span>
+              
+            </div>
+            
+            <div class="blog-post-excerpt">
+              Movie Review: Twisters (2024)
+
+            </div>
+            
+            <a href="/movies/2024/09/09/twisters-review.html" class="blog-post-read-more">Read More</a>
+          </div>
+        </div>
+      
+        <div class="blog-post-item">
+          <div class="blog-post-image-container">
+            
+              
+  
+
+
+
+
+
+  <img src="https://metadata-static.plex.tv/a/gracenote/thumbnails/afe9f09654e2c7b41b59c4d8a4d77202.jpg" alt="Movie Review: Uncut Gems (2019)" class="blog-post-image" loading="lazy" style="max-width: 100%; height: auto;" onerror="this.onerror=null; this.src='https://metadata-static.plex.tv/a/gracenote/afe9f09654e2c7b41b59c4d8a4d77202.jpg';">
+
+
+            
+          </div>
+          
+          <div class="blog-post-content">
+            <h2 class="blog-post-title">
+              <a href="/movies/2024/09/09/uncut-gems-review.html">Movie Review: Uncut Gems (2019)</a>
+            </h2>
+            
+            <div class="blog-post-meta">
+              September 09, 2024
+              
+              <span class="post-categories">
+                
+                <span class="post-category">movies</span>
+                
+              </span>
+              
+            </div>
+            
+            <div class="blog-post-excerpt">
+              Movie Review: Uncut Gems (2019)
+
+            </div>
+            
+            <a href="/movies/2024/09/09/uncut-gems-review.html" class="blog-post-read-more">Read More</a>
+          </div>
+        </div>
+      
+        <div class="blog-post-item">
+          <div class="blog-post-image-container">
+            
+              
+  
+
+
+
+
+
+  <img src="https://metadata-static.plex.tv/3/gracenote/thumbnails/324bb7d149a8566651332cf5975d8d74.jpg" alt="Movie Review: The Aviator (2004)" class="blog-post-image" loading="lazy" style="max-width: 100%; height: auto;" onerror="this.onerror=null; this.src='https://metadata-static.plex.tv/3/gracenote/324bb7d149a8566651332cf5975d8d74.jpg';">
+
+
+            
+          </div>
+          
+          <div class="blog-post-content">
+            <h2 class="blog-post-title">
+              <a href="/movies/2024/04/11/the-aviator-review.html">Movie Review: The Aviator (2004)</a>
+            </h2>
+            
+            <div class="blog-post-meta">
+              April 11, 2024
+              
+              <span class="post-categories">
+                
+                <span class="post-category">movies</span>
+                
+              </span>
+              
+            </div>
+            
+            <div class="blog-post-excerpt">
+              Movie Review: The Aviator (2004)
+
+            </div>
+            
+            <a href="/movies/2024/04/11/the-aviator-review.html" class="blog-post-read-more">Read More</a>
+          </div>
+        </div>
+      
+        <div class="blog-post-item">
+          <div class="blog-post-image-container">
+            
+              
+  
+
+
+
+
+
+  <img src="https://metadata-static.plex.tv/5/gracenote/thumbnails/541b7c3c43395d3d9058abfa61ea042b.jpg" alt="Movie Review: Madame Web (2024)" class="blog-post-image" loading="lazy" style="max-width: 100%; height: auto;" onerror="this.onerror=null; this.src='https://metadata-static.plex.tv/5/gracenote/541b7c3c43395d3d9058abfa61ea042b.jpg';">
+
+
+            
+          </div>
+          
+          <div class="blog-post-content">
+            <h2 class="blog-post-title">
+              <a href="/movies/2024/04/04/madame-web-review.html">Movie Review: Madame Web (2024)</a>
+            </h2>
+            
+            <div class="blog-post-meta">
+              April 04, 2024
+              
+              <span class="post-categories">
+                
+                <span class="post-category">movies</span>
+                
+              </span>
+              
+            </div>
+            
+            <div class="blog-post-excerpt">
+              Movie Review: Madame Web (2024)
+
+            </div>
+            
+            <a href="/movies/2024/04/04/madame-web-review.html" class="blog-post-read-more">Read More</a>
+          </div>
+        </div>
+      
+        <div class="blog-post-item">
+          <div class="blog-post-image-container">
+            
+              
+  
+
+
+
+
+
+  <img src="https://metadata-static.plex.tv/7/gracenote/thumbnails/7efa2b7e2cdd4e93e9580382f10a3d94.jpg" alt="Movie Review: Argylle (2024)" class="blog-post-image" loading="lazy" style="max-width: 100%; height: auto;" onerror="this.onerror=null; this.src='https://metadata-static.plex.tv/7/gracenote/7efa2b7e2cdd4e93e9580382f10a3d94.jpg';">
+
+
+            
+          </div>
+          
+          <div class="blog-post-content">
+            <h2 class="blog-post-title">
+              <a href="/movies/2024/04/02/argylle-review.html">Movie Review: Argylle (2024)</a>
+            </h2>
+            
+            <div class="blog-post-meta">
+              April 02, 2024
+              
+              <span class="post-categories">
+                
+                <span class="post-category">movies</span>
+                
+              </span>
+              
+            </div>
+            
+            <div class="blog-post-excerpt">
+              Movie Review: Argylle (2024)
+
+            </div>
+            
+            <a href="/movies/2024/04/02/argylle-review.html" class="blog-post-read-more">Read More</a>
+          </div>
+        </div>
+      
+        <div class="blog-post-item">
+          <div class="blog-post-image-container">
+            
+              
+  
+
+
+
+
+
+  <img src="https://metadata-static.plex.tv/b/gracenote/thumbnails/b4938fe34de7fbb09ba44af1b851af0a.jpg" alt="Movie Review: Road House (2024)" class="blog-post-image" loading="lazy" style="max-width: 100%; height: auto;" onerror="this.onerror=null; this.src='https://metadata-static.plex.tv/b/gracenote/b4938fe34de7fbb09ba44af1b851af0a.jpg';">
+
+
+            
+          </div>
+          
+          <div class="blog-post-content">
+            <h2 class="blog-post-title">
+              <a href="/movies/2024/04/02/road-house-review.html">Movie Review: Road House (2024)</a>
+            </h2>
+            
+            <div class="blog-post-meta">
+              April 02, 2024
+              
+              <span class="post-categories">
+                
+                <span class="post-category">movies</span>
+                
+              </span>
+              
+            </div>
+            
+            <div class="blog-post-excerpt">
+              Movie Review: Road House (2024)
+
+            </div>
+            
+            <a href="/movies/2024/04/02/road-house-review.html" class="blog-post-read-more">Read More</a>
+          </div>
+        </div>
+      
+        <div class="blog-post-item">
+          <div class="blog-post-image-container">
+            
+              
+  
+
+
+
+
+
+  <img src="https://metadata-static.plex.tv/d/gracenote/thumbnails/d8ad5855a0d8f73132bc7701ef7592e8.jpg" alt="Movie Review: In the Loop (2009)" class="blog-post-image" loading="lazy" style="max-width: 100%; height: auto;" onerror="this.onerror=null; this.src='https://metadata-static.plex.tv/d/gracenote/d8ad5855a0d8f73132bc7701ef7592e8.jpg';">
+
+
+            
+          </div>
+          
+          <div class="blog-post-content">
+            <h2 class="blog-post-title">
+              <a href="/movies/2024/01/05/in-the-loop-review.html">Movie Review: In the Loop (2009)</a>
+            </h2>
+            
+            <div class="blog-post-meta">
+              January 05, 2024
+              
+              <span class="post-categories">
+                
+                <span class="post-category">movies</span>
+                
+              </span>
+              
+            </div>
+            
+            <div class="blog-post-excerpt">
+              Movie Review: In the Loop (2009)
+
+            </div>
+            
+            <a href="/movies/2024/01/05/in-the-loop-review.html" class="blog-post-read-more">Read More</a>
+          </div>
+        </div>
+      
+        <div class="blog-post-item">
+          <div class="blog-post-image-container">
+            
+              
+  
+
+
+
+
+
+  <img src="https://metadata-static.plex.tv/9/gracenote/thumbnails/9f37c0402877316c3cf139a30031100f.jpg" alt="Movie Review: The Color of Money (1986)" class="blog-post-image" loading="lazy" style="max-width: 100%; height: auto;" onerror="this.onerror=null; this.src='https://metadata-static.plex.tv/9/gracenote/9f37c0402877316c3cf139a30031100f.jpg';">
+
+
+            
+          </div>
+          
+          <div class="blog-post-content">
+            <h2 class="blog-post-title">
+              <a href="/movies/2023/10/11/the-color-of-money-review.html">Movie Review: The Color of Money (1986)</a>
+            </h2>
+            
+            <div class="blog-post-meta">
+              October 11, 2023
+              
+              <span class="post-categories">
+                
+                <span class="post-category">movies</span>
+                
+              </span>
+              
+            </div>
+            
+            <div class="blog-post-excerpt">
+              Movie Review: The Color of Money (1986)
+
+            </div>
+            
+            <a href="/movies/2023/10/11/the-color-of-money-review.html" class="blog-post-read-more">Read More</a>
+          </div>
+        </div>
+      
+        <div class="blog-post-item">
+          <div class="blog-post-image-container">
+            
+              
+  
+
+
+
+
+
+  <img src="/assets/images/blog/thumbnails/default-image.png" alt="Movie Review: The Hustler (1961)" class="blog-post-image" loading="lazy" style="max-width: 100%; height: auto;" onerror="this.onerror=null; this.src='/assets/images/blog/default-image.png';">
+
+
+            
+          </div>
+          
+          <div class="blog-post-content">
+            <h2 class="blog-post-title">
+              <a href="/movies/2023/10/09/the-hustler-review.html">Movie Review: The Hustler (1961)</a>
+            </h2>
+            
+            <div class="blog-post-meta">
+              October 09, 2023
+              
+              <span class="post-categories">
+                
+                <span class="post-category">movies</span>
+                
+              </span>
+              
+            </div>
+            
+            <div class="blog-post-excerpt">
+              Movie Review: The Hustler (1961)
+
+            </div>
+            
+            <a href="/movies/2023/10/09/the-hustler-review.html" class="blog-post-read-more">Read More</a>
+          </div>
+        </div>
+      
+        <div class="blog-post-item">
+          <div class="blog-post-image-container">
+            
+              
+  
+
+
+
+
+
+  <img src="https://metadata-static.plex.tv/0/gracenote/thumbnails/0308f643e3f3c382886a661c5710ccef.jpg" alt="Movie Review: American Hustle (2013)" class="blog-post-image" loading="lazy" style="max-width: 100%; height: auto;" onerror="this.onerror=null; this.src='https://metadata-static.plex.tv/0/gracenote/0308f643e3f3c382886a661c5710ccef.jpg';">
+
+
+            
+          </div>
+          
+          <div class="blog-post-content">
+            <h2 class="blog-post-title">
+              <a href="/movies/2023/09/25/american-hustle-review.html">Movie Review: American Hustle (2013)</a>
+            </h2>
+            
+            <div class="blog-post-meta">
+              September 25, 2023
+              
+              <span class="post-categories">
+                
+                <span class="post-category">movies</span>
+                
+              </span>
+              
+            </div>
+            
+            <div class="blog-post-excerpt">
+              Movie Review: American Hustle (2013)
+
+            </div>
+            
+            <a href="/movies/2023/09/25/american-hustle-review.html" class="blog-post-read-more">Read More</a>
+          </div>
+        </div>
+      
+        <div class="blog-post-item">
+          <div class="blog-post-image-container">
+            
+              
+  
+
+
+
+
+
+  <img src="https://metadata-static.plex.tv/f/gracenote/thumbnails/f7620d7f371cdad92fd737191ab5f81c.jpg" alt="Movie Review: The Gentlemen (2020)" class="blog-post-image" loading="lazy" style="max-width: 100%; height: auto;" onerror="this.onerror=null; this.src='https://metadata-static.plex.tv/f/gracenote/f7620d7f371cdad92fd737191ab5f81c.jpg';">
+
+
+            
+          </div>
+          
+          <div class="blog-post-content">
+            <h2 class="blog-post-title">
+              <a href="/movies/2023/09/24/the-gentlemen-review.html">Movie Review: The Gentlemen (2020)</a>
+            </h2>
+            
+            <div class="blog-post-meta">
+              September 24, 2023
+              
+              <span class="post-categories">
+                
+                <span class="post-category">movies</span>
+                
+              </span>
+              
+            </div>
+            
+            <div class="blog-post-excerpt">
+              Movie Review: The Gentlemen (2020)
+
+            </div>
+            
+            <a href="/movies/2023/09/24/the-gentlemen-review.html" class="blog-post-read-more">Read More</a>
+          </div>
+        </div>
+      
+        <div class="blog-post-item">
+          <div class="blog-post-image-container">
+            
+              
+  
+
+
+
+
+
+  <img src="https://metadata-static.plex.tv/e/gracenote/thumbnails/ef2a1d2e0c31528b82617aae0bbf113e.jpg" alt="Movie Review: They Cloned Tyrone (2023)" class="blog-post-image" loading="lazy" style="max-width: 100%; height: auto;" onerror="this.onerror=null; this.src='https://metadata-static.plex.tv/e/gracenote/ef2a1d2e0c31528b82617aae0bbf113e.jpg';">
+
+
+            
+          </div>
+          
+          <div class="blog-post-content">
+            <h2 class="blog-post-title">
+              <a href="/movies/2023/09/19/they-cloned-tyrone-review.html">Movie Review: They Cloned Tyrone (2023)</a>
+            </h2>
+            
+            <div class="blog-post-meta">
+              September 19, 2023
+              
+              <span class="post-categories">
+                
+                <span class="post-category">movies</span>
+                
+              </span>
+              
+            </div>
+            
+            <div class="blog-post-excerpt">
+              Movie Review: They Cloned Tyrone (2023)
+
+            </div>
+            
+            <a href="/movies/2023/09/19/they-cloned-tyrone-review.html" class="blog-post-read-more">Read More</a>
+          </div>
+        </div>
+      
+        <div class="blog-post-item">
+          <div class="blog-post-image-container">
+            
+              
+  
+
+
+
+
+
+  <img src="https://image.tmdb.org/t/p/original/thumbnails/8SYsQOur3wAfh1LJf6rvTFpIPHy.jpg" alt="Movie Review: Shane Gillis: Beautiful Dogs (2023)" class="blog-post-image" loading="lazy" style="max-width: 100%; height: auto;" onerror="this.onerror=null; this.src='https://image.tmdb.org/t/p/original/8SYsQOur3wAfh1LJf6rvTFpIPHy.jpg';">
+
+
+            
+          </div>
+          
+          <div class="blog-post-content">
+            <h2 class="blog-post-title">
+              <a href="/movies/2023/09/11/shane-gillis-beautiful-dogs-review.html">Movie Review: Shane Gillis: Beautiful Dogs (2023)</a>
+            </h2>
+            
+            <div class="blog-post-meta">
+              September 11, 2023
+              
+              <span class="post-categories">
+                
+                <span class="post-category">movies</span>
+                
+              </span>
+              
+            </div>
+            
+            <div class="blog-post-excerpt">
+              Movie Review: Shane Gillis: Beautiful Dogs (2023)
+
+            </div>
+            
+            <a href="/movies/2023/09/11/shane-gillis-beautiful-dogs-review.html" class="blog-post-read-more">Read More</a>
+          </div>
+        </div>
+      
+        <div class="blog-post-item">
+          <div class="blog-post-image-container">
+            
+              
+  
+
+
+
+
+
+  <img src="https://metadata-static.plex.tv/1/gracenote/thumbnails/1a577ccfeee51f39175b51a627c78f54.jpg" alt="Movie Review: Barbie (2023)" class="blog-post-image" loading="lazy" style="max-width: 100%; height: auto;" onerror="this.onerror=null; this.src='https://metadata-static.plex.tv/1/gracenote/1a577ccfeee51f39175b51a627c78f54.jpg';">
+
+
+            
+          </div>
+          
+          <div class="blog-post-content">
+            <h2 class="blog-post-title">
+              <a href="/movies/2023/09/07/barbie-review.html">Movie Review: Barbie (2023)</a>
+            </h2>
+            
+            <div class="blog-post-meta">
+              September 07, 2023
+              
+              <span class="post-categories">
+                
+                <span class="post-category">movies</span>
+                
+              </span>
+              
+            </div>
+            
+            <div class="blog-post-excerpt">
+              Movie Review: Barbie (2023)
+
+            </div>
+            
+            <a href="/movies/2023/09/07/barbie-review.html" class="blog-post-read-more">Read More</a>
+          </div>
+        </div>
+      
+        <div class="blog-post-item">
+          <div class="blog-post-image-container">
+            
+              
+  
+
+
+
+
+
+  <img src="https://metadata-static.plex.tv/3/gracenote/thumbnails/30763183e14c1807e96a57ee74ef6fca.jpg" alt="Movie Review: Cocaine Bear (2023)" class="blog-post-image" loading="lazy" style="max-width: 100%; height: auto;" onerror="this.onerror=null; this.src='https://metadata-static.plex.tv/3/gracenote/30763183e14c1807e96a57ee74ef6fca.jpg';">
+
+
+            
+          </div>
+          
+          <div class="blog-post-content">
+            <h2 class="blog-post-title">
+              <a href="/movies/2023/09/07/cocaine-bear-review.html">Movie Review: Cocaine Bear (2023)</a>
+            </h2>
+            
+            <div class="blog-post-meta">
+              September 07, 2023
+              
+              <span class="post-categories">
+                
+                <span class="post-category">movies</span>
+                
+              </span>
+              
+            </div>
+            
+            <div class="blog-post-excerpt">
+              Movie Review: Cocaine Bear (2023)
+
+            </div>
+            
+            <a href="/movies/2023/09/07/cocaine-bear-review.html" class="blog-post-read-more">Read More</a>
+          </div>
+        </div>
+      
+        <div class="blog-post-item">
+          <div class="blog-post-image-container">
+            
+              
+  
+
+
+
+
+
+  <img src="https://metadata-static.plex.tv/8/plex/thumbnails/8f70f460-09f3-4736-831b-b52adc959016.jpg" alt="Movie Review: Blade Runner 2049 (2017)" class="blog-post-image" loading="lazy" style="max-width: 100%; height: auto;" onerror="this.onerror=null; this.src='https://metadata-static.plex.tv/8/plex/8f70f460-09f3-4736-831b-b52adc959016.jpg';">
+
+
+            
+          </div>
+          
+          <div class="blog-post-content">
+            <h2 class="blog-post-title">
+              <a href="/movies/2023/08/08/blade-runner-2049-review.html">Movie Review: Blade Runner 2049 (2017)</a>
+            </h2>
+            
+            <div class="blog-post-meta">
+              August 08, 2023
+              
+              <span class="post-categories">
+                
+                <span class="post-category">movies</span>
+                
+              </span>
+              
+            </div>
+            
+            <div class="blog-post-excerpt">
+              Movie Review: Blade Runner 2049 (2017)
+
+            </div>
+            
+            <a href="/movies/2023/08/08/blade-runner-2049-review.html" class="blog-post-read-more">Read More</a>
+          </div>
+        </div>
+      
+        <div class="blog-post-item">
+          <div class="blog-post-image-container">
+            
+              
+  
+
+
+
+
+
+  <img src="https://metadata-static.plex.tv/3/gracenote/thumbnails/3b3f4080a2356092ca722d46ea387490.jpg" alt="Movie Review: Black Dynamite (2009)" class="blog-post-image" loading="lazy" style="max-width: 100%; height: auto;" onerror="this.onerror=null; this.src='https://metadata-static.plex.tv/3/gracenote/3b3f4080a2356092ca722d46ea387490.jpg';">
+
+
+            
+          </div>
+          
+          <div class="blog-post-content">
+            <h2 class="blog-post-title">
+              <a href="/movies/2023/08/02/black-dynamite-review.html">Movie Review: Black Dynamite (2009)</a>
+            </h2>
+            
+            <div class="blog-post-meta">
+              August 02, 2023
+              
+              <span class="post-categories">
+                
+                <span class="post-category">movies</span>
+                
+              </span>
+              
+            </div>
+            
+            <div class="blog-post-excerpt">
+              Movie Review: Black Dynamite (2009)
+
+            </div>
+            
+            <a href="/movies/2023/08/02/black-dynamite-review.html" class="blog-post-read-more">Read More</a>
+          </div>
+        </div>
+      
+        <div class="blog-post-item">
+          <div class="blog-post-image-container">
+            
+              
+  
+
+
+
+
+
+  <img src="https://metadata-static.plex.tv/7/gracenote/thumbnails/72d7d68349302b841dc773a9106c0bf0.jpg" alt="Movie Review: Glass Onion (2022)" class="blog-post-image" loading="lazy" style="max-width: 100%; height: auto;" onerror="this.onerror=null; this.src='https://metadata-static.plex.tv/7/gracenote/72d7d68349302b841dc773a9106c0bf0.jpg';">
+
+
+            
+          </div>
+          
+          <div class="blog-post-content">
+            <h2 class="blog-post-title">
+              <a href="/movies/2023/07/31/glass-onion-review.html">Movie Review: Glass Onion (2022)</a>
+            </h2>
+            
+            <div class="blog-post-meta">
+              July 31, 2023
+              
+              <span class="post-categories">
+                
+                <span class="post-category">movies</span>
+                
+              </span>
+              
+            </div>
+            
+            <div class="blog-post-excerpt">
+              Movie Review: Glass Onion (2022)
+
+            </div>
+            
+            <a href="/movies/2023/07/31/glass-onion-review.html" class="blog-post-read-more">Read More</a>
+          </div>
+        </div>
+      
+        <div class="blog-post-item">
+          <div class="blog-post-image-container">
+            
+              
+  
+
+
+
+
+
+  <img src="https://metadata-static.plex.tv/7/gracenote/thumbnails/785bc7d9fced00e44e1e1b80367c5fdf.jpg" alt="Movie Review: Once Upon a Time in America (1984)" class="blog-post-image" loading="lazy" style="max-width: 100%; height: auto;" onerror="this.onerror=null; this.src='https://metadata-static.plex.tv/7/gracenote/785bc7d9fced00e44e1e1b80367c5fdf.jpg';">
+
+
+            
+          </div>
+          
+          <div class="blog-post-content">
+            <h2 class="blog-post-title">
+              <a href="/movies/2023/07/31/once-upon-a-time-in-america-review.html">Movie Review: Once Upon a Time in America (1984)</a>
+            </h2>
+            
+            <div class="blog-post-meta">
+              July 31, 2023
+              
+              <span class="post-categories">
+                
+                <span class="post-category">movies</span>
+                
+              </span>
+              
+            </div>
+            
+            <div class="blog-post-excerpt">
+              Movie Review: Once Upon a Time in America (1984)
+
+            </div>
+            
+            <a href="/movies/2023/07/31/once-upon-a-time-in-america-review.html" class="blog-post-read-more">Read More</a>
+          </div>
+        </div>
+      
+        <div class="blog-post-item">
+          <div class="blog-post-image-container">
+            
+              
+  
+
+
+
+
+
+  <img src="https://image.tmdb.org/t/p/original/thumbnails/nPRqlO2gndZv4m9cxE8IIoSG4xZ.jpg" alt="Movie Review: Rambo: First Blood Part II (1985)" class="blog-post-image" loading="lazy" style="max-width: 100%; height: auto;" onerror="this.onerror=null; this.src='https://image.tmdb.org/t/p/original/nPRqlO2gndZv4m9cxE8IIoSG4xZ.jpg';">
+
+
+            
+          </div>
+          
+          <div class="blog-post-content">
+            <h2 class="blog-post-title">
+              <a href="/movies/2023/07/26/rambo-first-blood-part-ii-review.html">Movie Review: Rambo: First Blood Part II (1985)</a>
+            </h2>
+            
+            <div class="blog-post-meta">
+              July 26, 2023
+              
+              <span class="post-categories">
+                
+                <span class="post-category">movies</span>
+                
+              </span>
+              
+            </div>
+            
+            <div class="blog-post-excerpt">
+              Movie Review: Rambo: First Blood Part II (1985)
+
+            </div>
+            
+            <a href="/movies/2023/07/26/rambo-first-blood-part-ii-review.html" class="blog-post-read-more">Read More</a>
+          </div>
+        </div>
+      
+        <div class="blog-post-item">
+          <div class="blog-post-image-container">
+            
+              
+  
+
+
+
+
+
+  <img src="https://metadata-static.plex.tv/2/gracenote/thumbnails/2d0173124b8b903ff80a4beb593396ad.jpg" alt="Movie Review: Saving Private Ryan (1998)" class="blog-post-image" loading="lazy" style="max-width: 100%; height: auto;" onerror="this.onerror=null; this.src='https://metadata-static.plex.tv/2/gracenote/2d0173124b8b903ff80a4beb593396ad.jpg';">
+
+
+            
+          </div>
+          
+          <div class="blog-post-content">
+            <h2 class="blog-post-title">
+              <a href="/movies/2023/07/23/saving-private-ryan-review.html">Movie Review: Saving Private Ryan (1998)</a>
+            </h2>
+            
+            <div class="blog-post-meta">
+              July 23, 2023
+              
+              <span class="post-categories">
+                
+                <span class="post-category">movies</span>
+                
+              </span>
+              
+            </div>
+            
+            <div class="blog-post-excerpt">
+              Movie Review: Saving Private Ryan (1998)
+
+            </div>
+            
+            <a href="/movies/2023/07/23/saving-private-ryan-review.html" class="blog-post-read-more">Read More</a>
+          </div>
+        </div>
+      
+    </div>
   
 </div>
     </div>
@@ -103,7 +1658,7 @@
     <div class="menu-popup">
   <div class="menu-container">
     <div class="menu-item">
-      <a href="https://resume.chkb.net/chkb/charles-barnes-frontend-resume-2024" class="menu-item no-decoration" target="_blank">Resume</a>
+      <a href="/resume/" class="menu-item no-decoration">Resume</a>
     </div>
     <div class="menu-item">
       <a href="/portfolio/" class="menu-item no-decoration">Portfolio</a>
@@ -126,6 +1681,7 @@
       <a href="https://www.linkedin.com/in/charlesabarnes/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
       <a href="mailto:me@chkb.net" aria-label="Email"><i class="far fa-envelope"></i></a>
       <a href="https://github.com/charlesabarnes/" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="/feed.xml" target="_blank" aria-label="RSS Feed"><i class="fa-solid fa-square-rss"></i></a>
     </div>
     <div class="copyright">
       &copy; 2025 Charles Barnes

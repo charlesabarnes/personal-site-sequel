@@ -4,12 +4,12 @@ This is my personal website built with Jekyll and hosted on GitHub Pages.
 
 ## Features
 
-- Clean, minimalist design 
-- Light/dark theme toggle
+- Clean, minimalist design
 - Responsive layout for mobile and desktop
 - Blog section with Markdown support
 - Photography gallery
 - Portfolio showcase
+- Tag-based content organization
 
 ## Development
 
@@ -54,7 +54,6 @@ With front matter:
 layout: post
 title: "Your Post Title"
 date: YYYY-MM-DD
-categories: [category1, category2]
 tags: [tag1, tag2]
 ---
 ```
@@ -67,14 +66,35 @@ Add new photo albums in the `_photography` directory as markdown files with fron
 ---
 layout: photo_album
 title: "Album Title"
-date: YYYY-MM-DD
-thumbnail: "/path/to/thumbnail.jpg"
+thumbnail: "/assets/images/photography/album-name/thumbnail.jpg"
 description: "Album description"
-images:
-  - path: "/path/to/image1.jpg"
-    caption: "Image caption"
-  - path: "/path/to/image2.jpg"
-    caption: "Image caption"
+---
+```
+
+Place your album images in the corresponding directory: `/assets/images/photography/album-name/`.
+
+Each album should have a thumbnails subdirectory containing thumbnail versions of all images. You can use the included `generate-thumbnails.sh` script to create these:
+
+```
+./generate-thumbnails.sh album-name
+```
+
+This will create properly sized thumbnails for all images in the album directory.
+
+### Tags
+
+The site uses a tag-based organization system. Create new tag pages in the `tag/` directory:
+
+```
+tag/tag-name.md
+```
+
+With front matter:
+```yaml
+---
+layout: tag
+tag: tag-name
+permalink: /tag/tag-name/
 ---
 ```
 
@@ -88,4 +108,4 @@ All content is copyright Charles Barnes unless otherwise specified.
 
 ## Contact
 
-For questions or issues, contact me at [charles@charlesabarnes.com](mailto:charles@charlesabarnes.com).
+For questions or issues, contact me at [charles@charlesabarnes.com](mailto:charles@charlesabarnes.com)
