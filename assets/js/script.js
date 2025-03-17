@@ -11,8 +11,17 @@ function showMenu(e) {
 document.addEventListener('DOMContentLoaded', () => {
     getDefaultTheme();
     updateThemeButton();
+    
+    // Handle menu popup clicks
     const backdrop = document.querySelector('.menu-popup');
-    backdrop.addEventListener('click', () => backdrop.classList.remove('show'));
+    const menuContainer = document.querySelector('.menu-container');
+    
+    backdrop.addEventListener('click', (e) => {
+      // Only close if clicking outside the menu container
+      if (e.target === backdrop) {
+        backdrop.classList.remove('show');
+      }
+    });
     
     // Portfolio filter functionality
     initPortfolioFilter();
@@ -72,6 +81,29 @@ function updateThemeButton() {
       themeButton.className = 'fa-regular fa-sun';
     }
   }
+  
+  // Also update mobile theme button
+  updateMobileThemeButton();
+}
+
+function updateMobileThemeButton() {
+  const mobileThemeButton = document.querySelector('.mobile-theme-toggle-button i');
+  const mobileThemeText = document.querySelector('.theme-text');
+  const theme = localStorage.getItem('theme');
+  
+  if (mobileThemeButton) {
+    if (theme === 'dark') {
+      mobileThemeButton.className = 'fa-regular fa-moon';
+      if (mobileThemeText) {
+        mobileThemeText.textContent = 'Toggle Light Mode';
+      }
+    } else {
+      mobileThemeButton.className = 'fa-regular fa-sun';
+      if (mobileThemeText) {
+        mobileThemeText.textContent = 'Toggle Dark Mode';
+      }
+    }
+  }
 }
 
 const setTheme = (theme) => {
@@ -91,6 +123,9 @@ const setTheme = (theme) => {
       themeButton.className = 'fa-regular fa-sun';
     }
   }
+  
+  // Update mobile theme button
+  updateMobileThemeButton();
 }
 
 const getDefaultTheme = () => {
