@@ -7,7 +7,8 @@ gem "csv"
 gem "base64"
 gem "bigdecimal"
 gem "observer"
-gem "rmagick", "~> 4.3.0"
+# Removed RMagick dependency to avoid build failures
+# gem "rmagick", "~> 4.3.0"
 
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
