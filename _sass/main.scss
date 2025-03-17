@@ -603,6 +603,67 @@ a.no-decoration:hover {
   text-align: center;
 }
 
+.theme-toggle-mobile {
+  margin-top: 0.5rem;
+}
+
+.mobile-theme-toggle-button {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.25rem;
+  font-family: 'Kanit', sans-serif;
+  font-weight: 400;
+  color: var(--border-color);
+  text-align: center;
+  cursor: pointer;
+  background: var(--icon-background);
+  padding: 0.75rem 1.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem !important;
+  box-shadow: 3px 3px 0px var(--shadow-color);
+  transition: all 0.2s ease;
+}
+
+.mobile-theme-toggle-button i {
+  font-size: 1.5rem;
+}
+
+.mobile-theme-toggle-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 4px 4px 0px var(--shadow-color);
+}
+
+.mobile-theme-toggle-button:active {
+  transform: translateY(1px);
+  box-shadow: 2px 2px 0px var(--shadow-color);
+}
+
+body.dark .mobile-theme-toggle-button {
+  color: var(--text-level-1);
+  background-color: var(--icon-background);
+  border-color: var(--border-color);
+  box-shadow: 3px 3px 0px var(--shadow-color);
+}
+
+body.dark .menu-container .menu-item, 
+body.dark .menu-container .button,
+body.dark .menu-container a,
+body.dark .theme-text {
+  // color: var(--text-level-1);
+}
+
+.menu-container a.button {
+  display: inline-block;
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-color);
+  background-color: var(--icon-background);
+  box-shadow: 3px 3px 0px var(--shadow-color);
+  transition: all 0.2s ease;
+  margin-top: 0.5rem;
+}
+
 /* Footer styles */
 .site-footer {
   width: 100%;
