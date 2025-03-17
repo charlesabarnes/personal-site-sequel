@@ -9,11 +9,13 @@ layout: default
     <div class="posts-grid">
       {% for post in site.tags[page.tag] %}
         <div class="blog-post-item">
-          {% if post.image %}
-            {% include picture.html path=post.image alt=post.title class="blog-post-image" %}
-          {% else %}
-            {% include picture.html path="/assets/images/blog/default-image.png" alt=post.title class="blog-post-image" %}
-          {% endif %}
+          <div class="blog-post-image-container">
+            {% if post.image %}
+              {% include picture.html path=post.image alt=post.title class="blog-post-image" %}
+            {% else %}
+              {% include picture.html path="/assets/images/blog/default-image.png" alt=post.title class="blog-post-image" %}
+            {% endif %}
+          </div>
           
           <div class="blog-post-content">
             <h2 class="blog-post-title">

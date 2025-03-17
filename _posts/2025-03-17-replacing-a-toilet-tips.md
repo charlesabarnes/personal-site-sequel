@@ -1,14 +1,14 @@
 ---
 layout: post
-title: "Replacing a Toilet: Tips for a Smooth DIY Project"
+title: "Replacing a Toilet: It's Pretty Simple"
 date: "2025-03-17"
 categories: [Home Improvement, Thoughts]
 tags: [home-improvement, thoughts]
 ---
 
-# Replacing a Toilet: Tips for a Smooth DIY Project
+# Replacing a Toilet: It's Pretty Simple
 
-Replacing a toilet is one of the most manageable plumbing projects for DIY enthusiasts. With proper preparation and the right tools, you can complete this project in just a few hours. Here are some essential tips I've learned from my recent bathroom upgrade.
+Plumbing work can be pretty intimidating, but replacing a toilet is one of the simpler plumbing projects to work on. F
 
 ## Tools and Materials You'll Need
 
