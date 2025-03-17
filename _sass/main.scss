@@ -623,6 +623,23 @@ a.no-decoration:hover {
   color: var(--border-color);
 }
 
+.social-links .rss-icon {
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  background-color: #f26522;
+  color: white;
+  text-decoration: none;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.social-links .rss-icon:hover {
+  background-color: #e55b17;
+  color: white;
+  text-decoration: none;
+}
+
 .copyright {
   font-size: 0.875rem;
   color: var(--text-color);

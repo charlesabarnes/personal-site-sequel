@@ -11,11 +11,14 @@ title: Charles Barnes - Photography
       {% for album in site.photography %}
         <div class="gallery-item">
           <a href="{{ album.url | relative_url }}" class="gallery-link">
-            {% include picture.html path=album.thumbnail alt=album.title class="gallery-thumbnail" sizes="(min-width: 800px) 33vw, 100vw" %}
+            {% include picture.html path=album.thumbnail alt=album.title class="gallery-thumbnail" sizes="(min-width: 800px) 33vw, 100vw" use_thumbnail=true %}
             <div class="gallery-info">
               <h2 class="gallery-title">{{ album.title }}</h2>
               {% if album.date %}
                 <div class="gallery-date">{{ album.date | date: "%B %Y" }}</div>
+              {% endif %}
+              {% if album.description %}
+                <div class="gallery-description">{{ album.description | truncate: 100 }}</div>
               {% endif %}
             </div>
           </a>

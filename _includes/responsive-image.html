@@ -1,1 +1,10 @@
-<img src="{{ include.path | relative_url }}" alt="{{ include.alt }}" class="{{ include.class }}" loading="lazy" style="max-width: 100%; height: auto;">
+{% assign path_parts = include.path | split: '/' %}
+{% assign filename = path_parts | last %}
+{% assign dir_path = path_parts | pop | join: '/' %}
+{% assign thumbnail_path = dir_path | append: '/thumbnails/' | append: filename %}
+
+{% if include.use_thumbnail == true %}
+  <img src="{{ thumbnail_path | relative_url }}" alt="{{ include.alt }}" class="{{ include.class }}" loading="lazy" style="max-width: 100%; height: auto;" onerror="this.onerror=null; this.src='{{ include.path | relative_url }}';">
+{% else %}
+  <img src="{{ include.path | relative_url }}" alt="{{ include.alt }}" class="{{ include.class }}" loading="lazy" style="max-width: 100%; height: auto;">
+{% endif %}

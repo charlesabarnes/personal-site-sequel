@@ -1,9 +1,9 @@
 ---
 layout: photo_album
-title: "Italian Journey"
+title: "Italy"
 date: 2023-06-19
 thumbnail: "/assets/images/photography/italy/thumbnail.jpg"
-description: "A photographic journey through the historic cities and beautiful landscapes of Italy."
+description: "A collection of photos from my trip to Italy in 2023."
 images:
   - path: "/assets/images/photography/italy/rome-colosseum.jpg"
     caption: "The Colosseum in Rome, an iconic symbol of the Roman Empire's might and engineering prowess"
