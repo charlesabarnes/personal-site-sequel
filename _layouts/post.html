@@ -28,10 +28,12 @@ layout: default
     </div>
   </div>
 
-  {% if page.image and page.categories contains 'movies' == false %}
-  <div class="post-featured-image">
-    <img src="{{ page.image }}" alt="{{ page.title }}">
-  </div>
+  {% if page.image %}
+    {% unless page.categories contains 'movies' %}
+    <div class="post-featured-image">
+      <img src="{{ page.image }}" alt="{{ page.title }}">
+    </div>
+    {% endunless %}
   {% endif %}
 
   <div class="post-content">
