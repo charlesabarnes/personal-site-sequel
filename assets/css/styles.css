@@ -263,15 +263,15 @@ body.dark .social-links a:hover { color: var(--icon-background); }
 
 .post .post-meta { font-family: 'Kanit', sans-serif; font-size: 0.875rem; color: var(--text-color); opacity: 0.7; display: flex; align-items: center; gap: 0.5rem; }
 
-.post .post-featured-image { width: 100%; height: 300px; margin: 2rem 0; }
+.post .post-featured-image { width: 100%; margin: 2rem 0; }
 
-.post .post-featured-image img { width: 100%; height: 300px; object-fit: cover; border-radius: 0.75rem; box-shadow: 3px 3px 0px var(--shadow-color); border: 1px solid var(--border-color); }
+.post .post-featured-image img { width: 100%; object-fit: cover; border-radius: 0.75rem; box-shadow: 3px 3px 0px var(--shadow-color); border: 1px solid var(--border-color); }
 
 .post .movie-poster { float: right; width: 200px; margin: 0 0 1rem 1.5rem; }
 
 .post .movie-poster img { width: 100%; height: auto; border-radius: 0.5rem; box-shadow: 3px 3px 0px var(--shadow-color); border: 1px solid var(--border-color); }
 
-.post .post-content { font-family: 'Kanit', sans-serif; font-size: 1.125rem; line-height: 1.8; }
+.post .post-content { font-family: 'Kanit', sans-serif; font-size: 1.125rem; line-height: 1.8; /* Style for full-size image links */ }
 
 .post .post-content p { margin-bottom: 1.5rem; }
 
@@ -289,7 +289,11 @@ body.dark .social-links a:hover { color: var(--icon-background); }
 
 .post .post-content ul li, .post .post-content ol li { margin-bottom: 0.625rem; }
 
-.post .post-content img { max-width: 100%; height: auto; margin: 2rem 0; border-radius: 0.5rem; box-shadow: 3px 3px 0px var(--shadow-color); }
+.post .post-content img { max-width: 100%; height: auto; margin: 2rem 0 0.5rem; border-radius: 0.5rem; box-shadow: 3px 3px 0px var(--shadow-color); }
+
+.post .post-content p em a { display: block; text-align: left; font-size: 0.9rem; margin-bottom: 2rem; color: var(--text-color); text-decoration: underline; opacity: 0.8; font-style: normal; }
+
+.post .post-content p em a:hover { opacity: 1; }
 
 .post .post-content pre { background: var(--icon-background); padding: 1.25rem; border-radius: 0.5rem; overflow-x: auto; margin-bottom: 1.5rem; box-shadow: 3px 3px 0px var(--shadow-color); border: 1px solid var(--border-color); }
 
