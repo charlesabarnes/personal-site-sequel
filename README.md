@@ -7,6 +7,7 @@ This is my personal website built with Jekyll and hosted on GitHub Pages.
 - Clean, minimalist design
 - Responsive layout for mobile and desktop
 - Blog section with Markdown support
+- Movie reviews collection
 - Photography gallery
 - Portfolio showcase
 - Tag-based content organization
@@ -57,6 +58,10 @@ date: YYYY-MM-DD
 tags: [tag1, tag2]
 ---
 ```
+
+### Movie Reviews
+
+Movie reviews are managed as a separate collection. See [README-movie-reviews.md](README-movie-reviews.md) for details on how to add and manage movie reviews.
 
 ### Photo Albums
 
