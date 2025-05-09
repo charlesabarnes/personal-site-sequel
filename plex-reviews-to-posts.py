@@ -488,7 +488,7 @@ def parse_args():
     import argparse
     parser = argparse.ArgumentParser(description="Generate Jekyll blog posts from Plex movie reviews")
     
-    parser.add_argument("--output-dir", default="_posts", help="Output directory")
+    parser.add_argument("--output-dir", default="_movie_reviews", help="Output directory")
     parser.add_argument("--min-rating", type=float, default=0, help="Minimum rating (0-10)")
     parser.add_argument("--limit", type=int, help="Limit number of reviews")
     parser.add_argument("--dry-run", action="store_true", help="Don't write files")
@@ -556,11 +556,14 @@ def create_post_content(movie):
         poster_front_matter = f'''poster_url: "{movie['poster_url']}"
 image: "{movie['poster_url']}"'''
     
+    # Create slug for the file name
+    slug = slugify(movie['title'])
+    
     frontmatter = f"""---
 layout: post
 title: "{post_title}"
 date: {post_date}
-categories: [movies]
+permalink: /movie-reviews/{slug}/
 tags: [movies, reviews]
 rating: {movie['rating']}
 movie_title: "{movie['title']}"

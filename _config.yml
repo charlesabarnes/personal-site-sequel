@@ -26,6 +26,9 @@ collections:
   photography:
     output: true
     permalink: /photography/:path/
+  movie_reviews:
+    output: true
+    permalink: /movie-reviews/:path/
 
 # Defaults
 defaults:
@@ -39,6 +42,11 @@ defaults:
       type: "photography"
     values:
       layout: "photo_album"
+  - scope:
+      path: ""
+      type: "movie_reviews"
+    values:
+      layout: "post"
   - scope:
       path: ""
     values:

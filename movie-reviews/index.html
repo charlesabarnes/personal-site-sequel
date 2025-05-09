@@ -1,0 +1,53 @@
+---
+layout: default
+title: Charles Barnes - Movie Reviews
+---
+
+<div class="movie-reviews-list">
+  <h1>Movie Reviews</h1>
+  
+  {% if site.movie_reviews.size > 0 %}
+    <div class="posts-grid movie-reviews-grid">
+      {% assign sorted_reviews = site.movie_reviews | sort: 'date' | reverse %}
+      {% for review in sorted_reviews %}
+        <div class="movie-review-item">
+          <div class="movie-poster-container">
+            {% if review.poster_url %}
+              <img src="{{ review.poster_url }}" alt="{{ review.movie_title }} poster" class="movie-poster">
+            {% else %}
+              <img src="/assets/images/blog/default-image.png" alt="{{ review.movie_title }}" class="movie-poster">
+            {% endif %}
+
+            {% if review.rating %}
+              <div class="movie-rating">
+                {{ review.rating }}/10
+              </div>
+            {% endif %}
+          </div>
+          
+          <div class="movie-review-content">
+            <h2 class="movie-title">
+              <a href="{{ review.url | relative_url }}">{{ review.movie_title }}</a>
+            </h2>
+            
+            <div class="movie-meta">
+              <span class="movie-year">{{ review.release_year }}</span>
+              {% if review.director %}
+              <span class="movie-director">Dir: {{ review.director }}</span>
+              {% endif %}
+              <span class="review-date">Reviewed: {{ review.date | date: "%b %d, %Y" }}</span>
+            </div>
+            
+            <div class="movie-review-excerpt">
+              {{ review.content | strip_html | truncatewords: 30 }}
+            </div>
+            
+            <a href="{{ review.url | relative_url }}" class="read-review">Read Review</a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  {% else %}
+    <p>No movie reviews yet. Check back soon!</p>
+  {% endif %}
+</div>

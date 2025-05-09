@@ -21,19 +21,16 @@ genres:
 
 # Movie Review: Kraven the Hunter (2024)
 
-
 <div class="movie-poster">
   <img src="https://metadata-static.plex.tv/3/gracenote/33fe82fe186055019ef22e6333d78074.jpg" alt="Kraven the Hunter poster" />
 </div>
 
-
 **Rating: ★★ (4/10)**
-
 
 > *Villains aren't born. They're made.*
 
-
 **Details:**
+
 - **Director:** J.C. Chandor
 - **Cast:** Aaron Taylor-Johnson, Ariana DeBose, Fred Hechinger, Alessandro Nivola, Christopher Abbott
 - **Genre:** Action, Adventure, Sci-Fi, Thriller
