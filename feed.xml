@@ -9,14 +9,34 @@
     <copyright>Copyright 2025 Charles Barnes</copyright>
     <webMaster>charles@charlesabarnes.com</webMaster>
     <managingEditor>charles@charlesabarnes.com (Charles Barnes)</managingEditor>
-    <pubDate>Fri, 07 Nov 2025 02:53:26 +0000</pubDate>
-    <lastBuildDate>Fri, 07 Nov 2025 02:53:26 +0000</lastBuildDate>
+    <pubDate>Sun, 23 Nov 2025 20:01:59 +0000</pubDate>
+    <lastBuildDate>Sun, 23 Nov 2025 20:01:59 +0000</lastBuildDate>
     <generator>Jekyll v4.2.2</generator>
     <image>
       <url>https://chkb.net/assets/images/blog/default-image.png</url>
       <title>Charles Barnes</title>
       <link>https://chkb.net</link>
     </image>
+    
+      <item>
+        <title>I Switched to Linux </title>
+        
+        <description>Diving in the deep and not looking back</description>
+        
+        <pubDate>Sun, 23 Nov 2025 00:00:00 +0000</pubDate>
+        <link>https://chkb.net/coding/thoughts/2025/11/23/ditching-windows.html</link>
+        <guid isPermaLink="true">https://chkb.net/coding/thoughts/2025/11/23/ditching-windows.html</guid>
+        <author>charles@charlesabarnes.com (Charles Barnes)</author>
+        
+        <media:content url="https://chkb.net/assets/images/blog/2025-11-23-ditching-windows/cover.png" medium="image" />
+        <media:thumbnail url="https://chkb.net/assets/images/blog/2025-11-23-ditching-windows/cover.png" />
+        
+        
+        <category>coding</category>
+        
+        <category>thoughts</category>
+        
+      </item>
     
       <item>
         <title>How I Built This Site</title>
