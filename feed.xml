@@ -9,14 +9,34 @@
     <copyright>Copyright 2025 Charles Barnes</copyright>
     <webMaster>charles@charlesabarnes.com</webMaster>
     <managingEditor>charles@charlesabarnes.com (Charles Barnes)</managingEditor>
-    <pubDate>Sun, 23 Nov 2025 20:01:59 +0000</pubDate>
-    <lastBuildDate>Sun, 23 Nov 2025 20:01:59 +0000</lastBuildDate>
+    <pubDate>Fri, 12 Dec 2025 15:07:14 +0000</pubDate>
+    <lastBuildDate>Fri, 12 Dec 2025 15:07:14 +0000</lastBuildDate>
     <generator>Jekyll v4.2.2</generator>
     <image>
       <url>https://chkb.net/assets/images/blog/default-image.png</url>
       <title>Charles Barnes</title>
       <link>https://chkb.net</link>
     </image>
+    
+      <item>
+        <title>I Burned Out</title>
+        
+        <description>Sharing my personal experience for those that may end up in a similar situation</description>
+        
+        <pubDate>Fri, 12 Dec 2025 00:00:00 +0000</pubDate>
+        <link>https://chkb.net/thoughts/2025/12/12/i-burned-out.html</link>
+        <guid isPermaLink="true">https://chkb.net/thoughts/2025/12/12/i-burned-out.html</guid>
+        <author>charles@charlesabarnes.com (Charles Barnes)</author>
+        
+        <media:content url="https://chkb.net/assets/images/blog/2025-12-12-i-burned-out/cover.png" medium="image" />
+        <media:thumbnail url="https://chkb.net/assets/images/blog/2025-12-12-i-burned-out/cover.png" />
+        
+        
+        <category>career</category>
+        
+        <category>thoughts</category>
+        
+      </item>
     
       <item>
         <title>I Switched to Linux </title>
