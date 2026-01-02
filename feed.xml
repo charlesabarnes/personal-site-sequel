@@ -6,17 +6,35 @@
     <link>https://chkb.net/</link>
     <atom:link href="https://chkb.net/feed.xml" rel="self" type="application/rss+xml"/>
     <language>en-us</language>
-    <copyright>Copyright 2025 Charles Barnes</copyright>
+    <copyright>Copyright 2026 Charles Barnes</copyright>
     <webMaster>charles@charlesabarnes.com</webMaster>
     <managingEditor>charles@charlesabarnes.com (Charles Barnes)</managingEditor>
-    <pubDate>Fri, 12 Dec 2025 15:07:14 +0000</pubDate>
-    <lastBuildDate>Fri, 12 Dec 2025 15:07:14 +0000</lastBuildDate>
+    <pubDate>Fri, 02 Jan 2026 03:33:41 +0000</pubDate>
+    <lastBuildDate>Fri, 02 Jan 2026 03:33:41 +0000</lastBuildDate>
     <generator>Jekyll v4.2.2</generator>
     <image>
       <url>https://chkb.net/assets/images/blog/default-image.png</url>
       <title>Charles Barnes</title>
       <link>https://chkb.net</link>
     </image>
+    
+      <item>
+        <title>In 2026 I am betting on humans</title>
+        
+        <description>Just a little optimistic prediction about social behavior in 2026</description>
+        
+        <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+        <link>https://chkb.net/thoughts/2026/01/01/betting-on-humans.html</link>
+        <guid isPermaLink="true">https://chkb.net/thoughts/2026/01/01/betting-on-humans.html</guid>
+        <author>charles@charlesabarnes.com (Charles Barnes)</author>
+        
+        <media:content url="https://chkb.net/assets/images/blog/2026-01-01-betting-on-humans/cover.png" medium="image" />
+        <media:thumbnail url="https://chkb.net/assets/images/blog/2026-01-01-betting-on-humans/cover.png" />
+        
+        
+        <category>thoughts</category>
+        
+      </item>
     
       <item>
         <title>I Burned Out</title>
