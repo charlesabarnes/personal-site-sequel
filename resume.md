@@ -3,110 +3,81 @@ layout: post
 title: Charles Barnes - Resume
 ---
 
-# Charles Barnes
-## Software Engineer | UX Designer
+## Experience
 
-- Email: resume@chkb.net
-- Website: [chkb.net](https://chkb.net)
-- Location: St. Louis, MO
+### **Bullhorn, Inc**
+**Staff Software Engineer**  
+*Apr 2025 - Present*
 
----
-
-# Charles Barnes  
-**Senior Software Engineer and Consultant**  
+- Presently delivering great work, check back later for the highlights
 
 ---
 
-## Summary  
-I am a Full Stack Software Engineer specializing in front-end development. I enjoy working in Angular, React, and TypeScript.
-
----
-
-## Experience  
-
-### **Karmacheck**  
+### **Karmacheck**
 **Senior Software Engineer**  
-*July 2024 - March 2025*  
+*Jul 2024 - Mar 2025*
 
-- Performed full stack development work in Typescript and Java
-- Contributed with migrating a Vue app to React
+- Delivered full-stack features across a TypeScript frontend and backend
+- Migrated some application components from Vue to React for widescale initiative
 
 ---
 
-### **Bitscopic, Inc**  
+### **Bitscopic, Inc**
 **Senior Software Engineer (Frontend Lead)**  
-*Mar 2022 - July 2024*  
+*Mar 2022 - Jul 2024*
 
-- Dictated architectural and visual direction for the company’s product portfolio.  
-- Migrated the company’s frontend applications to an `nrwl/Nx` monorepo.  
-- Upgraded 3 of the company’s 6 frontend applications from Ember and jQuery to React and TypeScript.  
-- Contributed to backend initiatives.  
-- Created a product design system and accessibility guidelines.  
-- Prototyped frontend features using Figma, Photoshop, and Illustrator.  
-- Selected vendors for product adoption and analytics tools.  
-- Modernized build and deployment processes with npm tools, CI/CD, and Bash scripts.  
+- Set architectural and visual direction for the company's product portfolio, built for the U.S. Department of Veterans Affairs, CDC, and FDA
+- Migrated three of six frontend applications from Ember and jQuery to React and TypeScript, and consolidated all six into an Nx monorepo
+- Built the product design system and accessibility guidelines, bringing the portfolio to WCAG 2.1 AA
+- Modernized build and deployment with CI/CD pipelines and npm tooling
+- Owned vendor selection and app integration for analytics and tutorial platforms
 
 ---
 
-### **Main Method, LLC**  
-**Technical Consultant/Owner**  
-*2020 - Present*  
+### **Bullhorn, Inc**
+**Junior Software Engineer → Senior Software Engineer**  
+*Jun 2017 - Mar 2022*
 
-- Helps small businesses and startups build web presences, apps, and UI/UX solutions.  
-- Develops cross-platform apps for iOS, Android, and standalone desktop applications using React Native and Ionic.  
-- Built integrations with OpenAI’s GPT-4 to process structured business data into human-readable data.  
-- Created web apps using Angular, Java, PHP, Node.js, and React.  
-
----
-
-### **Bullhorn, Inc**  
-**Senior Software Engineer**  
-*Oct 2021 - Mar 2022*  
-
-- Core member of Frontend Platform Health team.  
-- Experimented with performance improvements and bundle size reductions for JavaScript/TypeScript products.  
-- Leveraged CI/CD with GitHub Actions and Jenkins.  
-- Migrated and added automated tests using Cypress.  
-
-**Software Engineer III**  
-*Mar 2020 - Oct 2021*  
-
-- Maintained the company’s Angular component library.  
-- Developed a new product using Java, Spring, SQL Server, and Angular.  
-
-**Software Engineer**  
-*Dec 2018 - Mar 2020*  
-
-- Mentored interns and new hires.  
-- Upgraded the Career Portal offering from AngularJS to Angular 7+.  
-
-**Junior Software Engineer**  
-*June 2017 - Dec 2018*  
-
-- Full-stack LAMP and Angular development in an agile environment.  
-- Paired code with unit tests and end-to-end tests using Karma, Jest, PHPUnit, and Protractor.  
-
-**Technical Support Analyst**  
-*Jan 2016 - June 2017*  
-
-- Provided technical support for an industry-leading recruitment software company.  
-- Contributed to the company’s AngularJS open-source projects.  
-- Developed support tools that resolved thousands of tickets.  
+- Core member of the frontend platform health team, driving architecture optimization, cleanup, and widescale standardization and upgrades to improve performance and reduce bundle sizes across JavaScript/TypeScript products
+- Upgraded the Career Portal, deployed to thousands of customer sites, from AngularJS to Angular 7+ with no regressions and migrated it onto the company component library
+- Maintained the company's Angular component library
+- Delivered full-stack features across three products spanning Angular, Java/Spring, SQL Server, PHP, and MySQL
+- Automated tasks with CI/CD in GitHub Actions and Jenkins; reworked Protractor tests and added Cypress coverage
 
 ---
 
-## Skills  
+## Consulting
 
-### **Frontend Development**  
-- HTML, CSS, JavaScript, TypeScript, Angular, React, Next.js, Three.js  
+### **Main Method, LLC**
+**Technical Consultant / Owner**  
+*2020 - Present*
 
-### **Backend Development**  
-- Node.js, PHP, MongoDB, Java, Spring, SQL  
+- Built AI-integrated web and mobile products for small businesses and startups
+- Developed MCP server integrations exposing client product catalogs and business data to LLM-based assistants
+- Designed LLM pipelines that transform structured business data into human-readable output
+- Shipped cross-platform iOS, Android, and full stack web applications using Angular, React, and Typescript
 
-### **Design**  
-- Adobe CC, Figma, After Effects, Photoshop, Illustrator, Lottie  
+---
 
-### **Other**  
-- Linux, Windows, Android, iOS, Ionic, React Native, AWS, Azure, Firebase  
+## Projects
+
+### **Custom Store Platform/CMS**
+*2024 - Present*
+
+- Developed a custom multi-tenant ecommerce store serving tens of thousands of customers monthly
+- Designed and implemented a custom ETL process to efficiently load, link, and manage a large product catalog
+
+---
+
+## Skills
+
+### **Frontend Development**
+- HTML, CSS, Javascript, Typescript, Angular, React, NextJS, Three.js
+
+### **Backend Development**
+- NodeJS, PHP, MongoDB, Java, Spring, SQL
+
+### **Other**
+- AWS, Figma, Claude Code, Codex
 
 *References available upon request*

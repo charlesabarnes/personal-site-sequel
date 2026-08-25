@@ -12,7 +12,7 @@ In 2024 I burned out hard. I didn't care about work or code. I kept missing out 
 
 ### What is burnout
 
-You can likely find a ton of definitions and descriptions of burnout.  From a quick search, my favorite is "Burnout is a state of emotional, mental, and often physical exhaustion brought on by prolonged or repeated stress." ([[Psychology Todayhttps://www.psychologytoday.com/us/basics/burnout]]).  The definition while simple may map apply different to you in a slightly different way.
+You can likely find a ton of definitions and descriptions of burnout.  From a quick search, my favorite is "Burnout is a state of emotional, mental, and often physical exhaustion brought on by prolonged or repeated stress." ([Psychology Today](https://www.psychologytoday.com/us/basics/burnout)).  The definition while simple may map apply different to you in a slightly different way.
 
 ### Flash-point
 

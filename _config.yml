@@ -7,12 +7,12 @@ baseurl: ""
 github_username: charlesabarnes
 lang: en_US
 author: Charles Barnes
-logo: /assets/images/logo.png
+logo: /android-chrome-512x512.png
 social:
   name: Charles Barnes
   links:
     - https://github.com/charlesabarnes
-    - https://www.linkedin.com/in/charlesanthonybarnes
+    - https://www.linkedin.com/in/charlesabarnes
 
 # Build settings
 markdown: kramdown

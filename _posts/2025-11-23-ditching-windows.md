@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "I Switched to Linux "
+title: "I Switched to Linux"
 excerpt: "Diving in the deep and not looking back"
 date: "2025-11-23"
 categories: [Coding, Thoughts]

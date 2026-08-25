@@ -16,7 +16,7 @@ layout: default
         {{ page.date | date: "%B %d, %Y" }}
       </time>
       <span class="reading-time">
-        <i class="fa-regular fa-clock"></i> {{ readingtime }} min read
+        <i class="fa-regular fa-clock" aria-hidden="true"></i> {{ readingtime }} min read
       </span>
       {% if page.categories.size > 0 %}
       <span class="project-tags">
@@ -43,7 +43,7 @@ layout: default
   {% if page.tags.size > 0 %}
   <div class="project-tags">
     {% for tag in page.tags %}
-    <a href="{{ '/tag/' | append: tag | relative_url }}" class="project-tag">{{ tag }}</a>
+    <a href="{{ '/tag/' | append: tag | append: '/' | relative_url }}" class="project-tag">{{ tag }}</a>
     {% endfor %}
   </div>
   {% endif %}

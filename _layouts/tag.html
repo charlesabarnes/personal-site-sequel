@@ -4,8 +4,10 @@ layout: default
 
 <div class="blog-list">
   <h1>Posts tagged: {{ page.tag }}</h1>
-  
-  {% if site.tags[page.tag].size > 0 %}
+
+  {% assign tagged_reviews = site.movie_reviews | where_exp: "review", "review.tags contains page.tag" %}
+
+  {% if site.tags[page.tag].size > 0 or tagged_reviews.size > 0 %}
     <div class="posts-grid">
       {% for post in site.tags[page.tag] %}
         <div class="blog-post-item">
@@ -38,6 +40,35 @@ layout: default
             </div>
             
             <a href="{{ post.url | relative_url }}" class="blog-post-read-more">Read More</a>
+          </div>
+        </div>
+      {% endfor %}
+
+      {% assign sorted_reviews = tagged_reviews | sort: 'date' | reverse %}
+      {% for review in sorted_reviews %}
+        <div class="blog-post-item">
+          <div class="blog-post-image-container">
+            {% if review.poster_url %}
+              <img src="{{ review.poster_url }}" alt="{{ review.movie_title }} poster" class="blog-post-image" loading="lazy">
+            {% else %}
+              {% include picture.html path="/assets/images/blog/default-image.png" alt=review.title class="blog-post-image" %}
+            {% endif %}
+          </div>
+
+          <div class="blog-post-content">
+            <h2 class="blog-post-title">
+              <a href="{{ review.url | relative_url }}">{{ review.title }}</a>
+            </h2>
+
+            <div class="blog-post-meta">
+              {{ review.date | date: "%B %d, %Y" }}
+            </div>
+
+            <div class="blog-post-excerpt">
+              {{ review.content | strip_html | truncatewords: 30 }}
+            </div>
+
+            <a href="{{ review.url | relative_url }}" class="blog-post-read-more">Read More</a>
           </div>
         </div>
       {% endfor %}
