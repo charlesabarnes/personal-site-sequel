@@ -44,27 +44,20 @@ function initPortfolioFilter() {
       
       // Filter projects
       projectCards.forEach(card => {
-        if (filterValue === 'all') {
+        clearTimeout(card.hideTimeout);
+        const cardTags = (card.getAttribute('data-tags') || '').split(',');
+        if (filterValue === 'all' || cardTags.includes(filterValue)) {
           card.style.display = '';
           setTimeout(() => {
             card.style.opacity = '1';
             card.style.transform = '';
           }, 50);
         } else {
-          const cardTags = card.getAttribute('data-tags').split(',');
-          if (cardTags.includes(filterValue)) {
-            card.style.display = '';
-            setTimeout(() => {
-              card.style.opacity = '1';
-              card.style.transform = '';
-            }, 50);
-          } else {
-            card.style.opacity = '0';
-            card.style.transform = 'scale(0.8)';
-            setTimeout(() => {
-              card.style.display = 'none';
-            }, 300);
-          }
+          card.style.opacity = '0';
+          card.style.transform = 'scale(0.8)';
+          card.hideTimeout = setTimeout(() => {
+            card.style.display = 'none';
+          }, 300);
         }
       });
     });
@@ -129,13 +122,7 @@ const setTheme = (theme) => {
 }
 
 const getDefaultTheme = () => {
-  const theme = localStorage.getItem('theme');
-  if (theme) {
-    setTheme(theme);
-  } else {
-    // Always default to light theme
-    setTheme('light');
-  }
+  setTheme('light');
 }
 
 function toggleTheme() {

@@ -52,7 +52,7 @@ for img in "$SOURCE_DIR"/*.{jpg,jpeg,png,JPG,JPEG,PNG}; do
   
   # Generate thumbnail (300px width, preserving aspect ratio)
   # For large panoramas, use different settings to avoid memory issues
-  filesize=$(stat -c%s "$img")
+  filesize=$(stat -c%s "$img" 2>/dev/null || stat -f%z "$img")
   if [ $filesize -gt 5000000 ]; then
     echo "  Large image detected ($filesize bytes), using optimized settings"
     convert -limit memory 1GB -limit area 1GB -define jpeg:size=600x400 \
