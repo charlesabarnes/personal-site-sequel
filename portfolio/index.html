@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="utf-8">
 <title>Charles Barnes - Portfolio</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- Favicon and App Icons -->
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -19,19 +18,20 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-<!-- Stylesheets -->
+<script>document.documentElement.dataset.theme=(function(){try{return localStorage.getItem("theme")}catch(e){}})()||"light";</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&family=Kanit:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap">
 <link rel="stylesheet" href="/assets/css/styles.css">
-<link href="/assets/fontawesome/css/fontawesome.min.css" rel="stylesheet">
-<link href="/assets/fontawesome/css/brands.min.css" rel="stylesheet">
-<link href="/assets/fontawesome/css/regular.min.css" rel="stylesheet">
-<link href="/assets/fontawesome/css/solid.min.css" rel="stylesheet">
-<script src="/assets/js/script.js"></script>
+<link rel="stylesheet" href="/assets/fontawesome/css/fontawesome.min.css">
+<link rel="stylesheet" href="/assets/fontawesome/css/brands.min.css">
+<link rel="stylesheet" href="/assets/fontawesome/css/regular.min.css">
+<link rel="stylesheet" href="/assets/fontawesome/css/solid.min.css">
+<script src="/assets/js/script.js" defer></script>
 
-<!-- Primary Meta Tags -->
 <meta name="author" content="Charles Barnes">
 <meta name="keywords" content="HTML,CSS,JavaScript,Charles,Barnes,web,developer,website,development,Missouri,Charles Barnes,Saint Louis Developer,St louis">
 
-<!-- Schema.org markup for Google -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -44,7 +44,6 @@
 }
 </script>
 
-<!-- Jekyll SEO tag to populate meta tags -->
 <!-- Begin Jekyll SEO tag v2.9.1 -->
 <meta name="generator" content="Jekyll v4.2.2" />
 <meta property="og:title" content="Charles Barnes - Portfolio" />
@@ -67,378 +66,524 @@
 <meta property="og:image" content="https://chkb.net/assets/images/blog/default-image.png">
 
 
-<!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:url" content="https://chkb.net/portfolio/">
 <meta property="twitter:title" content="Charles Barnes - Portfolio">
 <meta property="twitter:description" content="Charles Barnes - Developer in St. Louis, Mo | charles@charlesabarnes.com">
 <meta property="twitter:image" content="https://chkb.net/assets/images/blog/default-image.png">
 
-<!-- RSS feed -->
 <link rel="alternate" type="application/rss+xml" title="Charles Barnes" href="https://chkb.net/feed.xml">
 
 
-<!-- Glad you are taking a look at the HTML. 
-  Built by Charles Anthony Barnes. 
-  Let me know what you think! me@chkb.net -->
+
   </head>
   <body>
-    <div class="container">
-      <div class="header">
-  <div class="header-row menu-row">
-    <button class="menu-button" onclick="showMenu()" aria-label="Open menu">
-      <i class="fa-regular fa-bars" aria-hidden="true"></i>
-    </button>
-  </div>
-  <div class="header-row">
-    <div class="menu start">
-      <!-- <button class="menu-button theme-toggle-button" onclick="toggleTheme()">
-        <i class="fa-regular fa-sun"></i>
-      </button>  -->
-      <a href="/resume" class="menu-item no-decoration">Resume</a>
-      <a href="/portfolio/" class="menu-item no-decoration">Portfolio</a>
-      <a href="https://chkb.ai" class="menu-item no-decoration" target="_blank" rel="noopener noreferrer">AI Blog</a>
-    </div>
-    <a class="no-decoration" href="/">
-      <div class="name">
-        <span>Charles</span>
-        <span class="name-special">"chuck"</span>
-        <span>Barnes</span>
-      </div>
-    </a>
-    <div class="menu end">
-      <a href="/blog/" class="menu-item">Blog</a>
-      <a href="/photography/" class="menu-item">Photography</a>
-      <a href="mailto:charles@charlesabarnes.com" class="button no-decoration">Contact</a>
-    </div>
-  </div>
-  <div class="subtitle">Software Engineer x UX Designer</div>
-</div>
-      
-      <div class="portfolio-container">
-  <h1 class="portfolio-heading">My Work</h1>
-  
-  <div class="tag-filter">
-    <button class="filter-tag active" data-tag="all">All</button>
-    <button class="filter-tag" data-tag="Angular">Angular</button>
-    <button class="filter-tag" data-tag="TypeScript">TypeScript</button>
-    <button class="filter-tag" data-tag="JavaScript">JavaScript</button>
-    <button class="filter-tag" data-tag="Open Source">Open Source</button>
-    <button class="filter-tag" data-tag="UI/UX">UI/UX</button>
-    <button class="filter-tag" data-tag="Web App">Web App</button>
-  </div>
-  
-  <div class="portfolio-grid">
-    <!-- gangway -->
-    <div class="project-card" data-tags="Angular,TypeScript,Open Source,Web App">
-      <div class="project-image">
-        <img src="/portfolio/project-images/gangway/previews.jpg" alt="gangway Previews dashboard">
-      </div>
-      <div class="project-content">
-        <h2 class="project-title">gangway</h2>
-        <div class="project-year">2026</div>
-        <p class="project-description">
-          A self-hosted preview server. Pull requests, folders dropped in the browser, and apps built by AI agents over MCP each get their own HTTPS URL on your domain. Installs with a one-liner or from Unraid's Community Apps.
-        </p>
-        <div class="project-tags">
-          <span class="project-tag">TypeScript</span>
-          <span class="project-tag">Angular</span>
-          <span class="project-tag">Bun</span>
-          <span class="project-tag">Docker</span>
-          <span class="project-tag">MCP</span>
-          <span class="project-tag">Open Source</span>
-        </div>
-        <div class="project-links">
-          <a href="https://gangway.sh/" target="_blank" rel="noopener noreferrer"><i class="far fa-window-maximize"></i> Visit Website</a>
-          <a href="https://github.com/charlesabarnes/gangway" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View on GitHub</a>
-          <a href="/portfolio/project-images/gangway/previews.jpg" target="_blank" rel="noopener noreferrer"><i class="far fa-image"></i> Previews</a>
-          <a href="/portfolio/project-images/gangway/artifacts.jpg" target="_blank" rel="noopener noreferrer"><i class="far fa-image"></i> Artifacts</a>
-        </div>
-      </div>
-    </div>
+    <header class="site-header container">
+  <div class="site-header__bar">
+    <a class="site-header__home" href="/" aria-label="Charles Barnes, home"><span class="badge" aria-hidden="true"><span>C</span><span>H</span><span>K</span><span>B</span></span>
+</a>
+    <div class="site-header__actions">
+      <nav class="site-header__nav site-nav" aria-label="Primary" data-nav>
+        
+          
+            <a class="site-nav__link" href="/resume">Resume</a>
+          
+        
+          
+            <a class="site-nav__link" href="/portfolio/" aria-current="page">Portfolio</a>
+          
+        
+          
+            <a class="site-nav__link" href="https://chkb.ai" target="_blank" rel="noopener noreferrer">AI Blog<i class="site-nav__external fa-regular fa-arrow-up-right" aria-hidden="true"></i></a>
+          
+        
+          
+            <a class="site-nav__link" href="/blog/">Blog</a>
+          
+        
+          
+            <a class="site-nav__link" href="/photography/">Photography</a>
+          
+        
+        <span class="site-nav__dot" data-nav-dot></span>
+      </nav>
+      <a class="site-header__contact button button--accent button--sm" href="mailto:charles@charlesabarnes.com">Contact</a>
+      <button type="button" class="icon-button theme-toggle" data-theme-toggle aria-label="Toggle dark mode">
+  <i class="theme-toggle__light fa-regular fa-sun" aria-hidden="true"></i>
+  <i class="theme-toggle__dark fa-regular fa-moon" aria-hidden="true"></i>
+</button>
 
-    <!-- Actors Everywhere -->
-    <div class="project-card" data-tags="JavaScript,UI/UX,Web App">
-      <div class="project-image">
-        <img src="/portfolio/project-images/actors-everywhere.png" alt="Actors Everywhere">
-      </div>
-      <div class="project-content">
-        <h2 class="project-title">Actors Everywhere</h2>
-        <div class="project-year">2024</div>
-        <p class="project-description">
-          A marketing website for Actors Everywhere, a platform connecting actors with opportunities. Designed to showcase services and attract potential clients and talent.
-        </p>
-        <div class="project-tags">
-          <span class="project-tag">JavaScript</span>
-          <span class="project-tag">Web Design</span>
-          <span class="project-tag">UI/UX</span>
-          <span class="project-tag">Marketing</span>
-        </div>
-        <div class="project-links">
-          <a href="https://actorseverywhere.com/" target="_blank" rel="noopener noreferrer"><i class="far fa-window-maximize"></i> Visit Website</a>
-          <a href="/portfolio/project-images/actors-everywhere.png" target="_blank" rel="noopener noreferrer"><i class="far fa-image"></i> View Screenshot</a>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Baristina -->
-    <div class="project-card" data-tags="JavaScript,UI/UX,Web App,Shopify">
-      <div class="project-image">
-        <img src="/portfolio/project-images/baristina/baristina-base-color.png" alt="Philips Baristina Configurator">
-      </div>
-      <div class="project-content">
-        <h2 class="project-title">Philips Baristina</h2>
-        <div class="project-year">2024</div>
-        <p class="project-description">
-          Marketing page and interactive configuration tool for the Philips Baristina espresso machine, allowing customers to customize their machine.
-        </p>
-        <div class="project-tags">
-          <span class="project-tag">JavaScript</span>
-          <span class="project-tag">Interactive</span>
-          <span class="project-tag">Shopify</span>
-        </div>
-        <div class="project-links">
-          <a href="/portfolio/project-images/baristina/baristina-base-color.png" target="_blank" rel="noopener noreferrer"><i class="far fa-image"></i> Base Color</a>
-          <a href="/portfolio/project-images/baristina/baristina-portafilter.png" target="_blank" rel="noopener noreferrer"><i class="far fa-image"></i> Portafilter</a>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Praedialert -->
-    <div class="project-card" data-tags="Angular,TypeScript,Healthcare,UI/UX">
-      <div class="project-image">
-        <img src="/portfolio/project-images/praedialert/dashboard.png" alt="Praedialert Dashboard">
-      </div>
-      <div class="project-content">
-        <h2 class="project-title">Praedialert Revamp</h2>
-        <div class="project-year">2023</div>
-        <p class="project-description">
-          A comprehensive healthcare application for monitoring patient data and managing healthcare workflows.
-        </p>
-        <div class="project-tags">
-          <span class="project-tag">Angular</span>
-          <span class="project-tag">TypeScript</span>
-          <span class="project-tag">Healthcare</span>
-          <span class="project-tag">UI/UX</span>
-        </div>
-        <div class="project-links">
-          <a href="/portfolio/project-images/praedialert/dashboard.png" target="_blank" rel="noopener noreferrer"><i class="far fa-image"></i> Dashboard</a>
-          <a href="/portfolio/project-images/praedialert/create-adhoc-item.png" target="_blank" rel="noopener noreferrer"><i class="far fa-image"></i> Create Item</a>
-          <a href="/portfolio/project-images/praedialert/patient-chart.png" target="_blank" rel="noopener noreferrer"><i class="far fa-image"></i> Patient Chart</a>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Praedico -->
-    <div class="project-card" data-tags="Angular,TypeScript,UI/UX">
-      <div class="project-image">
-        <img src="/portfolio/project-images/praedico/praedico-dark.png" alt="Praedico Dark Theme">
-      </div>
-      <div class="project-content">
-        <h2 class="project-title">Praedico Revamp</h2>
-        <div class="project-year">2023</div>
-        <p class="project-description">
-          A modernized interface for the Praedico platform with light and dark themes to enhance user experience.
-        </p>
-        <div class="project-tags">
-          <span class="project-tag">Angular</span>
-          <span class="project-tag">TypeScript</span>
-          <span class="project-tag">Dark Mode</span>
-          <span class="project-tag">UI Design</span>
-        </div>
-        <div class="project-links">
-          <a href="/portfolio/project-images/praedico/praedico-dark.png" target="_blank" rel="noopener noreferrer"><i class="far fa-image"></i> Dark Theme</a>
-          <a href="/portfolio/project-images/praedico/praedico-light.png" target="_blank" rel="noopener noreferrer"><i class="far fa-image"></i> Light Theme</a>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Praedivault -->
-    <div class="project-card" data-tags="Angular,Healthcare,Security">
-      <div class="project-image">
-        <img src="/portfolio/project-images/praedivault/praedivault.png" alt="Praedivault">
-      </div>
-      <div class="project-content">
-        <h2 class="project-title">Praedivault</h2>
-        <div class="project-year">2023</div>
-        <p class="project-description">
-          A secure data storage and management solution for healthcare data, ensuring compliance and accessibility.
-        </p>
-        <div class="project-tags">
-          <span class="project-tag">Angular</span>
-          <span class="project-tag">Security</span>
-          <span class="project-tag">Data Storage</span>
-          <span class="project-tag">Healthcare</span>
-        </div>
-        <div class="project-links">
-          <a href="/portfolio/project-images/praedivault/praedivault.png" target="_blank" rel="noopener noreferrer"><i class="far fa-image"></i> View Screenshot</a>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Praedigene -->
-    <div class="project-card" data-tags="Angular,Healthcare,Data Visualization">
-      <div class="project-image">
-        <img src="/portfolio/project-images/praedigene/praedigene.png" alt="Praedigene">
-      </div>
-      <div class="project-content">
-        <h2 class="project-title">Praedigene Revamp</h2>
-        <div class="project-year">2022</div>
-        <p class="project-description">
-          A genetic data analysis platform with enhanced workflow management for healthcare professionals.
-        </p>
-        <div class="project-tags">
-          <span class="project-tag">Angular</span>
-          <span class="project-tag">Data Visualization</span>
-          <span class="project-tag">Genetics</span>
-          <span class="project-tag">Healthcare</span>
-        </div>
-        <div class="project-links">
-          <a href="/portfolio/project-images/praedigene/praedigene.png" target="_blank" rel="noopener noreferrer"><i class="far fa-image"></i> Dashboard</a>
-          <a href="/portfolio/project-images/praedigene/work-items.png" target="_blank" rel="noopener noreferrer"><i class="far fa-image"></i> Work Items</a>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Pointing Poker -->
-    <div class="project-card" data-tags="JavaScript,Open Source,Agile">
-      <div class="project-image">
-        <img src="/portfolio/project-images/pointing-poker.png" alt="Pointing Poker">
-      </div>
-      <div class="project-content">
-        <h2 class="project-title">Pointing Poker</h2>
-        <div class="project-year">2019</div>
-        <p class="project-description">
-          A real-time collaborative planning poker tool for agile teams, allowing for remote estimation sessions.
-        </p>
-        <div class="project-tags">
-          <span class="project-tag">JavaScript</span>
-          <span class="project-tag">Real-time</span>
-          <span class="project-tag">Agile</span>
-          <span class="project-tag">WebSockets</span>
-        </div>
-        <div class="project-links">
-          <a href="https://github.com/charlesabarnes/pointing-poker" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View on GitHub</a>
-          <a href="/portfolio/project-images/pointing-poker.png" target="_blank" rel="noopener noreferrer"><i class="far fa-image"></i> View Screenshot</a>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Career Portal -->
-    <div class="project-card" data-tags="Angular,JavaScript,Open Source,UI/UX">
-      <div class="project-image">
-        <img src="/portfolio/project-images/career-portal.png" alt="Career Portal">
-      </div>
-      <div class="project-content">
-        <h2 class="project-title">Career Portal Angular Upgrade</h2>
-        <div class="project-year">2019</div>
-        <p class="project-description">
-          Upgraded the Bullhorn Career Portal to Angular, enhancing performance and user experience.
-        </p>
-        <div class="project-tags">
-          <span class="project-tag">Angular</span>
-          <span class="project-tag">Migration</span>
-          <span class="project-tag">Open Source</span>
-          <span class="project-tag">Responsive Design</span>
-        </div>
-        <div class="project-links">
-          <a href="https://github.com/bullhorn/career-portal" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View on GitHub</a>
-          <a href="/portfolio/project-images/career-portal.png" target="_blank" rel="noopener noreferrer"><i class="far fa-image"></i> View Screenshot</a>
-        </div>
-      </div>
-    </div>
-    
-    <!-- BoxlabBBO -->
-    <div class="project-card" data-tags="JavaScript,Data Analysis,Web App">
-      <div class="project-image">
-        <img src="/portfolio/project-images/boxlab.png" alt="BoxlabBBO">
-      </div>
-      <div class="project-content">
-        <h2 class="project-title">BoxlabBBO</h2>
-        <div class="project-year">2019</div>
-        <p class="project-description">
-          A specialized application for boxing officials to track and analyze boxing data and statistics.
-        </p>
-        <div class="project-tags">
-          <span class="project-tag">JavaScript</span>
-          <span class="project-tag">Sports Tech</span>
-          <span class="project-tag">Data Analysis</span>
-          <span class="project-tag">Web App</span>
-        </div>
-        <div class="project-links">
-          <a href="/portfolio/project-images/boxlab.png" target="_blank" rel="noopener noreferrer"><i class="far fa-image"></i> View Screenshot</a>
-        </div>
-      </div>
-    </div>
-    
-    <!-- SPF Toolbox -->
-    <div class="project-card" data-tags="PHP,Open Source,Security">
-      <div class="project-image">
-        <img src="/portfolio/project-images/spftoolbox.png" alt="SPF Toolbox">
-      </div>
-      <div class="project-content">
-        <h2 class="project-title">SPF Toolbox</h2>
-        <div class="project-year">2017</div>
-        <p class="project-description">
-          An open-source utility for checking and validating SPF, DKIM, and DMARC records for email security.
-        </p>
-        <div class="project-tags">
-          <span class="project-tag">PHP</span>
-          <span class="project-tag">Email Security</span>
-          <span class="project-tag">Open Source</span>
-          <span class="project-tag">Utility</span>
-        </div>
-        <div class="project-links">
-          <a href="https://github.com/charlesabarnes/SPFtoolbox" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View on GitHub</a>
-          <a href="/portfolio/project-images/spftoolbox.png" target="_blank" rel="noopener noreferrer"><i class="far fa-image"></i> View Screenshot</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-    </div>
-
-    <div class="menu-popup">
-  <div class="menu-container">
-    <div class="menu-item">
-      <a href="/resume" class="no-decoration">Resume</a>
-    </div>
-    <div class="menu-item">
-      <a href="/portfolio/" class="no-decoration">Portfolio</a>
-    </div>
-    <div class="menu-item">
-      <a href="https://chkb.ai" class="no-decoration" target="_blank" rel="noopener noreferrer">AI Blog</a>
-    </div>
-    <div class="menu-item">
-      <a href="/blog/">Blog</a>
-    </div>
-    <div class="menu-item">
-      <a href="/photography/">Photography</a>
-    </div>
-    <div class="menu-item">
-      <a href="mailto:charles@charlesabarnes.com" class="button no-decoration">Contact</a>
-    </div>
-    <!-- <div class="menu-item theme-toggle-mobile">
-      <button onclick="toggleTheme(); updateMobileThemeButton();" class="mobile-theme-toggle-button">
-        <i class="fa-regular fa-sun"></i>
-        <span class="theme-text">Toggle Dark Mode</span>
+      <button type="button" class="site-header__menu icon-button" data-menu-open aria-label="Open menu" aria-haspopup="dialog">
+        <i class="fa-regular fa-bars" aria-hidden="true"></i>
       </button>
-    </div> -->
+    </div>
+  </div>
+</header>
+
+    <main class="site-main">
+      
+
+<div class="container">
+  
+  <header class="page-head" data-rise>
+  <h1 class="page-head__title">My Work</h1>
+  <div class="page-head__aside">
+    <span class="meta">12 projects, 2017 to 2026</span>
+    
+    
+  </div>
+</header>
+
+  <div class="filter-bar" role="group" aria-label="Filter projects" data-filter-bar>
+    <button type="button" class="chip chip--filter" data-filter="All" aria-pressed="true">All</button>
+    
+      <button type="button" class="chip chip--filter" data-filter="Angular" aria-pressed="false">Angular</button>
+    
+      <button type="button" class="chip chip--filter" data-filter="TypeScript" aria-pressed="false">TypeScript</button>
+    
+      <button type="button" class="chip chip--filter" data-filter="JavaScript" aria-pressed="false">JavaScript</button>
+    
+      <button type="button" class="chip chip--filter" data-filter="Open Source" aria-pressed="false">Open Source</button>
+    
+      <button type="button" class="chip chip--filter" data-filter="UI/UX" aria-pressed="false">UI/UX</button>
+    
+      <button type="button" class="chip chip--filter" data-filter="Web App" aria-pressed="false">Web App</button>
+    
+  </div>
+  <div class="project-grid" data-rise data-filter-grid>
+    
+      
+
+
+<article class="project-card" data-filters="Angular,TypeScript,Open Source,Web App">
+  
+    <a class="frame frame--video" href="https://gangway.sh/" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true"><img src="/portfolio/project-images/gangway/previews.jpg" alt="" loading="lazy"></a>
+  
+  <div>
+    <div class="project-card__head">
+      <h3 class="project-card__title">gangway</h3>
+      <span class="meta">2026</span>
+    </div>
+    <p class="project-card__text">A self-hosted preview server. Pull requests, folders dropped in the browser, and apps built by AI agents over MCP each get their own HTTPS URL on your domain. Installs with a one-liner or from Unraid's Community Apps.</p>
+    <div class="project-card__tags meta">TypeScript · Angular · Bun · Docker · MCP · Open Source</div>
+    <div class="link-list">
+      
+        
+        
+        <a class="arrow-link" href="https://gangway.sh/" target="_blank" rel="noopener noreferrer">Visit Website<i class="fa-regular fa-arrow-up-right" aria-hidden="true"></i></a>
+      
+        
+        
+        <a class="arrow-link" href="https://github.com/charlesabarnes/gangway" target="_blank" rel="noopener noreferrer">View on GitHub<i class="fa-regular fa-arrow-up-right" aria-hidden="true"></i></a>
+      
+        
+        
+        <a class="arrow-link" href="/portfolio/project-images/gangway/previews.jpg" target="_blank" rel="noopener noreferrer">Previews<i class="fa-regular fa-arrow-up-right" aria-hidden="true"></i></a>
+      
+        
+        
+        <a class="arrow-link" href="/portfolio/project-images/gangway/artifacts.jpg" target="_blank" rel="noopener noreferrer">Artifacts<i class="fa-regular fa-arrow-up-right" aria-hidden="true"></i></a>
+      
+    </div>
+  </div>
+</article>
+
+    
+      
+
+
+<article class="project-card" data-filters="Angular,TypeScript,Web App">
+  
+    <a class="frame frame--video" href="https://catalog.noshok.com/" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true"><img src="/portfolio/project-images/noshok/catalog.webp" alt="" loading="lazy"></a>
+  
+  <div>
+    <div class="project-card__head">
+      <h3 class="project-card__title">NOSHOK Catalog</h3>
+      <span class="meta">2025</span>
+    </div>
+    <p class="project-card__text">Online product catalog for NOSHOK including backend item management portal. I built the store, an API, an MCP server, and content management.</p>
+    <div class="project-card__tags meta">Angular · TypeScript · NestJS · Docker · MCP</div>
+    <div class="link-list">
+      
+        
+        
+        <a class="arrow-link" href="https://catalog.noshok.com/" target="_blank" rel="noopener noreferrer">Visit Website<i class="fa-regular fa-arrow-up-right" aria-hidden="true"></i></a>
+      
+    </div>
+  </div>
+</article>
+
+    
+      
+
+
+<article class="project-card" data-filters="JavaScript,UI/UX,Web App">
+  
+    <a class="frame frame--video" href="https://actorseverywhere.com/" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true"><img src="/portfolio/project-images/actors-everywhere.png" alt="" loading="lazy"></a>
+  
+  <div>
+    <div class="project-card__head">
+      <h3 class="project-card__title">Actors Everywhere</h3>
+      <span class="meta">2024</span>
+    </div>
+    <p class="project-card__text">A marketing website for Actors Everywhere, a platform connecting actors with opportunities. Designed to showcase services and attract potential clients and talent.</p>
+    <div class="project-card__tags meta">JavaScript · Web Design · UI/UX · Marketing</div>
+    <div class="link-list">
+      
+        
+        
+        <a class="arrow-link" href="https://actorseverywhere.com/" target="_blank" rel="noopener noreferrer">Visit Website<i class="fa-regular fa-arrow-up-right" aria-hidden="true"></i></a>
+      
+        
+        
+        <a class="arrow-link" href="/portfolio/project-images/actors-everywhere.png" target="_blank" rel="noopener noreferrer">View Screenshot<i class="fa-regular fa-arrow-up-right" aria-hidden="true"></i></a>
+      
+    </div>
+  </div>
+</article>
+
+    
+      
+
+
+<article class="project-card" data-filters="JavaScript,UI/UX,Web App">
+  
+    <a class="frame frame--video" href="/portfolio/project-images/baristina/baristina-base-color.png" target="_blank" rel="noopener noreferrer" aria-label="Open screenshot of Philips Baristina"><img src="/portfolio/project-images/baristina/baristina-base-color.png" alt="Philips Baristina Configurator" loading="lazy"></a>
+  
+  <div>
+    <div class="project-card__head">
+      <h3 class="project-card__title">Philips Baristina</h3>
+      <span class="meta">2024</span>
+    </div>
+    <p class="project-card__text">Marketing page and interactive configuration tool for the Philips Baristina espresso machine, allowing customers to customize their machine.</p>
+    <div class="project-card__tags meta">JavaScript · Interactive · Shopify</div>
+    <div class="link-list">
+      
+        
+        
+        <a class="arrow-link" href="/portfolio/project-images/baristina/baristina-base-color.png" target="_blank" rel="noopener noreferrer">Base Color<i class="fa-regular fa-arrow-up-right" aria-hidden="true"></i></a>
+      
+        
+        
+        <a class="arrow-link" href="/portfolio/project-images/baristina/baristina-portafilter.png" target="_blank" rel="noopener noreferrer">Portafilter<i class="fa-regular fa-arrow-up-right" aria-hidden="true"></i></a>
+      
+    </div>
+  </div>
+</article>
+
+    
+      
+
+
+<article class="project-card" data-filters="Angular,TypeScript,UI/UX">
+  
+    <a class="frame frame--video" href="/portfolio/project-images/praedialert/dashboard.png" target="_blank" rel="noopener noreferrer" aria-label="Open screenshot of Praedialert Revamp"><img src="/portfolio/project-images/praedialert/dashboard.png" alt="Praedialert Dashboard" loading="lazy"></a>
+  
+  <div>
+    <div class="project-card__head">
+      <h3 class="project-card__title">Praedialert Revamp</h3>
+      <span class="meta">2023</span>
+    </div>
+    <p class="project-card__text">A comprehensive healthcare application for monitoring patient data and managing healthcare workflows.</p>
+    <div class="project-card__tags meta">Angular · TypeScript · Healthcare · UI/UX</div>
+    <div class="link-list">
+      
+        
+        
+        <a class="arrow-link" href="/portfolio/project-images/praedialert/dashboard.png" target="_blank" rel="noopener noreferrer">Dashboard<i class="fa-regular fa-arrow-up-right" aria-hidden="true"></i></a>
+      
+        
+        
+        <a class="arrow-link" href="/portfolio/project-images/praedialert/create-adhoc-item.png" target="_blank" rel="noopener noreferrer">Create Item<i class="fa-regular fa-arrow-up-right" aria-hidden="true"></i></a>
+      
+        
+        
+        <a class="arrow-link" href="/portfolio/project-images/praedialert/patient-chart.png" target="_blank" rel="noopener noreferrer">Patient Chart<i class="fa-regular fa-arrow-up-right" aria-hidden="true"></i></a>
+      
+    </div>
+  </div>
+</article>
+
+    
+      
+
+
+<article class="project-card" data-filters="Angular,TypeScript,UI/UX">
+  
+    <a class="frame frame--video" href="/portfolio/project-images/praedico/praedico-dark.png" target="_blank" rel="noopener noreferrer" aria-label="Open screenshot of Praedico Revamp"><img src="/portfolio/project-images/praedico/praedico-dark.png" alt="Praedico Dark Theme" loading="lazy"></a>
+  
+  <div>
+    <div class="project-card__head">
+      <h3 class="project-card__title">Praedico Revamp</h3>
+      <span class="meta">2023</span>
+    </div>
+    <p class="project-card__text">A modernized interface for the Praedico platform with light and dark themes to enhance user experience.</p>
+    <div class="project-card__tags meta">Angular · TypeScript · Dark Mode · UI Design</div>
+    <div class="link-list">
+      
+        
+        
+        <a class="arrow-link" href="/portfolio/project-images/praedico/praedico-dark.png" target="_blank" rel="noopener noreferrer">Dark Theme<i class="fa-regular fa-arrow-up-right" aria-hidden="true"></i></a>
+      
+        
+        
+        <a class="arrow-link" href="/portfolio/project-images/praedico/praedico-light.png" target="_blank" rel="noopener noreferrer">Light Theme<i class="fa-regular fa-arrow-up-right" aria-hidden="true"></i></a>
+      
+    </div>
+  </div>
+</article>
+
+    
+      
+
+
+<article class="project-card" data-filters="Angular">
+  
+    <a class="frame frame--video" href="/portfolio/project-images/praedivault/praedivault.png" target="_blank" rel="noopener noreferrer" aria-label="Open screenshot of Praedivault"><img src="/portfolio/project-images/praedivault/praedivault.png" alt="Praedivault" loading="lazy"></a>
+  
+  <div>
+    <div class="project-card__head">
+      <h3 class="project-card__title">Praedivault</h3>
+      <span class="meta">2023</span>
+    </div>
+    <p class="project-card__text">A secure data storage and management solution for healthcare data, ensuring compliance and accessibility.</p>
+    <div class="project-card__tags meta">Angular · Security · Data Storage · Healthcare</div>
+    <div class="link-list">
+      
+        
+        
+        <a class="arrow-link" href="/portfolio/project-images/praedivault/praedivault.png" target="_blank" rel="noopener noreferrer">View Screenshot<i class="fa-regular fa-arrow-up-right" aria-hidden="true"></i></a>
+      
+    </div>
+  </div>
+</article>
+
+    
+      
+
+
+<article class="project-card" data-filters="Angular">
+  
+    <a class="frame frame--video" href="/portfolio/project-images/praedigene/praedigene.png" target="_blank" rel="noopener noreferrer" aria-label="Open screenshot of Praedigene Revamp"><img src="/portfolio/project-images/praedigene/praedigene.png" alt="Praedigene" loading="lazy"></a>
+  
+  <div>
+    <div class="project-card__head">
+      <h3 class="project-card__title">Praedigene Revamp</h3>
+      <span class="meta">2022</span>
+    </div>
+    <p class="project-card__text">A genetic data analysis platform with enhanced workflow management for healthcare professionals.</p>
+    <div class="project-card__tags meta">Angular · Data Visualization · Genetics · Healthcare</div>
+    <div class="link-list">
+      
+        
+        
+        <a class="arrow-link" href="/portfolio/project-images/praedigene/praedigene.png" target="_blank" rel="noopener noreferrer">Dashboard<i class="fa-regular fa-arrow-up-right" aria-hidden="true"></i></a>
+      
+        
+        
+        <a class="arrow-link" href="/portfolio/project-images/praedigene/work-items.png" target="_blank" rel="noopener noreferrer">Work Items<i class="fa-regular fa-arrow-up-right" aria-hidden="true"></i></a>
+      
+    </div>
+  </div>
+</article>
+
+    
+      
+
+
+<article class="project-card" data-filters="JavaScript,Open Source">
+  
+    <a class="frame frame--video" href="https://github.com/charlesabarnes/pointing-poker" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true"><img src="/portfolio/project-images/pointing-poker.png" alt="" loading="lazy"></a>
+  
+  <div>
+    <div class="project-card__head">
+      <h3 class="project-card__title">Pointing Poker</h3>
+      <span class="meta">2019</span>
+    </div>
+    <p class="project-card__text">A real-time collaborative planning poker tool for agile teams, allowing for remote estimation sessions.</p>
+    <div class="project-card__tags meta">JavaScript · Real-time · Agile · WebSockets</div>
+    <div class="link-list">
+      
+        
+        
+        <a class="arrow-link" href="https://github.com/charlesabarnes/pointing-poker" target="_blank" rel="noopener noreferrer">View on GitHub<i class="fa-regular fa-arrow-up-right" aria-hidden="true"></i></a>
+      
+        
+        
+        <a class="arrow-link" href="/portfolio/project-images/pointing-poker.png" target="_blank" rel="noopener noreferrer">View Screenshot<i class="fa-regular fa-arrow-up-right" aria-hidden="true"></i></a>
+      
+    </div>
+  </div>
+</article>
+
+    
+      
+
+
+<article class="project-card" data-filters="Angular,JavaScript,Open Source,UI/UX">
+  
+    <a class="frame frame--video" href="https://github.com/bullhorn/career-portal" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true"><img src="/portfolio/project-images/career-portal.png" alt="" loading="lazy"></a>
+  
+  <div>
+    <div class="project-card__head">
+      <h3 class="project-card__title">Career Portal Angular Upgrade</h3>
+      <span class="meta">2019</span>
+    </div>
+    <p class="project-card__text">Upgraded the Bullhorn Career Portal to Angular, enhancing performance and user experience.</p>
+    <div class="project-card__tags meta">Angular · Migration · Open Source · Responsive Design</div>
+    <div class="link-list">
+      
+        
+        
+        <a class="arrow-link" href="https://github.com/bullhorn/career-portal" target="_blank" rel="noopener noreferrer">View on GitHub<i class="fa-regular fa-arrow-up-right" aria-hidden="true"></i></a>
+      
+        
+        
+        <a class="arrow-link" href="/portfolio/project-images/career-portal.png" target="_blank" rel="noopener noreferrer">View Screenshot<i class="fa-regular fa-arrow-up-right" aria-hidden="true"></i></a>
+      
+    </div>
+  </div>
+</article>
+
+    
+      
+
+
+<article class="project-card" data-filters="JavaScript,Web App">
+  
+    <a class="frame frame--video" href="/portfolio/project-images/boxlab.png" target="_blank" rel="noopener noreferrer" aria-label="Open screenshot of BoxlabBBO"><img src="/portfolio/project-images/boxlab.png" alt="BoxlabBBO" loading="lazy"></a>
+  
+  <div>
+    <div class="project-card__head">
+      <h3 class="project-card__title">BoxlabBBO</h3>
+      <span class="meta">2019</span>
+    </div>
+    <p class="project-card__text">A specialized application for boxing officials to track and analyze boxing data and statistics.</p>
+    <div class="project-card__tags meta">JavaScript · Sports Tech · Data Analysis · Web App</div>
+    <div class="link-list">
+      
+        
+        
+        <a class="arrow-link" href="/portfolio/project-images/boxlab.png" target="_blank" rel="noopener noreferrer">View Screenshot<i class="fa-regular fa-arrow-up-right" aria-hidden="true"></i></a>
+      
+    </div>
+  </div>
+</article>
+
+    
+      
+
+
+<article class="project-card" data-filters="Open Source">
+  
+    <a class="frame frame--video" href="https://github.com/charlesabarnes/SPFtoolbox" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true"><img src="/portfolio/project-images/spftoolbox.png" alt="" loading="lazy"></a>
+  
+  <div>
+    <div class="project-card__head">
+      <h3 class="project-card__title">SPF Toolbox</h3>
+      <span class="meta">2017</span>
+    </div>
+    <p class="project-card__text">An open-source utility for checking and validating SPF, DKIM, and DMARC records for email security.</p>
+    <div class="project-card__tags meta">PHP · Email Security · Open Source · Utility</div>
+    <div class="link-list">
+      
+        
+        
+        <a class="arrow-link" href="https://github.com/charlesabarnes/SPFtoolbox" target="_blank" rel="noopener noreferrer">View on GitHub<i class="fa-regular fa-arrow-up-right" aria-hidden="true"></i></a>
+      
+        
+        
+        <a class="arrow-link" href="/portfolio/project-images/spftoolbox.png" target="_blank" rel="noopener noreferrer">View Screenshot<i class="fa-regular fa-arrow-up-right" aria-hidden="true"></i></a>
+      
+    </div>
+  </div>
+</article>
+
+    
   </div>
 </div>
+
+    </main>
     <footer class="site-footer">
-  <div class="footer-container">
-    <div class="social-links">
-      <a href="https://bsky.app/profile/chkb.net" target="_blank" rel="noopener noreferrer" aria-label="Bluesky"><i class="fa-brands fa-bluesky" aria-hidden="true"></i></a>
-      <a href="https://www.linkedin.com/in/charlesabarnes/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
-      <a href="mailto:me@chkb.net" aria-label="Email"><i class="far fa-envelope" aria-hidden="true"></i></a>
-      <a href="https://github.com/charlesabarnes/" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
-      <a href="/feed.xml" target="_blank" aria-label="RSS Feed"><i class="fa-solid fa-square-rss" aria-hidden="true"></i></a>
-    </div>
-    <div class="copyright">
-      &copy; 2026 Charles Barnes
-    </div>
+  <div class="site-footer__social">
+    
+      
+      
+      <a href="https://bsky.app/profile/chkb.net" aria-label="Bluesky" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-bluesky" aria-hidden="true"></i></a>
+    
+      
+      
+      <a href="https://www.linkedin.com/in/charlesabarnes/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
+    
+      
+      
+      <a href="mailto:me@chkb.net" aria-label="Email"><i class="fa-regular fa-envelope" aria-hidden="true"></i></a>
+    
+      
+      
+      <a href="https://github.com/charlesabarnes/" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+    
+      
+      
+      <a href="/feed.xml" aria-label="RSS Feed" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-square-rss" aria-hidden="true"></i></a>
+    
   </div>
+  <div class="site-footer__copyright">&copy; 2026 Charles Barnes</div>
 </footer>
+
+    <dialog class="mobile-menu" data-menu aria-label="Menu">
+  <span class="mobile-menu__grip" aria-hidden="true"></span>
+  <nav class="mobile-menu__grid" data-rise>
+    <a class="mobile-menu__item" href="/">
+      <span class="key-tile"><i class="fa-regular fa-house" aria-hidden="true"></i></span>
+      Home
+    </a>
+    
+      
+      
+      <a class="mobile-menu__item" href="/resume">
+        <span class="key-tile"><i class="fa-regular fa-file-lines" aria-hidden="true"></i></span>
+        Resume
+      </a>
+    
+      
+      
+      <a class="mobile-menu__item" href="/portfolio/" aria-current="page">
+        <span class="key-tile key-tile--featured"><i class="fa-regular fa-briefcase" aria-hidden="true"></i></span>
+        Portfolio
+      </a>
+    
+      
+      
+      <a class="mobile-menu__item" href="https://chkb.ai" target="_blank" rel="noopener noreferrer">
+        <span class="key-tile"><i class="fa-regular fa-microchip-ai" aria-hidden="true"></i></span>
+        AI Blog
+      </a>
+    
+      
+      
+      <a class="mobile-menu__item" href="/blog/">
+        <span class="key-tile"><i class="fa-regular fa-pen-nib" aria-hidden="true"></i></span>
+        Blog
+      </a>
+    
+      
+      
+      <a class="mobile-menu__item" href="/photography/">
+        <span class="key-tile"><i class="fa-regular fa-camera-retro" aria-hidden="true"></i></span>
+        Photography
+      </a>
+    
+  </nav>
+  <div class="mobile-menu__actions">
+    <a class="button button--accent" href="mailto:charles@charlesabarnes.com"><i class="fa-regular fa-envelope" aria-hidden="true"></i>Contact</a>
+    <button type="button" class="icon-button theme-toggle" data-theme-toggle aria-label="Toggle dark mode">
+  <i class="theme-toggle__light fa-regular fa-sun" aria-hidden="true"></i>
+  <i class="theme-toggle__dark fa-regular fa-moon" aria-hidden="true"></i>
+</button>
+
+  </div>
+</dialog>
+
   </body>
 </html>

@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="utf-8">
 <title>Cobol - Charles Barnes</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- Favicon and App Icons -->
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -19,19 +18,20 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-<!-- Stylesheets -->
+<script>document.documentElement.dataset.theme=(function(){try{return localStorage.getItem("theme")}catch(e){}})()||"light";</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&family=Kanit:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap">
 <link rel="stylesheet" href="/assets/css/styles.css">
-<link href="/assets/fontawesome/css/fontawesome.min.css" rel="stylesheet">
-<link href="/assets/fontawesome/css/brands.min.css" rel="stylesheet">
-<link href="/assets/fontawesome/css/regular.min.css" rel="stylesheet">
-<link href="/assets/fontawesome/css/solid.min.css" rel="stylesheet">
-<script src="/assets/js/script.js"></script>
+<link rel="stylesheet" href="/assets/fontawesome/css/fontawesome.min.css">
+<link rel="stylesheet" href="/assets/fontawesome/css/brands.min.css">
+<link rel="stylesheet" href="/assets/fontawesome/css/regular.min.css">
+<link rel="stylesheet" href="/assets/fontawesome/css/solid.min.css">
+<script src="/assets/js/script.js" defer></script>
 
-<!-- Primary Meta Tags -->
 <meta name="author" content="Charles Barnes">
 <meta name="keywords" content="">
 
-<!-- Schema.org markup for Google -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -44,7 +44,6 @@
 }
 </script>
 
-<!-- Jekyll SEO tag to populate meta tags -->
 <!-- Begin Jekyll SEO tag v2.9.1 -->
 <meta name="generator" content="Jekyll v4.2.2" />
 <meta property="og:title" content="Cobol" />
@@ -69,229 +68,236 @@
 <meta property="og:image" content="https://chkb.net/assets/images/blog/default-image.png">
 
 
-<!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:url" content="https://chkb.net/photography/cobol/">
 <meta property="twitter:title" content="Cobol">
 <meta property="twitter:description" content="A collection of photos of my dog Cobol.">
 <meta property="twitter:image" content="https://chkb.net/assets/images/blog/default-image.png">
 
-<!-- RSS feed -->
 <link rel="alternate" type="application/rss+xml" title="Charles Barnes" href="https://chkb.net/feed.xml">
 
 
-<!-- Glad you are taking a look at the HTML. 
-  Built by Charles Anthony Barnes. 
-  Let me know what you think! me@chkb.net -->
+
   </head>
   <body>
-    <div class="container">
-      <div class="header">
-  <div class="header-row menu-row">
-    <button class="menu-button" onclick="showMenu()" aria-label="Open menu">
-      <i class="fa-regular fa-bars" aria-hidden="true"></i>
-    </button>
-  </div>
-  <div class="header-row">
-    <div class="menu start">
-      <!-- <button class="menu-button theme-toggle-button" onclick="toggleTheme()">
-        <i class="fa-regular fa-sun"></i>
-      </button>  -->
-      <a href="/resume" class="menu-item no-decoration">Resume</a>
-      <a href="/portfolio/" class="menu-item no-decoration">Portfolio</a>
-      <a href="https://chkb.ai" class="menu-item no-decoration" target="_blank" rel="noopener noreferrer">AI Blog</a>
-    </div>
-    <a class="no-decoration" href="/">
-      <div class="name">
-        <span>Charles</span>
-        <span class="name-special">"chuck"</span>
-        <span>Barnes</span>
-      </div>
-    </a>
-    <div class="menu end">
-      <a href="/blog/" class="menu-item">Blog</a>
-      <a href="/photography/" class="menu-item">Photography</a>
-      <a href="mailto:charles@charlesabarnes.com" class="button no-decoration">Contact</a>
-    </div>
-  </div>
-  <div class="subtitle">Software Engineer x UX Designer</div>
-</div>
-      
-      <div class="photo-album">
-  <h1 class="album-title">Cobol</h1>
-  
-  
-  <div class="album-year">2025</div>
-  
-  
-  
-  <div class="album-description">
-    A collection of photos of my dog Cobol.
-  </div>
-  
-  
-  <p>This collection features my wonderful dog Cobol. These are the best shots I have of him.  He’s a fast mover so it’s hard to get good pics of him.</p>
+    <header class="site-header container">
+  <div class="site-header__bar">
+    <a class="site-header__home" href="/" aria-label="Charles Barnes, home"><span class="badge" aria-hidden="true"><span>C</span><span>H</span><span>K</span><span>B</span></span>
+</a>
+    <div class="site-header__actions">
+      <nav class="site-header__nav site-nav" aria-label="Primary" data-nav>
+        
+          
+            <a class="site-nav__link" href="/resume">Resume</a>
+          
+        
+          
+            <a class="site-nav__link" href="/portfolio/">Portfolio</a>
+          
+        
+          
+            <a class="site-nav__link" href="https://chkb.ai" target="_blank" rel="noopener noreferrer">AI Blog<i class="site-nav__external fa-regular fa-arrow-up-right" aria-hidden="true"></i></a>
+          
+        
+          
+            <a class="site-nav__link" href="/blog/">Blog</a>
+          
+        
+          
+            <a class="site-nav__link" href="/photography/" aria-current="page">Photography</a>
+          
+        
+        <span class="site-nav__dot" data-nav-dot></span>
+      </nav>
+      <a class="site-header__contact button button--accent button--sm" href="mailto:charles@charlesabarnes.com">Contact</a>
+      <button type="button" class="icon-button theme-toggle" data-theme-toggle aria-label="Toggle dark mode">
+  <i class="theme-toggle__light fa-regular fa-sun" aria-hidden="true"></i>
+  <i class="theme-toggle__dark fa-regular fa-moon" aria-hidden="true"></i>
+</button>
 
-  
-  <div class="photo-grid">
-    
-    <div class="photo-item">
-      <a href="/assets/images/photography/cobol/20190427_094426.jpg" class="photo-link" target="_blank" rel="noopener noreferrer">
-        
-        
-        
-        
-        
-        <img src="/assets/images/photography/cobol/thumbnails/20190427_094426.jpg" alt="Cobol taking a bath" class="photo-image" loading="lazy" onerror="this.onerror=null; this.src='/assets/images/photography/cobol/20190427_094426.jpg';" />
-      </a>
-      
-      <div class="photo-caption">Cobol taking a bath</div>
-      
-    </div>
-    
-    <div class="photo-item">
-      <a href="/assets/images/photography/cobol/20190504_170337_010_saved.jpg" class="photo-link" target="_blank" rel="noopener noreferrer">
-        
-        
-        
-        
-        
-        <img src="/assets/images/photography/cobol/thumbnails/20190504_170337_010_saved.jpg" alt="As a younger dog" class="photo-image" loading="lazy" onerror="this.onerror=null; this.src='/assets/images/photography/cobol/20190504_170337_010_saved.jpg';" />
-      </a>
-      
-      <div class="photo-caption">As a younger dog</div>
-      
-    </div>
-    
-    <div class="photo-item">
-      <a href="/assets/images/photography/cobol/20190530_125112.jpg" class="photo-link" target="_blank" rel="noopener noreferrer">
-        
-        
-        
-        
-        
-        <img src="/assets/images/photography/cobol/thumbnails/20190530_125112.jpg" alt="Cobol enjoying outside" class="photo-image" loading="lazy" onerror="this.onerror=null; this.src='/assets/images/photography/cobol/20190530_125112.jpg';" />
-      </a>
-      
-      <div class="photo-caption">Cobol enjoying outside</div>
-      
-    </div>
-    
-    <div class="photo-item">
-      <a href="/assets/images/photography/cobol/20240325_154319.jpg" class="photo-link" target="_blank" rel="noopener noreferrer">
-        
-        
-        
-        
-        
-        <img src="/assets/images/photography/cobol/thumbnails/20240325_154319.jpg" alt="Relaxing at home" class="photo-image" loading="lazy" onerror="this.onerror=null; this.src='/assets/images/photography/cobol/20240325_154319.jpg';" />
-      </a>
-      
-      <div class="photo-caption">Relaxing at home</div>
-      
-    </div>
-    
-    <div class="photo-item">
-      <a href="/assets/images/photography/cobol/20240326_152551.jpg" class="photo-link" target="_blank" rel="noopener noreferrer">
-        
-        
-        
-        
-        
-        <img src="/assets/images/photography/cobol/thumbnails/20240326_152551.jpg" alt="Just a nice shot of him" class="photo-image" loading="lazy" onerror="this.onerror=null; this.src='/assets/images/photography/cobol/20240326_152551.jpg';" />
-      </a>
-      
-      <div class="photo-caption">Just a nice shot of him</div>
-      
-    </div>
-    
-    <div class="photo-item">
-      <a href="/assets/images/photography/cobol/IMG_20230625_151611.jpg" class="photo-link" target="_blank" rel="noopener noreferrer">
-        
-        
-        
-        
-        
-        <img src="/assets/images/photography/cobol/thumbnails/IMG_20230625_151611.jpg" alt="Sly cobol" class="photo-image" loading="lazy" onerror="this.onerror=null; this.src='/assets/images/photography/cobol/IMG_20230625_151611.jpg';" />
-      </a>
-      
-      <div class="photo-caption">Sly cobol</div>
-      
-    </div>
-    
-    <div class="photo-item">
-      <a href="/assets/images/photography/cobol/LRM_EXPORT_248352852664005_20190823_173551637.jpeg" class="photo-link" target="_blank" rel="noopener noreferrer">
-        
-        
-        
-        
-        
-        <img src="/assets/images/photography/cobol/thumbnails/LRM_EXPORT_248352852664005_20190823_173551637.jpeg" alt="Cobol enjoying a sunny day" class="photo-image" loading="lazy" onerror="this.onerror=null; this.src='/assets/images/photography/cobol/LRM_EXPORT_248352852664005_20190823_173551637.jpeg';" />
-      </a>
-      
-      <div class="photo-caption">Cobol enjoying a sunny day</div>
-      
-    </div>
-    
-    <div class="photo-item">
-      <a href="/assets/images/photography/cobol/DSC_4452.JPG" class="photo-link" target="_blank" rel="noopener noreferrer">
-        
-        
-        
-        
-        
-        <img src="/assets/images/photography/cobol/thumbnails/DSC_4452.JPG" alt="Testing a new camera" class="photo-image" loading="lazy" onerror="this.onerror=null; this.src='/assets/images/photography/cobol/DSC_4452.JPG';" />
-      </a>
-      
-      <div class="photo-caption">Testing a new camera</div>
-      
-    </div>
-    
-  </div>
-</div>
-    </div>
-
-    <div class="menu-popup">
-  <div class="menu-container">
-    <div class="menu-item">
-      <a href="/resume" class="no-decoration">Resume</a>
-    </div>
-    <div class="menu-item">
-      <a href="/portfolio/" class="no-decoration">Portfolio</a>
-    </div>
-    <div class="menu-item">
-      <a href="https://chkb.ai" class="no-decoration" target="_blank" rel="noopener noreferrer">AI Blog</a>
-    </div>
-    <div class="menu-item">
-      <a href="/blog/">Blog</a>
-    </div>
-    <div class="menu-item">
-      <a href="/photography/">Photography</a>
-    </div>
-    <div class="menu-item">
-      <a href="mailto:charles@charlesabarnes.com" class="button no-decoration">Contact</a>
-    </div>
-    <!-- <div class="menu-item theme-toggle-mobile">
-      <button onclick="toggleTheme(); updateMobileThemeButton();" class="mobile-theme-toggle-button">
-        <i class="fa-regular fa-sun"></i>
-        <span class="theme-text">Toggle Dark Mode</span>
+      <button type="button" class="site-header__menu icon-button" data-menu-open aria-label="Open menu" aria-haspopup="dialog">
+        <i class="fa-regular fa-bars" aria-hidden="true"></i>
       </button>
-    </div> -->
+    </div>
+  </div>
+</header>
+
+    <main class="site-main">
+      <div class="container">
+  <div class="album-back">
+    <a class="arrow-link arrow-link--back" href="/photography/"><i class="fa-regular fa-arrow-left" aria-hidden="true"></i>Photography</a>
+  </div>
+  
+  <header class="page-head page-head--tight" data-rise>
+  <h1 class="page-head__title">Cobol</h1>
+  <div class="page-head__aside">
+    <span class="meta">March 2025 · 8 photos</span>
+    
+    
+  </div>
+</header>
+
+  <div class="album-intro"><p>This collection features my wonderful dog Cobol. These are the best shots I have of him.  He’s a fast mover so it’s hard to get good pics of him.</p>
+</div>
+  <div class="photo-wall" data-lightbox-group>
+    
+      
+      
+      <div class="photo-wall__item">
+        <a class="frame frame--natural" href="/assets/images/photography/cobol/20190427_094426.jpg" data-lightbox data-caption="Cobol taking a bath">
+          <img src="/assets/images/photography/cobol/thumbnails/20190427_094426.jpg" alt="Cobol taking a bath" loading="lazy">
+        </a>
+      </div>
+    
+      
+      
+      <div class="photo-wall__item">
+        <a class="frame frame--natural" href="/assets/images/photography/cobol/20190504_170337_010_saved.jpg" data-lightbox data-caption="As a younger dog">
+          <img src="/assets/images/photography/cobol/thumbnails/20190504_170337_010_saved.jpg" alt="As a younger dog" loading="lazy">
+        </a>
+      </div>
+    
+      
+      
+      <div class="photo-wall__item">
+        <a class="frame frame--natural" href="/assets/images/photography/cobol/20190530_125112.jpg" data-lightbox data-caption="Cobol enjoying outside">
+          <img src="/assets/images/photography/cobol/thumbnails/20190530_125112.jpg" alt="Cobol enjoying outside" loading="lazy">
+        </a>
+      </div>
+    
+      
+      
+      <div class="photo-wall__item">
+        <a class="frame frame--natural" href="/assets/images/photography/cobol/20240325_154319.jpg" data-lightbox data-caption="Relaxing at home">
+          <img src="/assets/images/photography/cobol/thumbnails/20240325_154319.jpg" alt="Relaxing at home" loading="lazy">
+        </a>
+      </div>
+    
+      
+      
+      <div class="photo-wall__item">
+        <a class="frame frame--natural" href="/assets/images/photography/cobol/20240326_152551.jpg" data-lightbox data-caption="Just a nice shot of him">
+          <img src="/assets/images/photography/cobol/thumbnails/20240326_152551.jpg" alt="Just a nice shot of him" loading="lazy">
+        </a>
+      </div>
+    
+      
+      
+      <div class="photo-wall__item">
+        <a class="frame frame--natural" href="/assets/images/photography/cobol/IMG_20230625_151611.jpg" data-lightbox data-caption="Sly cobol">
+          <img src="/assets/images/photography/cobol/thumbnails/IMG_20230625_151611.jpg" alt="Sly cobol" loading="lazy">
+        </a>
+      </div>
+    
+      
+      
+      <div class="photo-wall__item">
+        <a class="frame frame--natural" href="/assets/images/photography/cobol/LRM_EXPORT_248352852664005_20190823_173551637.jpeg" data-lightbox data-caption="Cobol enjoying a sunny day">
+          <img src="/assets/images/photography/cobol/thumbnails/LRM_EXPORT_248352852664005_20190823_173551637.jpeg" alt="Cobol enjoying a sunny day" loading="lazy">
+        </a>
+      </div>
+    
+      
+      
+      <div class="photo-wall__item">
+        <a class="frame frame--natural" href="/assets/images/photography/cobol/DSC_4452.JPG" data-lightbox data-caption="Testing a new camera">
+          <img src="/assets/images/photography/cobol/thumbnails/DSC_4452.JPG" alt="Testing a new camera" loading="lazy">
+        </a>
+      </div>
+    
   </div>
 </div>
-    <footer class="site-footer">
-  <div class="footer-container">
-    <div class="social-links">
-      <a href="https://bsky.app/profile/chkb.net" target="_blank" rel="noopener noreferrer" aria-label="Bluesky"><i class="fa-brands fa-bluesky" aria-hidden="true"></i></a>
-      <a href="https://www.linkedin.com/in/charlesabarnes/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
-      <a href="mailto:me@chkb.net" aria-label="Email"><i class="far fa-envelope" aria-hidden="true"></i></a>
-      <a href="https://github.com/charlesabarnes/" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
-      <a href="/feed.xml" target="_blank" aria-label="RSS Feed"><i class="fa-solid fa-square-rss" aria-hidden="true"></i></a>
-    </div>
-    <div class="copyright">
-      &copy; 2026 Charles Barnes
-    </div>
+<dialog class="lightbox" data-lightbox-dialog aria-label="Photo viewer">
+  <button type="button" class="lightbox__close icon-button" data-lightbox-close aria-label="Close"><i class="fa-regular fa-xmark" aria-hidden="true"></i></button>
+  <img class="lightbox__image" data-lightbox-image alt="">
+  <div class="lightbox__bar">
+    <button type="button" class="icon-button" data-lightbox-step="-1" aria-label="Previous photo"><i class="fa-regular fa-arrow-left" aria-hidden="true"></i></button>
+    <p class="lightbox__caption"><span data-lightbox-caption></span><span class="lightbox__count" data-lightbox-count></span></p>
+    <button type="button" class="icon-button" data-lightbox-step="1" aria-label="Next photo"><i class="fa-regular fa-arrow-right" aria-hidden="true"></i></button>
   </div>
+</dialog>
+
+    </main>
+    <footer class="site-footer">
+  <div class="site-footer__social">
+    
+      
+      
+      <a href="https://bsky.app/profile/chkb.net" aria-label="Bluesky" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-bluesky" aria-hidden="true"></i></a>
+    
+      
+      
+      <a href="https://www.linkedin.com/in/charlesabarnes/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
+    
+      
+      
+      <a href="mailto:me@chkb.net" aria-label="Email"><i class="fa-regular fa-envelope" aria-hidden="true"></i></a>
+    
+      
+      
+      <a href="https://github.com/charlesabarnes/" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+    
+      
+      
+      <a href="/feed.xml" aria-label="RSS Feed" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-square-rss" aria-hidden="true"></i></a>
+    
+  </div>
+  <div class="site-footer__copyright">&copy; 2026 Charles Barnes</div>
 </footer>
+
+    <dialog class="mobile-menu" data-menu aria-label="Menu">
+  <span class="mobile-menu__grip" aria-hidden="true"></span>
+  <nav class="mobile-menu__grid" data-rise>
+    <a class="mobile-menu__item" href="/">
+      <span class="key-tile"><i class="fa-regular fa-house" aria-hidden="true"></i></span>
+      Home
+    </a>
+    
+      
+      
+      <a class="mobile-menu__item" href="/resume">
+        <span class="key-tile"><i class="fa-regular fa-file-lines" aria-hidden="true"></i></span>
+        Resume
+      </a>
+    
+      
+      
+      <a class="mobile-menu__item" href="/portfolio/">
+        <span class="key-tile"><i class="fa-regular fa-briefcase" aria-hidden="true"></i></span>
+        Portfolio
+      </a>
+    
+      
+      
+      <a class="mobile-menu__item" href="https://chkb.ai" target="_blank" rel="noopener noreferrer">
+        <span class="key-tile"><i class="fa-regular fa-microchip-ai" aria-hidden="true"></i></span>
+        AI Blog
+      </a>
+    
+      
+      
+      <a class="mobile-menu__item" href="/blog/">
+        <span class="key-tile"><i class="fa-regular fa-pen-nib" aria-hidden="true"></i></span>
+        Blog
+      </a>
+    
+      
+      
+      <a class="mobile-menu__item" href="/photography/" aria-current="page">
+        <span class="key-tile key-tile--featured"><i class="fa-regular fa-camera-retro" aria-hidden="true"></i></span>
+        Photography
+      </a>
+    
+  </nav>
+  <div class="mobile-menu__actions">
+    <a class="button button--accent" href="mailto:charles@charlesabarnes.com"><i class="fa-regular fa-envelope" aria-hidden="true"></i>Contact</a>
+    <button type="button" class="icon-button theme-toggle" data-theme-toggle aria-label="Toggle dark mode">
+  <i class="theme-toggle__light fa-regular fa-sun" aria-hidden="true"></i>
+  <i class="theme-toggle__dark fa-regular fa-moon" aria-hidden="true"></i>
+</button>
+
+  </div>
+</dialog>
+
   </body>
 </html>

@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="utf-8">
 <title>Charles Barnes - Software Engineer x UX Designer</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- Favicon and App Icons -->
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -19,19 +18,20 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-<!-- Stylesheets -->
+<script>document.documentElement.dataset.theme=(function(){try{return localStorage.getItem("theme")}catch(e){}})()||"light";</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&family=Kanit:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap">
 <link rel="stylesheet" href="/assets/css/styles.css">
-<link href="/assets/fontawesome/css/fontawesome.min.css" rel="stylesheet">
-<link href="/assets/fontawesome/css/brands.min.css" rel="stylesheet">
-<link href="/assets/fontawesome/css/regular.min.css" rel="stylesheet">
-<link href="/assets/fontawesome/css/solid.min.css" rel="stylesheet">
-<script src="/assets/js/script.js"></script>
+<link rel="stylesheet" href="/assets/fontawesome/css/fontawesome.min.css">
+<link rel="stylesheet" href="/assets/fontawesome/css/brands.min.css">
+<link rel="stylesheet" href="/assets/fontawesome/css/regular.min.css">
+<link rel="stylesheet" href="/assets/fontawesome/css/solid.min.css">
+<script src="/assets/js/script.js" defer></script>
 
-<!-- Primary Meta Tags -->
 <meta name="author" content="Charles Barnes">
 <meta name="keywords" content="HTML,CSS,JavaScript,Charles,Barnes,web,developer,website,development,Missouri,Charles Barnes,Saint Louis Developer,St louis">
 
-<!-- Schema.org markup for Google -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -44,7 +44,6 @@
 }
 </script>
 
-<!-- Jekyll SEO tag to populate meta tags -->
 <!-- Begin Jekyll SEO tag v2.9.1 -->
 <meta name="generator" content="Jekyll v4.2.2" />
 <meta property="og:title" content="Charles Barnes - Software Engineer x UX Designer" />
@@ -67,243 +66,378 @@
 <meta property="og:image" content="https://chkb.net/assets/images/blog/default-image.png">
 
 
-<!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:url" content="https://chkb.net/">
 <meta property="twitter:title" content="Charles Barnes - Software Engineer x UX Designer">
 <meta property="twitter:description" content="Charles Barnes - Developer in St. Louis, Mo | charles@charlesabarnes.com">
 <meta property="twitter:image" content="https://chkb.net/assets/images/blog/default-image.png">
 
-<!-- RSS feed -->
 <link rel="alternate" type="application/rss+xml" title="Charles Barnes" href="https://chkb.net/feed.xml">
 
 
-<!-- Glad you are taking a look at the HTML. 
-  Built by Charles Anthony Barnes. 
-  Let me know what you think! me@chkb.net -->
+
   </head>
   <body>
-    <div class="container">
-      <div class="header">
-  <div class="header-row menu-row">
-    <button class="menu-button" onclick="showMenu()" aria-label="Open menu">
-      <i class="fa-regular fa-bars" aria-hidden="true"></i>
-    </button>
-  </div>
-  <div class="header-row">
-    <div class="menu start">
-      <!-- <button class="menu-button theme-toggle-button" onclick="toggleTheme()">
-        <i class="fa-regular fa-sun"></i>
-      </button>  -->
-      <a href="/resume" class="menu-item no-decoration">Resume</a>
-      <a href="/portfolio/" class="menu-item no-decoration">Portfolio</a>
-      <a href="https://chkb.ai" class="menu-item no-decoration" target="_blank" rel="noopener noreferrer">AI Blog</a>
-    </div>
-    <a class="no-decoration" href="/">
-      <div class="name">
-        <span>Charles</span>
-        <span class="name-special">"chuck"</span>
-        <span>Barnes</span>
-      </div>
-    </a>
-    <div class="menu end">
-      <a href="/blog/" class="menu-item">Blog</a>
-      <a href="/photography/" class="menu-item">Photography</a>
-      <a href="mailto:charles@charlesabarnes.com" class="button no-decoration">Contact</a>
-    </div>
-  </div>
-  <div class="subtitle">Software Engineer x UX Designer</div>
-</div>
-      
-      <div class="latest-post-preview" style="padding: 0 10px; box-sizing: border-box;">
-  <h2 class="latest-post-heading">Latest from the Blog</h2>
-  
-  
-    <div class="latest-post-container">
-      <div class="latest-post-image">
-        <div style="height: 300px; position: relative; overflow: hidden; background-color: var(--icon-background);">
+    <header class="site-header container">
+  <div class="site-header__bar">
+    <a class="site-header__home" href="/" aria-label="Charles Barnes, home"><span class="badge" aria-hidden="true"><span>C</span><span>H</span><span>K</span><span>B</span></span>
+</a>
+    <div class="site-header__actions">
+      <nav class="site-header__nav site-nav" aria-label="Primary" data-nav>
+        
           
-            
-  
-
-
-
-
-
-  <img src="/assets/images/blog/2026-01-01-betting-on-humans/thumbnails/cover.png" alt="In 2026 I am betting on humans" class="cover-image" loading="lazy" style="max-width: 100%; height: auto;" onerror="this.onerror=null; this.src='/assets/images/blog/2026-01-01-betting-on-humans/cover.png';">
-
-
+            <a class="site-nav__link" href="/resume">Resume</a>
           
-        </div>
-      </div>
-      <div class="latest-post-content">
-        <h3 class="latest-post-title">
-          <a href="/thoughts/2026/01/01/betting-on-humans.html">In 2026 I am betting on humans</a>
-        </h3>
-        <div class="latest-post-meta">
-          January 01, 2026
+        
           
-            <span class="project-tags">
-              
-                <span class="project-tag">Thoughts</span>
-              
-            </span>
+            <a class="site-nav__link" href="/portfolio/">Portfolio</a>
           
-        </div>
-        <div class="latest-post-excerpt">
-          Just a little optimistic prediction about social behavior in 2026
-        </div>
-        <a href="/thoughts/2026/01/01/betting-on-humans.html" class="read-more-button">Read More</a>
-      </div>
-    </div>
-  
-</div>
+        
+          
+            <a class="site-nav__link" href="https://chkb.ai" target="_blank" rel="noopener noreferrer">AI Blog<i class="site-nav__external fa-regular fa-arrow-up-right" aria-hidden="true"></i></a>
+          
+        
+          
+            <a class="site-nav__link" href="/blog/">Blog</a>
+          
+        
+          
+            <a class="site-nav__link" href="/photography/">Photography</a>
+          
+        
+        <span class="site-nav__dot" data-nav-dot></span>
+      </nav>
+      <a class="site-header__contact button button--accent button--sm" href="mailto:charles@charlesabarnes.com">Contact</a>
+      <button type="button" class="icon-button theme-toggle" data-theme-toggle aria-label="Toggle dark mode">
+  <i class="theme-toggle__light fa-regular fa-sun" aria-hidden="true"></i>
+  <i class="theme-toggle__dark fa-regular fa-moon" aria-hidden="true"></i>
+</button>
 
-<div class="icons-container">
-  <h2 class="icons-title">Explore My World</h2>
-  <div class="icons" style="padding: 0 10px;">
-    <!-- Technology/Skills -->
-    <a href="/tag/react/" class="icon-link">
-      <div class="icon">
-        <i class="fa-brands fa-react" aria-hidden="true"></i>
-      </div>
-      <span class="icon-label">React</span>
-    </a>
-    
-    <a href="/movie-reviews/" class="icon-link">
-      <div class="icon">
-        <i class="fa-regular fa-film" aria-hidden="true"></i>
-      </div>
-      <span class="icon-label">Movie Reviews</span>
-    </a>
-    
-    <a href="/tag/thoughts/" class="icon-link">
-      <div class="icon">
-        <i class="fa-regular fa-thought-bubble" aria-hidden="true"></i>
-      </div>
-      <span class="icon-label">Random Thoughts</span>
-    </a>
-    
-    <a href="/tag/aws/" class="icon-link">
-      <div class="icon">
-        <i class="fa-brands fa-aws" aria-hidden="true"></i>
-      </div>
-      <span class="icon-label">AWS</span>
-    </a>
-    
-    <!-- Hobbies/Interests -->
-    <a href="/photography" class="icon-link">
-      <div class="icon">
-        <i class="fa-regular fa-camera-retro" aria-hidden="true"></i>
-      </div>
-      <span class="icon-label">Photography</span>
-    </a>
-    
-    <a href="/photography/cobol" class="icon-link">
-      <div class="icon">
-        <i class="fa-regular fa-dog" aria-hidden="true"></i>
-      </div>
-      <span class="icon-label">Dog</span>
-    </a>
-    
-    <a href="/tag/home-improvement/" class="icon-link">
-      <div class="icon">
-        <i class="fa-regular fa-house" aria-hidden="true"></i>
-      </div>
-      <span class="icon-label">Home Improvement</span>
-    </a>
-    
-    <a href="/tag/gaming/" class="icon-link">
-      <div class="icon">
-        <i class="fa-regular fa-gamepad-modern" aria-hidden="true"></i>
-      </div>
-      <span class="icon-label">Gaming</span>
-    </a>
-    
-    <!-- Programming -->
-    <a href="/tag/javascript/" class="icon-link">
-      <div class="icon">
-        <i class="fa-brands fa-square-js" aria-hidden="true"></i>
-      </div>
-      <span class="icon-label">JavaScript</span>
-    </a>
-    
-    <a href="/tag/css/" class="icon-link">
-      <div class="icon">
-        <i class="fa-brands fa-css3-alt" aria-hidden="true"></i>
-      </div>
-      <span class="icon-label">CSS</span>
-    </a>
-    
-    <a href="/tag/coding/" class="icon-link">
-      <div class="icon">
-        <i class="fa-regular fa-code" aria-hidden="true"></i>
-      </div>
-      <span class="icon-label">Coding</span>
-    </a>
-    
-    <a href="/thoughts/2026/01/01/betting-on-humans.html" class="icon-link featured">
-      <div class="icon">
-        <i class="fa-regular fa-lightbulb-cfl-on" aria-hidden="true"></i>
-      </div>
-      <span class="icon-label">Latest Blog</span>
-    </a>
-  </div>
-</div>
-
-<script>
-  document.querySelectorAll('.icon').forEach((icon) => {
-    icon.addEventListener('click', (e) => {
-      icon.classList.add('shake');
-      setTimeout(() => {
-        icon.classList.remove('shake');
-      }, 300);
-    });
-  });
-</script>
-    </div>
-
-    <div class="menu-popup">
-  <div class="menu-container">
-    <div class="menu-item">
-      <a href="/resume" class="no-decoration">Resume</a>
-    </div>
-    <div class="menu-item">
-      <a href="/portfolio/" class="no-decoration">Portfolio</a>
-    </div>
-    <div class="menu-item">
-      <a href="https://chkb.ai" class="no-decoration" target="_blank" rel="noopener noreferrer">AI Blog</a>
-    </div>
-    <div class="menu-item">
-      <a href="/blog/">Blog</a>
-    </div>
-    <div class="menu-item">
-      <a href="/photography/">Photography</a>
-    </div>
-    <div class="menu-item">
-      <a href="mailto:charles@charlesabarnes.com" class="button no-decoration">Contact</a>
-    </div>
-    <!-- <div class="menu-item theme-toggle-mobile">
-      <button onclick="toggleTheme(); updateMobileThemeButton();" class="mobile-theme-toggle-button">
-        <i class="fa-regular fa-sun"></i>
-        <span class="theme-text">Toggle Dark Mode</span>
+      <button type="button" class="site-header__menu icon-button" data-menu-open aria-label="Open menu" aria-haspopup="dialog">
+        <i class="fa-regular fa-bars" aria-hidden="true"></i>
       </button>
-    </div> -->
+    </div>
   </div>
+</header>
+
+    <main class="site-main">
+      
+
+
+<div class="container">
+  <section class="hero" data-rise>
+    <p class="kicker">Staff Software Engineer · St. Louis, MO</p>
+    <h1 class="hero__title">Software Engineer <span class="hero__nowrap"><span class="hero__x" role="img" aria-label="x"><i class="fa-solid fa-xmark" aria-hidden="true"></i></span> UX</span> Designer</h1>
+    <div class="button-row">
+      <a class="button" href="/portfolio/">My Work</a>
+      <a class="button" href="/resume">Resume</a>
+      <a class="button button--accent" href="mailto:charles@charlesabarnes.com">Contact</a>
+    </div>
+  </section>
+
+  <section aria-label="Explore">
+    <div class="toss" data-toss>
+      
+        
+        <a class="toss__tile" href="/tag/react/" title="React" aria-label="React" draggable="false">
+          <span class="key-tile key-tile--lg"><i class="fa-brands fa-react" aria-hidden="true"></i></span>
+        </a>
+      
+        
+        <a class="toss__tile" href="/portfolio/?filter=Angular" title="Angular" aria-label="Angular" draggable="false">
+          <span class="key-tile key-tile--lg"><i class="fa-brands fa-angular" aria-hidden="true"></i></span>
+        </a>
+      
+        
+        <a class="toss__tile" href="/portfolio/?filter=TypeScript" title="TypeScript" aria-label="TypeScript" draggable="false">
+          <span class="key-tile key-tile--lg"><i class="fa-brands fa-typescript" aria-hidden="true"></i></span>
+        </a>
+      
+        
+        <a class="toss__tile" href="/movie-reviews/" title="Movie Reviews" aria-label="Movie Reviews" draggable="false">
+          <span class="key-tile key-tile--lg"><i class="fa-regular fa-film" aria-hidden="true"></i></span>
+        </a>
+      
+        
+        <a class="toss__tile" href="/tag/thoughts/" title="Random Thoughts" aria-label="Random Thoughts" draggable="false">
+          <span class="key-tile key-tile--lg"><i class="fa-regular fa-thought-bubble" aria-hidden="true"></i></span>
+        </a>
+      
+        
+        <a class="toss__tile" href="/tag/aws/" title="AWS" aria-label="AWS" draggable="false">
+          <span class="key-tile key-tile--lg"><i class="fa-brands fa-aws" aria-hidden="true"></i></span>
+        </a>
+      
+        
+        <a class="toss__tile" href="/portfolio/?filter=Open%20Source" title="Docker" aria-label="Docker" draggable="false">
+          <span class="key-tile key-tile--lg"><i class="fa-brands fa-docker" aria-hidden="true"></i></span>
+        </a>
+      
+        
+        <a class="toss__tile" href="/resume" title="Android" aria-label="Android" draggable="false">
+          <span class="key-tile key-tile--lg"><i class="fa-brands fa-android" aria-hidden="true"></i></span>
+        </a>
+      
+        
+        <a class="toss__tile" href="/photography/" title="Photography" aria-label="Photography" draggable="false">
+          <span class="key-tile key-tile--lg"><i class="fa-regular fa-camera-retro" aria-hidden="true"></i></span>
+        </a>
+      
+        
+        <a class="toss__tile" href="/photography/cobol/" title="Dog" aria-label="Dog" draggable="false">
+          <span class="key-tile key-tile--lg"><i class="fa-regular fa-dog" aria-hidden="true"></i></span>
+        </a>
+      
+        
+        <a class="toss__tile" href="/tag/home-improvement/" title="Home Improvement" aria-label="Home Improvement" draggable="false">
+          <span class="key-tile key-tile--lg"><i class="fa-regular fa-house" aria-hidden="true"></i></span>
+        </a>
+      
+        
+        <a class="toss__tile" href="/tag/gaming/" title="Gaming" aria-label="Gaming" draggable="false">
+          <span class="key-tile key-tile--lg"><i class="fa-regular fa-gamepad-modern" aria-hidden="true"></i></span>
+        </a>
+      
+        
+        <a class="toss__tile" href="/tag/javascript/" title="JavaScript" aria-label="JavaScript" draggable="false">
+          <span class="key-tile key-tile--lg"><i class="fa-brands fa-square-js" aria-hidden="true"></i></span>
+        </a>
+      
+        
+        <a class="toss__tile" href="/tag/css/" title="CSS" aria-label="CSS" draggable="false">
+          <span class="key-tile key-tile--lg"><i class="fa-brands fa-css3-alt" aria-hidden="true"></i></span>
+        </a>
+      
+        
+        <a class="toss__tile" href="/tag/coding/" title="Coding" aria-label="Coding" draggable="false">
+          <span class="key-tile key-tile--lg"><i class="fa-regular fa-code" aria-hidden="true"></i></span>
+        </a>
+      
+        
+        <a class="toss__tile" href="https://github.com/charlesabarnes/" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="GitHub" draggable="false">
+          <span class="key-tile key-tile--lg"><i class="fa-brands fa-github" aria-hidden="true"></i></span>
+        </a>
+      
+        
+        <a class="toss__tile" href="/thoughts/2026/01/01/betting-on-humans.html" title="Latest Blog" aria-label="Latest Blog" draggable="false">
+          <span class="key-tile key-tile--lg key-tile--featured"><i class="fa-regular fa-lightbulb-cfl-on" aria-hidden="true"></i></span>
+        </a>
+      
+    </div>
+    <div class="toss__foot" data-toss-foot hidden>
+      <span class="meta">Click a tile to open it, or grab one and throw it</span>
+      <button type="button" class="text-button" data-toss-shake><i class="fa-regular fa-arrows-rotate" aria-hidden="true"></i>Shake</button>
+    </div>
+  </section>
+
+  
+  <section class="section">
+    <div class="section-head">
+      <h2 class="kicker">Latest from the Blog</h2>
+      <a class="arrow-link" href="/blog/">All Posts<i class="fa-regular fa-arrow-right" aria-hidden="true"></i></a>
+    </div>
+    <article class="featured-post" data-rise>
+      <a class="frame frame--wide frame--contain" href="/thoughts/2026/01/01/betting-on-humans.html" tabindex="-1" aria-hidden="true">
+        <img src="/assets/images/blog/2026-01-01-betting-on-humans/cover.png" alt="" loading="lazy">
+      </a>
+      <div>
+        <div class="meta meta-list">
+          <span>January 1, 2026</span>
+          <span>2 min read
+</span>
+        </div>
+        <h3 class="featured-post__title"><a href="/thoughts/2026/01/01/betting-on-humans.html">In 2026 I am betting on humans</a></h3>
+        <p class="featured-post__excerpt">Just a little optimistic prediction about social behavior in 2026</p>
+        <a class="arrow-link" href="/thoughts/2026/01/01/betting-on-humans.html">Read More<i class="fa-regular fa-arrow-right" aria-hidden="true"></i></a>
+      </div>
+    </article>
+    <div data-rise>
+      
+        <a class="list-row" href="/thoughts/2025/12/12/i-burned-out.html">
+          <span class="meta">December 12, 2025</span>
+          <span>
+            <span class="list-row__title">I Burned Out</span>
+            <span class="list-row__text">Sharing my personal experience for those that may end up in a similar situation</span>
+          </span>
+          <i class="list-row__arrow fa-regular fa-arrow-right" aria-hidden="true"></i>
+        </a>
+      
+        <a class="list-row" href="/coding/thoughts/2025/11/23/ditching-windows.html">
+          <span class="meta">November 23, 2025</span>
+          <span>
+            <span class="list-row__title">I Switched to Linux</span>
+            <span class="list-row__text">Diving in the deep and not looking back</span>
+          </span>
+          <i class="list-row__arrow fa-regular fa-arrow-right" aria-hidden="true"></i>
+        </a>
+      
+        <a class="list-row" href="/coding/jekyll/github%20pages/2025/03/18/how-i-built-this-site.html">
+          <span class="meta">March 18, 2025</span>
+          <span>
+            <span class="list-row__title">How I Built This Site</span>
+            <span class="list-row__text">I use my personal website as a place to market myself and exhibit my eye for design. I always spend an inordinate amount of time on it and this time...</span>
+          </span>
+          <i class="list-row__arrow fa-regular fa-arrow-right" aria-hidden="true"></i>
+        </a>
+      
+    </div>
+  </section>
+  
+
+  <section class="section">
+    <div class="section-head">
+      <h2 class="kicker">Selected Work</h2>
+      <a class="arrow-link" href="/portfolio/">All Work<i class="fa-regular fa-arrow-right" aria-hidden="true"></i></a>
+    </div>
+    <div class="project-grid project-grid--compact" data-rise>
+      
+        
+
+
+<article class="project-card" data-filters="Angular,TypeScript,Open Source,Web App">
+  
+    <a class="frame frame--video" href="https://gangway.sh/" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true"><img src="/portfolio/project-images/gangway/previews.jpg" alt="" loading="lazy"></a>
+  
+  <div>
+    <div class="project-card__head">
+      <h3 class="project-card__title">gangway</h3>
+      <span class="meta">2026</span>
+    </div>
+    <p class="project-card__text">A self-hosted preview server. Pull requests, folders dropped in the browser, and apps built by AI agents over MCP each get their own HTTPS URL on your domain. Installs with a one-liner or from Unraid's Community Apps.</p>
+    <div class="project-card__tags meta">TypeScript · Angular · Bun · Docker · MCP · Open Source</div>
+    <div class="link-list">
+      
+        
+        
+        <a class="arrow-link" href="https://gangway.sh/" target="_blank" rel="noopener noreferrer">Visit Website<i class="fa-regular fa-arrow-up-right" aria-hidden="true"></i></a>
+      
+        
+        
+        <a class="arrow-link" href="https://github.com/charlesabarnes/gangway" target="_blank" rel="noopener noreferrer">View on GitHub<i class="fa-regular fa-arrow-up-right" aria-hidden="true"></i></a>
+      
+        
+        
+        <a class="arrow-link" href="/portfolio/project-images/gangway/previews.jpg" target="_blank" rel="noopener noreferrer">Previews<i class="fa-regular fa-arrow-up-right" aria-hidden="true"></i></a>
+      
+        
+        
+        <a class="arrow-link" href="/portfolio/project-images/gangway/artifacts.jpg" target="_blank" rel="noopener noreferrer">Artifacts<i class="fa-regular fa-arrow-up-right" aria-hidden="true"></i></a>
+      
+    </div>
+  </div>
+</article>
+
+      
+        
+
+
+<article class="project-card" data-filters="Angular,TypeScript,Web App">
+  
+    <a class="frame frame--video" href="https://catalog.noshok.com/" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true"><img src="/portfolio/project-images/noshok/catalog.webp" alt="" loading="lazy"></a>
+  
+  <div>
+    <div class="project-card__head">
+      <h3 class="project-card__title">NOSHOK Catalog</h3>
+      <span class="meta">2025</span>
+    </div>
+    <p class="project-card__text">Online product catalog for NOSHOK including backend item management portal. I built the store, an API, an MCP server, and content management.</p>
+    <div class="project-card__tags meta">Angular · TypeScript · NestJS · Docker · MCP</div>
+    <div class="link-list">
+      
+        
+        
+        <a class="arrow-link" href="https://catalog.noshok.com/" target="_blank" rel="noopener noreferrer">Visit Website<i class="fa-regular fa-arrow-up-right" aria-hidden="true"></i></a>
+      
+    </div>
+  </div>
+</article>
+
+      
+    </div>
+  </section>
 </div>
+
+    </main>
     <footer class="site-footer">
-  <div class="footer-container">
-    <div class="social-links">
-      <a href="https://bsky.app/profile/chkb.net" target="_blank" rel="noopener noreferrer" aria-label="Bluesky"><i class="fa-brands fa-bluesky" aria-hidden="true"></i></a>
-      <a href="https://www.linkedin.com/in/charlesabarnes/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
-      <a href="mailto:me@chkb.net" aria-label="Email"><i class="far fa-envelope" aria-hidden="true"></i></a>
-      <a href="https://github.com/charlesabarnes/" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
-      <a href="/feed.xml" target="_blank" aria-label="RSS Feed"><i class="fa-solid fa-square-rss" aria-hidden="true"></i></a>
-    </div>
-    <div class="copyright">
-      &copy; 2026 Charles Barnes
-    </div>
+  <div class="site-footer__social">
+    
+      
+      
+      <a href="https://bsky.app/profile/chkb.net" aria-label="Bluesky" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-bluesky" aria-hidden="true"></i></a>
+    
+      
+      
+      <a href="https://www.linkedin.com/in/charlesabarnes/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
+    
+      
+      
+      <a href="mailto:me@chkb.net" aria-label="Email"><i class="fa-regular fa-envelope" aria-hidden="true"></i></a>
+    
+      
+      
+      <a href="https://github.com/charlesabarnes/" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+    
+      
+      
+      <a href="/feed.xml" aria-label="RSS Feed" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-square-rss" aria-hidden="true"></i></a>
+    
   </div>
+  <div class="site-footer__copyright">&copy; 2026 Charles Barnes</div>
 </footer>
+
+    <dialog class="mobile-menu" data-menu aria-label="Menu">
+  <span class="mobile-menu__grip" aria-hidden="true"></span>
+  <nav class="mobile-menu__grid" data-rise>
+    <a class="mobile-menu__item" href="/" aria-current="page">
+      <span class="key-tile key-tile--featured"><i class="fa-regular fa-house" aria-hidden="true"></i></span>
+      Home
+    </a>
+    
+      
+      
+      <a class="mobile-menu__item" href="/resume">
+        <span class="key-tile"><i class="fa-regular fa-file-lines" aria-hidden="true"></i></span>
+        Resume
+      </a>
+    
+      
+      
+      <a class="mobile-menu__item" href="/portfolio/">
+        <span class="key-tile"><i class="fa-regular fa-briefcase" aria-hidden="true"></i></span>
+        Portfolio
+      </a>
+    
+      
+      
+      <a class="mobile-menu__item" href="https://chkb.ai" target="_blank" rel="noopener noreferrer">
+        <span class="key-tile"><i class="fa-regular fa-microchip-ai" aria-hidden="true"></i></span>
+        AI Blog
+      </a>
+    
+      
+      
+      <a class="mobile-menu__item" href="/blog/">
+        <span class="key-tile"><i class="fa-regular fa-pen-nib" aria-hidden="true"></i></span>
+        Blog
+      </a>
+    
+      
+      
+      <a class="mobile-menu__item" href="/photography/">
+        <span class="key-tile"><i class="fa-regular fa-camera-retro" aria-hidden="true"></i></span>
+        Photography
+      </a>
+    
+  </nav>
+  <div class="mobile-menu__actions">
+    <a class="button button--accent" href="mailto:charles@charlesabarnes.com"><i class="fa-regular fa-envelope" aria-hidden="true"></i>Contact</a>
+    <button type="button" class="icon-button theme-toggle" data-theme-toggle aria-label="Toggle dark mode">
+  <i class="theme-toggle__light fa-regular fa-sun" aria-hidden="true"></i>
+  <i class="theme-toggle__dark fa-regular fa-moon" aria-hidden="true"></i>
+</button>
+
+  </div>
+</dialog>
+
   </body>
 </html>
