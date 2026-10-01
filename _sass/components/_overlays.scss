@@ -1,0 +1,64 @@
+.read-progress {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 60;
+  height: 3px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  pointer-events: none;
+}
+
+.lightbox {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: space(6);
+  border: 0;
+  background: rgba(color(black), .9);
+  color: color(cream);
+
+  &[open] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: space(4);
+    animation: fade-in $dur-fast $ease;
+  }
+
+  &::backdrop { background: transparent; }
+
+  &__image {
+    max-width: 100%;
+    max-height: 76vh;
+    box-shadow: 0 0 20px rgba(color(black), .5);
+    animation: pop-in $dur-base $ease;
+  }
+
+  &__bar {
+    display: flex;
+    align-items: center;
+    gap: space(5);
+    max-width: $measure;
+  }
+
+  &__caption {
+    flex: 1;
+    font-size: fs(base);
+    text-align: center;
+  }
+
+  &__count {
+    margin-left: space(2);
+    opacity: .6;
+  }
+
+  &__close {
+    position: absolute;
+    top: space(5);
+    right: space(5);
+  }
+}

@@ -1,45 +1,81 @@
 ---
 layout: default
 title: Charles Barnes - Software Engineer x UX Designer
+nav: home
 ---
-
-<div class="latest-post-preview" style="padding: 0 10px; box-sizing: border-box;">
-  <h2 class="latest-post-heading">Latest from the Blog</h2>
-  {% assign latest_post = site.posts | sort: 'date' | reverse | first %}
-  {% if latest_post %}
-    <div class="latest-post-container">
-      <div class="latest-post-image">
-        <div style="height: 300px; position: relative; overflow: hidden; background-color: var(--icon-background);">
-          {% if latest_post.image %}
-            {% include picture.html path=latest_post.image alt=latest_post.title class="cover-image" %}
-          {% else %}
-            {% include picture.html path="/assets/images/blog/default-image.png" alt=latest_post.title class="cover-image" %}
-          {% endif %}
-        </div>
-      </div>
-      <div class="latest-post-content">
-        <h3 class="latest-post-title">
-          <a href="{{ latest_post.url | relative_url }}">{{ latest_post.title }}</a>
-        </h3>
-        <div class="latest-post-meta">
-          {{ latest_post.date | date: "%B %d, %Y" }}
-          {% if latest_post.categories.size > 0 %}
-            <span class="project-tags">
-              {% for category in latest_post.categories %}
-                <span class="project-tag">{{ category }}</span>
-              {% endfor %}
-            </span>
-          {% endif %}
-        </div>
-        <div class="latest-post-excerpt">
-          {{ latest_post.excerpt | strip_html | truncatewords: 50 }}
-        </div>
-        <a href="{{ latest_post.url | relative_url }}" class="read-more-button">Read More</a>
-      </div>
+{% assign role = site.data.resume.sections.first.entries.first.role %}
+{% assign posts = site.posts %}
+{% assign latest = posts.first %}
+<div class="container">
+  <section class="hero" data-rise>
+    <p class="kicker">{{ role }} · {{ site.data.resume.location }}</p>
+    <h1 class="hero__title">Software Engineer <span class="hero__nowrap"><span class="hero__x" role="img" aria-label="x"><i class="fa-solid fa-xmark" aria-hidden="true"></i></span> UX</span> Designer</h1>
+    <div class="button-row">
+      <a class="button" href="{{ '/portfolio/' | relative_url }}">My Work</a>
+      <a class="button" href="{{ '/resume' | relative_url }}">Resume</a>
+      <a class="button button--accent" href="mailto:{{ site.email }}">Contact</a>
     </div>
-  {% else %}
-    <p>No blog posts available yet. Check back soon!</p>
-  {% endif %}
-</div>
+  </section>
 
-{% include icon_grid.html %}
+  <section aria-label="Explore">
+    <div class="toss" data-toss>
+      {% for tile in site.data.explore %}
+        {% if tile.latest_post %}{% assign url = latest.url | relative_url %}{% elsif tile.external %}{% assign url = tile.url %}{% else %}{% assign url = tile.url | relative_url %}{% endif %}
+        <a class="toss__tile" href="{{ url }}"{% if tile.external %} target="_blank" rel="noopener noreferrer"{% endif %} title="{{ tile.label }}" aria-label="{{ tile.label }}" draggable="false">
+          <span class="key-tile key-tile--lg{% if tile.featured %} key-tile--featured{% endif %}"><i class="{{ tile.icon }}" aria-hidden="true"></i></span>
+        </a>
+      {% endfor %}
+    </div>
+    <div class="toss__foot" data-toss-foot hidden>
+      <span class="meta">Click a tile to open it, or grab one and throw it</span>
+      <button type="button" class="text-button" data-toss-shake><i class="fa-regular fa-arrows-rotate" aria-hidden="true"></i>Shake</button>
+    </div>
+  </section>
+
+  {% if latest %}
+  <section class="section">
+    <div class="section-head">
+      <h2 class="kicker">Latest from the Blog</h2>
+      <a class="arrow-link" href="{{ '/blog/' | relative_url }}">All Posts<i class="fa-regular fa-arrow-right" aria-hidden="true"></i></a>
+    </div>
+    <article class="featured-post" data-rise>
+      <a class="frame frame--wide frame--contain" href="{{ latest.url | relative_url }}" tabindex="-1" aria-hidden="true">
+        <img src="{{ latest.image | default: '/assets/images/blog/default-image.png' | relative_url }}" alt="" loading="lazy">
+      </a>
+      <div>
+        <div class="meta meta-list">
+          <span>{{ latest.date | date: "%B %-d, %Y" }}</span>
+          <span>{% include reading_time.html content=latest.content %}</span>
+        </div>
+        <h3 class="featured-post__title"><a href="{{ latest.url | relative_url }}">{{ latest.title }}</a></h3>
+        <p class="featured-post__excerpt">{% include post_summary.html post=latest %}</p>
+        <a class="arrow-link" href="{{ latest.url | relative_url }}">Read More<i class="fa-regular fa-arrow-right" aria-hidden="true"></i></a>
+      </div>
+    </article>
+    <div data-rise>
+      {% for post in posts offset: 1 limit: 3 %}
+        <a class="list-row" href="{{ post.url | relative_url }}">
+          <span class="meta">{{ post.date | date: "%B %-d, %Y" }}</span>
+          <span>
+            <span class="list-row__title">{{ post.title }}</span>
+            <span class="list-row__text">{% include post_summary.html post=post %}</span>
+          </span>
+          <i class="list-row__arrow fa-regular fa-arrow-right" aria-hidden="true"></i>
+        </a>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  <section class="section">
+    <div class="section-head">
+      <h2 class="kicker">Selected Work</h2>
+      <a class="arrow-link" href="{{ '/portfolio/' | relative_url }}">All Work<i class="fa-regular fa-arrow-right" aria-hidden="true"></i></a>
+    </div>
+    <div class="project-grid project-grid--compact" data-rise>
+      {% for project in site.data.projects.items limit: 2 %}
+        {% include project_card.html project=project %}
+      {% endfor %}
+    </div>
+  </section>
+</div>

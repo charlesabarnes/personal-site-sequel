@@ -1,0 +1,120 @@
+.year-group {
+  margin-top: space(6);
+
+  &__year {
+    font-size: fs(lg);
+
+    @include bp(md) { padding-top: space(8); }
+  }
+}
+
+.post {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  padding-top: space(10);
+
+  @include bp(sm) { padding-top: space(18); }
+
+  @include bp(md) {
+    grid-template-columns: 200px minmax(0, $measure);
+    justify-content: center;
+    gap: space(18);
+  }
+
+  &__aside {
+    display: flex;
+    flex-direction: column;
+    gap: space(6);
+    margin-bottom: space(7);
+
+    @include bp(md) {
+      position: sticky;
+      top: space(8);
+      align-self: start;
+      margin-bottom: 0;
+    }
+  }
+
+  &__facts,
+  &__toc { display: none; }
+
+  @include bp(md) {
+    &__facts {
+      display: flex;
+      flex-direction: column;
+      gap: space(1);
+    }
+
+    &__toc:not([hidden]) { display: flex; }
+    &__meta { display: none; }
+  }
+
+  &__title {
+    margin: space(2) 0 space(3);
+    font-size: fs(2xl);
+    line-height: 1.1;
+
+    @include bp(sm) { font-size: fs(4xl); }
+  }
+
+  &__lede {
+    font-size: 20px;
+    line-height: 1.5;
+    opacity: .85;
+  }
+
+  &__cover { margin: space(10) 0 space(12); }
+
+  &__header + .prose { margin-top: space(10); }
+
+  &__tags { margin-top: space(8); }
+
+  .list-row--next { margin-top: space(16); }
+}
+
+.toc {
+  flex-direction: column;
+  border-left: 1px solid var(--rule);
+
+  &__link {
+    margin-left: -1px;
+    padding: space(1) 0 space(1) space(3);
+    font-size: fs(sm);
+    border-left: 2px solid transparent;
+    opacity: .7;
+    transition: opacity $dur-fast $ease, border-color $dur-fast $ease;
+
+    &:hover { opacity: 1; text-decoration: none; }
+
+    &--sub { padding-left: space(6); }
+
+    &.is-active {
+      font-weight: 500;
+      opacity: 1;
+      border-color: var(--accent);
+    }
+  }
+}
+
+.post--review .prose {
+  > h1:first-child { display: none; }
+
+  .movie-poster {
+    max-width: 240px;
+    margin-bottom: space(6);
+  }
+}
+
+.page {
+  max-width: $measure + 2 * $gutter;
+  padding-top: space(12);
+
+  @include bp(sm) { padding-top: space(20); }
+
+  .prose > h1:first-child {
+    margin-bottom: space(8);
+    font-size: fs(2xl);
+
+    @include bp(sm) { font-size: fs(4xl); }
+  }
+}

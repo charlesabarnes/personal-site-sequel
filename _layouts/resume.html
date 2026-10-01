@@ -1,0 +1,38 @@
+---
+layout: default
+---
+{% assign resume = site.data.resume %}
+<div class="container">
+  {% include page_head.html title="Resume" sub=resume.location contact=true %}
+  {% for section in resume.sections %}
+    <section class="split split--wide resume-section">
+      <h2 class="split__label resume-section__label kicker">{{ section.title }}</h2>
+      <div data-rise>
+        {% for entry in section.entries %}
+          <article class="resume-entry">
+            <div class="resume-entry__head">
+              <h3 class="resume-entry__company">{{ entry.company }}</h3>
+              <span class="meta">{{ entry.dates }}</span>
+            </div>
+            {% if entry.role %}<div class="resume-entry__role">{{ entry.role }}</div>{% endif %}
+            <ul class="resume-entry__points">
+              {% for point in entry.points %}<li>{{ point }}</li>{% endfor %}
+            </ul>
+          </article>
+        {% endfor %}
+      </div>
+    </section>
+  {% endfor %}
+  <section class="split split--wide resume-section">
+    <h2 class="split__label resume-section__label kicker">Skills</h2>
+    <div class="skills">
+      {% for skill in resume.skills %}
+        <div>
+          <div class="skills__group">{{ skill.group }}</div>
+          <div class="skills__items">{{ skill.items | join: ', ' }}</div>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+  <p class="resume-note meta">References available upon request</p>
+</div>

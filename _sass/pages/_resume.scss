@@ -1,0 +1,60 @@
+.resume-section {
+  margin-top: space(14);
+
+  &__label {
+    padding-top: space(1);
+  }
+}
+
+.resume-entry {
+  padding: space(6) 0 space(7);
+  border-top: 1px solid var(--rule);
+
+  &__head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: space(3);
+  }
+
+  &__company { font-size: fs(lg); }
+
+  &__role {
+    margin-top: 2px;
+    opacity: .85;
+  }
+
+  &__points {
+    max-width: $measure;
+    margin: space(4) 0 0;
+    padding-left: space(5);
+    line-height: 1.65;
+
+    li { margin-bottom: 6px; }
+  }
+}
+
+.skills {
+  display: grid;
+  gap: space(7);
+  padding-top: space(6);
+  border-top: 1px solid var(--rule);
+
+  @include bp(sm) { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+  &__group {
+    margin-bottom: space(2);
+    font-weight: 500;
+  }
+
+  &__items {
+    line-height: 1.8;
+    opacity: .85;
+  }
+}
+
+.resume-note {
+  margin-top: space(12);
+  font-style: italic;
+}

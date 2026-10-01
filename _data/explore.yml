@@ -1,0 +1,53 @@
+- label: React
+  icon: fa-brands fa-react
+  url: "/tag/react/"
+- label: Angular
+  icon: fa-brands fa-angular
+  url: "/portfolio/?filter=Angular"
+- label: TypeScript
+  icon: fa-brands fa-typescript
+  url: "/portfolio/?filter=TypeScript"
+- label: Movie Reviews
+  icon: fa-regular fa-film
+  url: "/movie-reviews/"
+- label: Random Thoughts
+  icon: fa-regular fa-thought-bubble
+  url: "/tag/thoughts/"
+- label: AWS
+  icon: fa-brands fa-aws
+  url: "/tag/aws/"
+- label: Docker
+  icon: fa-brands fa-docker
+  url: "/portfolio/?filter=Open%20Source"
+- label: Android
+  icon: fa-brands fa-android
+  url: "/resume"
+- label: Photography
+  icon: fa-regular fa-camera-retro
+  url: "/photography/"
+- label: Dog
+  icon: fa-regular fa-dog
+  url: "/photography/cobol/"
+- label: Home Improvement
+  icon: fa-regular fa-house
+  url: "/tag/home-improvement/"
+- label: Gaming
+  icon: fa-regular fa-gamepad-modern
+  url: "/tag/gaming/"
+- label: JavaScript
+  icon: fa-brands fa-square-js
+  url: "/tag/javascript/"
+- label: CSS
+  icon: fa-brands fa-css3-alt
+  url: "/tag/css/"
+- label: Coding
+  icon: fa-regular fa-code
+  url: "/tag/coding/"
+- label: GitHub
+  icon: fa-brands fa-github
+  url: https://github.com/charlesabarnes/
+  external: true
+- label: Latest Blog
+  icon: fa-regular fa-lightbulb-cfl-on
+  latest_post: true
+  featured: true

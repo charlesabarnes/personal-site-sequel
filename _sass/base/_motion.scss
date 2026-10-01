@@ -1,0 +1,46 @@
+@keyframes rise {
+  from { opacity: 0; transform: translateY(14px); }
+}
+
+@keyframes shake {
+  25% { transform: rotate(-5deg); }
+  50% { transform: rotate(5deg); }
+  75% { transform: rotate(-5deg); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+}
+
+@keyframes slide-up {
+  from { transform: translateY(100%); }
+}
+
+@keyframes pop-in {
+  from { opacity: 0; transform: scale(.96); }
+}
+
+[data-rise] > * {
+  animation: rise $dur-slow $ease backwards;
+}
+
+@for $i from 2 through 12 {
+  [data-rise] > :nth-child(#{$i}) {
+    animation-delay: ($i - 1) * $stagger;
+  }
+}
+
+.is-shaking {
+  animation: shake $dur-base $ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-delay: 0s !important;
+    transition-duration: 1ms !important;
+    scroll-behavior: auto !important;
+  }
+}

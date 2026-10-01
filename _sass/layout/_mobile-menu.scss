@@ -1,0 +1,61 @@
+.mobile-menu {
+  position: fixed;
+  inset: auto 0 0;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: space(3) space(4) space(6);
+  background: color(cream);
+  color: color(ink);
+  border: 1px solid var(--border);
+  border-bottom: 0;
+  border-radius: radius(lg) radius(lg) 0 0;
+
+  &[open] { animation: slide-up .35s $ease; }
+
+  &::backdrop {
+    background: rgba(color(black), .7);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    animation: fade-in .25s $ease;
+  }
+
+  &__grip {
+    display: block;
+    width: 40px;
+    height: 4px;
+    margin: 0 auto space(5);
+    border-radius: 2px;
+    background: color(ink);
+    opacity: .3;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: space(5) space(2);
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: space(3);
+    font-size: fs(sm);
+    text-align: center;
+
+    &:hover { text-decoration: none; }
+    &[aria-current="page"] { font-weight: 500; }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: space(3);
+    margin-top: space(6);
+
+    .button { flex: 1; }
+  }
+
+  @include bp(lg) { display: none; }
+}

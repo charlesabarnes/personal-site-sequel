@@ -1,0 +1,33 @@
+.icon-button {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  font-size: 16px;
+  cursor: pointer;
+  background: var(--surface);
+  color: var(--on-surface);
+  @include outlined(sm);
+  @include pressable(2px);
+
+  &:hover { text-decoration: none; }
+
+  @include bp(sm) {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    @include pressable(3px);
+  }
+}
+
+.theme-toggle {
+  .theme-toggle__dark { display: none; }
+
+  [data-theme="dark"] & {
+    .theme-toggle__light { display: none; }
+    .theme-toggle__dark { display: inline-block; }
+  }
+}

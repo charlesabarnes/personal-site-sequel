@@ -1,0 +1,15 @@
+- label: Bluesky
+  icon: fa-brands fa-bluesky
+  url: https://bsky.app/profile/chkb.net
+- label: LinkedIn
+  icon: fa-brands fa-linkedin
+  url: https://www.linkedin.com/in/charlesabarnes/
+- label: Email
+  icon: fa-regular fa-envelope
+  url: mailto:me@chkb.net
+- label: GitHub
+  icon: fa-brands fa-github
+  url: https://github.com/charlesabarnes/
+- label: RSS Feed
+  icon: fa-solid fa-square-rss
+  url: /feed.xml

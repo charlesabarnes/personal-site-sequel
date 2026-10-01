@@ -1,28 +1,21 @@
-<div class="menu-popup">
-  <div class="menu-container">
-    <div class="menu-item">
-      <a href="{{ '/resume' | relative_url }}" class="no-decoration">Resume</a>
-    </div>
-    <div class="menu-item">
-      <a href="{{ '/portfolio/' | relative_url }}" class="no-decoration">Portfolio</a>
-    </div>
-    <div class="menu-item">
-      <a href="https://chkb.ai" class="no-decoration" target="_blank" rel="noopener noreferrer">AI Blog</a>
-    </div>
-    <div class="menu-item">
-      <a href="{{ '/blog/' | relative_url }}">Blog</a>
-    </div>
-    <div class="menu-item">
-      <a href="{{ '/photography/' | relative_url }}">Photography</a>
-    </div>
-    <div class="menu-item">
-      <a href="mailto:charles@charlesabarnes.com" class="button no-decoration">Contact</a>
-    </div>
-    <!-- <div class="menu-item theme-toggle-mobile">
-      <button onclick="toggleTheme(); updateMobileThemeButton();" class="mobile-theme-toggle-button">
-        <i class="fa-regular fa-sun"></i>
-        <span class="theme-text">Toggle Dark Mode</span>
-      </button>
-    </div> -->
+<dialog class="mobile-menu" data-menu aria-label="Menu">
+  <span class="mobile-menu__grip" aria-hidden="true"></span>
+  <nav class="mobile-menu__grid" data-rise>
+    <a class="mobile-menu__item" href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>
+      <span class="key-tile{% if page.url == '/' %} key-tile--featured{% endif %}"><i class="fa-regular fa-house" aria-hidden="true"></i></span>
+      Home
+    </a>
+    {% for item in site.data.navigation %}
+      {% assign current = false %}
+      {% if page.nav == item.id %}{% assign current = true %}{% endif %}
+      <a class="mobile-menu__item" href="{% if item.external %}{{ item.url }}{% else %}{{ item.url | relative_url }}{% endif %}"{% if item.external %} target="_blank" rel="noopener noreferrer"{% endif %}{% if current %} aria-current="page"{% endif %}>
+        <span class="key-tile{% if current %} key-tile--featured{% endif %}"><i class="{{ item.icon }}" aria-hidden="true"></i></span>
+        {{ item.label }}
+      </a>
+    {% endfor %}
+  </nav>
+  <div class="mobile-menu__actions">
+    <a class="button button--accent" href="mailto:{{ site.email }}"><i class="fa-regular fa-envelope" aria-hidden="true"></i>Contact</a>
+    {% include theme_toggle.html %}
   </div>
-</div>
+</dialog>

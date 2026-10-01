@@ -1,0 +1,46 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: space(2);
+  padding: 10px space(5);
+  font-family: $font-body;
+  font-size: fs(base);
+  line-height: 1.2;
+  white-space: nowrap;
+  cursor: pointer;
+  background: var(--surface);
+  color: var(--on-surface);
+  @include outlined(md);
+  @include pressable(3px);
+
+  &:hover { text-decoration: none; }
+
+  &--accent {
+    background: var(--accent);
+    color: var(--on-accent);
+  }
+
+  &--sm {
+    padding: space(2) space(4);
+    font-size: fs(sm);
+    @include pressable(2px);
+  }
+}
+
+.text-button {
+  @include reset-button;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 0;
+  white-space: nowrap;
+
+  &:hover { text-decoration: underline; }
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: space(4);
+}

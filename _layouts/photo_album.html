@@ -1,36 +1,31 @@
 ---
 layout: default
 ---
-<div class="photo-album">
-  <h1 class="album-title">{{ page.title }}</h1>
-  
-  {% if page.date %}
-  <div class="album-year">{{ page.date | date: "%Y" }}</div>
-  {% endif %}
-  
-  {% if page.description %}
-  <div class="album-description">
-    {{ page.description }}
+<div class="container">
+  <div class="album-back">
+    <a class="arrow-link arrow-link--back" href="{{ '/photography/' | relative_url }}"><i class="fa-regular fa-arrow-left" aria-hidden="true"></i>Photography</a>
   </div>
-  {% endif %}
-  
-  {{ content }}
-  
-  <div class="photo-grid">
+  {% capture sub %}{% if page.date %}{{ page.date | date: "%B %Y" }} · {% endif %}{{ page.images.size }} photos{% endcapture %}
+  {% include page_head.html title=page.title sub=sub tight=true %}
+  <div class="album-intro">{{ content }}</div>
+  <div class="photo-wall" data-lightbox-group>
     {% for image in page.images %}
-    <div class="photo-item">
-      <a href="{{ image.path | relative_url }}" class="photo-link" target="_blank" rel="noopener noreferrer">
-        {% assign path_parts = image.path | split: '/' %}
-        {% assign filename = path_parts | last %}
-        {% assign dir_path = path_parts | pop | join: '/' %}
-        {% assign thumbnail_path = dir_path | append: '/thumbnails/' | append: filename %}
-        
-        <img src="{{ thumbnail_path | relative_url }}" alt="{{ image.caption }}" class="photo-image" loading="lazy" onerror="this.onerror=null; this.src='{{ image.path | relative_url }}';" />
-      </a>
-      {% if image.caption %}
-      <div class="photo-caption">{{ image.caption }}</div>
-      {% endif %}
-    </div>
+      {% assign parts = image.path | split: '/' %}
+      {% assign thumb = parts | pop | join: '/' | append: '/thumbnails/' | append: parts.last %}
+      <div class="photo-wall__item">
+        <a class="frame frame--natural" href="{{ image.path | relative_url }}" data-lightbox data-caption="{{ image.caption | escape }}">
+          <img src="{{ thumb | relative_url }}" alt="{{ image.caption | escape }}" loading="lazy">
+        </a>
+      </div>
     {% endfor %}
   </div>
 </div>
+<dialog class="lightbox" data-lightbox-dialog aria-label="Photo viewer">
+  <button type="button" class="lightbox__close icon-button" data-lightbox-close aria-label="Close"><i class="fa-regular fa-xmark" aria-hidden="true"></i></button>
+  <img class="lightbox__image" data-lightbox-image alt="">
+  <div class="lightbox__bar">
+    <button type="button" class="icon-button" data-lightbox-step="-1" aria-label="Previous photo"><i class="fa-regular fa-arrow-left" aria-hidden="true"></i></button>
+    <p class="lightbox__caption"><span data-lightbox-caption></span><span class="lightbox__count" data-lightbox-count></span></p>
+    <button type="button" class="icon-button" data-lightbox-step="1" aria-label="Next photo"><i class="fa-regular fa-arrow-right" aria-hidden="true"></i></button>
+  </div>
+</dialog>

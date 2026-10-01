@@ -1,0 +1,28 @@
+:root {
+  --bg: #{color(cream)};
+  --fg: #{color(ink)};
+  --rule: #{color(ink)};
+  --border: #{color(ink)};
+  --shadow: #{color(ink)};
+  --accent: #{color(orange)};
+  --on-accent: #{color(cream)};
+  --surface: #{color(cream)};
+  --on-surface: #{color(ink)};
+  --inverse-bg: #{color(ink)};
+  --inverse-fg: #{color(cream)};
+  --brand-navy: #{color(navy)};
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --bg: #{color(ink)};
+  --fg: #{color(cream)};
+  --rule: #{rgba(color(cream), .35)};
+  --border: #{color(black)};
+  --shadow: #{color(black)};
+  --accent: #{color(orange-dark)};
+  --inverse-bg: #{color(cream)};
+  --inverse-fg: #{color(ink)};
+  --brand-navy: #{color(navy-dark)};
+  color-scheme: dark;
+}

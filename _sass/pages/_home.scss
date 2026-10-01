@@ -1,0 +1,111 @@
+.hero {
+  padding: clamp(#{space(10)}, 9vw, 112px) 0 clamp(#{space(8)}, 7vw, 88px);
+
+  .kicker { margin-bottom: space(6); }
+
+  &__title {
+    max-width: 1000px;
+    font-family: $font-display;
+    font-size: clamp(28px, 6.9vw, 76px);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: .01em;
+    overflow-wrap: break-word;
+    color: color(cream);
+    -webkit-text-stroke: 1px var(--shadow);
+    text-shadow: 2px 3px 0 var(--shadow);
+    transition: text-shadow $dur-base $ease;
+
+    &:hover { text-shadow: 3px 5px 0 var(--shadow); }
+  }
+
+  &__nowrap { white-space: nowrap; }
+
+  &__x {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: .8em;
+    height: .8em;
+    margin: 0 .06em;
+    vertical-align: .02em;
+    background: var(--accent);
+    color: color(cream);
+    border: 1px solid var(--shadow);
+    border-radius: radius(sm);
+    -webkit-text-stroke: 0;
+    text-shadow: none;
+    @include hard-shadow(3px);
+
+    i { font-size: .5em; }
+  }
+
+  .button-row { margin-top: space(10); }
+}
+
+.toss {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(64px, 1fr));
+  justify-items: center;
+  gap: space(6) 0;
+  padding: space(6) 0;
+  border-bottom: 1px solid var(--rule);
+
+  @include bp(sm) { grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); }
+
+  &__tile:hover { text-decoration: none; }
+
+  &.is-live {
+    position: relative;
+    display: block;
+    padding: 0;
+    overflow: hidden;
+    touch-action: pan-y;
+  }
+
+  &.is-live &__tile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    touch-action: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    will-change: transform;
+
+    .key-tile { pointer-events: none; }
+  }
+
+  &__foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: space(3);
+    padding-top: space(3);
+  }
+}
+
+.featured-post {
+  display: grid;
+  gap: space(6);
+  align-items: center;
+  padding: space(8) 0 space(10);
+
+  @include bp(md) {
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+    gap: space(12);
+  }
+
+  &__title {
+    margin: space(2) 0 space(3);
+    font-size: fs(xl);
+    line-height: 1.15;
+
+    @include bp(sm) { font-size: fs(2xl); }
+  }
+
+  &__excerpt {
+    margin-bottom: space(5);
+    font-size: fs(md);
+    opacity: .85;
+  }
+}

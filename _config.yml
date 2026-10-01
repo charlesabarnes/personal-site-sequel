@@ -37,16 +37,22 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+      nav: blog
   - scope:
       path: ""
       type: "photography"
     values:
       layout: "photo_album"
+      nav: photography
   - scope:
       path: ""
       type: "movie_reviews"
     values:
       layout: "post"
+  - scope:
+      path: "tag"
+    values:
+      nav: blog
   - scope:
       path: ""
     values:

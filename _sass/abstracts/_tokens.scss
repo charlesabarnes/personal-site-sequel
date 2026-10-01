@@ -1,0 +1,68 @@
+$palette: (
+  cream: #FFFAF3,
+  ink: #333333,
+  black: #000000,
+  orange: #FF4C00,
+  orange-dark: #F55B19,
+  navy: #335778,
+  navy-dark: #FBEEDB
+);
+
+$font-body: 'Kanit', system-ui, sans-serif;
+$font-display: 'Bungee', Impact, sans-serif;
+$font-mono: 'SF Mono', Consolas, Monaco, Menlo, monospace;
+
+$type: (
+  xs: 12px,
+  sm: 14px,
+  base: 16px,
+  md: 18px,
+  lg: 22px,
+  xl: 28px,
+  2xl: 34px,
+  3xl: 40px,
+  4xl: 48px
+);
+
+$space: (
+  1: 4px,
+  2: 8px,
+  3: 12px,
+  4: 16px,
+  5: 20px,
+  6: 24px,
+  7: 28px,
+  8: 32px,
+  10: 40px,
+  12: 48px,
+  14: 56px,
+  16: 64px,
+  18: 72px,
+  20: 80px,
+  24: 96px,
+  30: 120px
+);
+
+$radius: (
+  dot: 1px,
+  sm: 4px,
+  md: 8px,
+  lg: 12px
+);
+
+$breakpoints: (
+  sm: 760px,
+  md: 1000px,
+  lg: 1130px
+);
+
+$content-max: 1200px;
+$measure: 720px;
+$gutter: 40px;
+$gutter-sm: 16px;
+
+$ease: ease;
+$dur-fast: .2s;
+$dur-base: .3s;
+$dur-slow: .5s;
+$stagger: 55ms;

@@ -1,0 +1,17 @@
+{% assign item = include.item %}
+{% assign cover = item.image %}
+{% if item.poster_url %}{% assign cover = item.poster_url %}{% endif %}
+<a class="list-row list-row--media{% if item.poster_url %} list-row--poster{% endif %}" href="{{ item.url | relative_url }}">
+  <span class="frame frame--small frame--contain {% if item.poster_url %}frame--poster{% else %}frame--wide{% endif %}">
+    <img src="{{ cover | default: "/assets/images/blog/default-image.png" | relative_url }}" alt="" loading="lazy">
+  </span>
+  <span>
+    <span class="meta meta-list">
+      <span>{{ item.date | date: "%B %-d, %Y" }}</span>
+      {% if item.rating %}<span>{{ item.rating }}/10</span>{% else %}<span>{% include reading_time.html content=item.content %}</span>{% endif %}
+      {% if item.categories.size > 0 and item.collection == 'posts' %}<span>{{ item.categories | join: ', ' }}</span>{% endif %}
+    </span>
+    <span class="list-row__title" role="heading" aria-level="3">{{ item.movie_title | default: item.title }}</span>
+    <span class="list-row__text">{% include post_summary.html post=item %}</span>
+  </span>
+</a>

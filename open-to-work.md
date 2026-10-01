@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title: Charles Barnes - Open to Work
 ---
 

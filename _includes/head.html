@@ -2,7 +2,6 @@
 <title>{% if page.title %}{% if page.title contains site.title %}{{ page.title }}{% else %}{{ page.title }} - {{ site.title }}{% endif %}{% else %}{{ site.title }}{% endif %}</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- Favicon and App Icons -->
 <link rel="apple-touch-icon" href="{{ '/apple-touch-icon.png' | relative_url }}">
 <link rel="icon" type="image/png" sizes="32x32" href="{{ '/favicon-32x32.png' | relative_url }}">
 <link rel="icon" type="image/png" sizes="16x16" href="{{ '/favicon-16x16.png' | relative_url }}">
@@ -16,19 +15,20 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-<!-- Stylesheets -->
+<script>document.documentElement.dataset.theme=(function(){try{return localStorage.getItem("theme")}catch(e){}})()||"light";</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&family=Kanit:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap">
 <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
-<link href="{{ '/assets/fontawesome/css/fontawesome.min.css' | relative_url }}" rel="stylesheet">
-<link href="{{ '/assets/fontawesome/css/brands.min.css' | relative_url }}" rel="stylesheet">
-<link href="{{ '/assets/fontawesome/css/regular.min.css' | relative_url }}" rel="stylesheet">
-<link href="{{ '/assets/fontawesome/css/solid.min.css' | relative_url }}" rel="stylesheet">
-<script src="{{ '/assets/js/script.js' | relative_url }}"></script>
+<link rel="stylesheet" href="{{ '/assets/fontawesome/css/fontawesome.min.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/fontawesome/css/brands.min.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/fontawesome/css/regular.min.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/fontawesome/css/solid.min.css' | relative_url }}">
+<script src="{{ '/assets/js/script.js' | relative_url }}" defer></script>
 
-<!-- Primary Meta Tags -->
 <meta name="author" content="{% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}">
 <meta name="keywords" content="{% if page.tags %}{{ page.tags | join: ',' }}{% else %}HTML,CSS,JavaScript,Charles,Barnes,web,developer,website,development,Missouri,Charles Barnes,Saint Louis Developer,St louis{% endif %}">
 
-<!-- Schema.org markup for Google -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -96,24 +96,18 @@
 }
 </script>
 
-<!-- Jekyll SEO tag to populate meta tags -->
 {% seo title=false %}
 
 {% unless page.image %}
 <meta property="og:image" content="{{ '/assets/images/blog/default-image.png' | absolute_url }}">
 {% endunless %}
 
-<!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:url" content="{{ page.url | absolute_url }}">
 <meta property="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
 <meta property="twitter:description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 <meta property="twitter:image" content="{% if page.image %}{{ page.image | absolute_url }}{% else %}{{ '/assets/images/blog/default-image.png' | absolute_url }}{% endif %}">
 
-<!-- RSS feed -->
 <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | absolute_url }}">
 
 
-<!-- Glad you are taking a look at the HTML. 
-  Built by Charles Anthony Barnes. 
-  Let me know what you think! me@chkb.net -->

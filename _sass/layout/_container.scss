@@ -1,0 +1,40 @@
+.container {
+  width: 100%;
+  max-width: $content-max;
+  margin-inline: auto;
+  padding-inline: $gutter-sm;
+
+  @include bp(sm) {
+    padding-inline: $gutter;
+  }
+}
+
+.site-main {
+  flex: 1;
+}
+
+.split {
+  display: grid;
+  gap: space(1);
+
+  @include bp(md) {
+    grid-template-columns: 120px minmax(0, 1fr);
+    gap: space(8);
+  }
+
+  &--wide {
+    @include bp(md) {
+      grid-template-columns: 200px minmax(0, 1fr);
+      gap: space(12);
+    }
+  }
+
+  &__label {
+    align-self: start;
+
+    @include bp(md) {
+      position: sticky;
+      top: space(6);
+    }
+  }
+}

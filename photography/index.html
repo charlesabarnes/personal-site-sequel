@@ -1,28 +1,33 @@
 ---
 layout: default
 title: Charles Barnes - Photography
+nav: photography
 ---
-
-<div class="photography-list">
-  <h1>Photography</h1>
-  
-  {% if site.photography.size > 0 %}
-    <div class="gallery-list">
-      {% for album in site.photography %}
-        <div class="gallery-item">
-          <a href="{{ album.url | relative_url }}" class="gallery-link">
-            {% include picture.html path=album.thumbnail alt=album.title class="gallery-thumbnail" sizes="(min-width: 800px) 33vw, 100vw" use_thumbnail=true %}
-            <div class="gallery-info">
-              <h2 class="gallery-title">{{ album.title }}</h2>
-              {% if album.date %}
-                <div class="gallery-date">{{ album.date | date: "%B %Y" }}</div>
+{% assign albums = site.photography | sort: 'date' | reverse %}
+<div class="container">
+  {% capture sub %}{{ albums.size }} albums{% endcapture %}
+  {% include page_head.html title="Photography" sub=sub %}
+  {% if albums.size > 0 %}
+    <div class="album-grid" data-rise>
+      {% for album in albums %}
+        <a class="album-card frame-link" href="{{ album.url | relative_url }}">
+          <span class="frame mosaic">
+            {% assign picks = "" | split: "" %}
+            {% assign picks = picks | push: album.images[0].path | push: album.images[1].path | push: album.images[3].path %}
+            {% for path in picks %}
+              {% if path %}
+                {% assign parts = path | split: '/' %}
+                {% assign thumb = parts | pop | join: '/' | append: '/thumbnails/' | append: parts.last %}
+                <img src="{{ thumb | relative_url }}" alt="" loading="lazy">
               {% endif %}
-              {% if album.description %}
-                <div class="gallery-description">{{ album.description | truncate: 100 }}</div>
-              {% endif %}
-            </div>
-          </a>
-        </div>
+            {% endfor %}
+          </span>
+          <span class="album-card__head">
+            <span class="album-card__title" role="heading" aria-level="2">{{ album.title }}</span>
+            <span class="meta">{{ album.date | date: "%B %Y" }} · {{ album.images.size }} photos</span>
+          </span>
+          <span class="album-card__text">{{ album.description }}</span>
+        </a>
       {% endfor %}
     </div>
   {% else %}

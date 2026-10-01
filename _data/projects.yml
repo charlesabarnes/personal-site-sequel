@@ -1,0 +1,270 @@
+filters:
+- Angular
+- TypeScript
+- JavaScript
+- Open Source
+- UI/UX
+- Web App
+items:
+- title: gangway
+  year: '2026'
+  image: "/portfolio/project-images/gangway/previews.jpg"
+  alt: gangway Previews dashboard
+  description: A self-hosted preview server. Pull requests, folders dropped in the
+    browser, and apps built by AI agents over MCP each get their own HTTPS URL on
+    your domain. Installs with a one-liner or from Unraid's Community Apps.
+  tags:
+  - TypeScript
+  - Angular
+  - Bun
+  - Docker
+  - MCP
+  - Open Source
+  filters:
+  - Angular
+  - TypeScript
+  - Open Source
+  - Web App
+  links:
+  - label: Visit Website
+    url: https://gangway.sh/
+    icon: fa-regular fa-window-maximize
+  - label: View on GitHub
+    url: https://github.com/charlesabarnes/gangway
+    icon: fa-brands fa-github
+  - label: Previews
+    url: "/portfolio/project-images/gangway/previews.jpg"
+    icon: fa-regular fa-image
+  - label: Artifacts
+    url: "/portfolio/project-images/gangway/artifacts.jpg"
+    icon: fa-regular fa-image
+- title: NOSHOK Catalog
+  year: '2025'
+  image: "/portfolio/project-images/noshok/catalog.webp"
+  alt: NOSHOK online product catalog
+  description: Online product catalog for NOSHOK including backend item management
+    portal. I built the store, an API, an MCP server, and content management.
+  tags:
+  - Angular
+  - TypeScript
+  - NestJS
+  - Docker
+  - MCP
+  filters:
+  - Angular
+  - TypeScript
+  - Web App
+  links:
+  - label: Visit Website
+    url: https://catalog.noshok.com/
+    icon: fa-regular fa-window-maximize
+- title: Actors Everywhere
+  year: '2024'
+  image: "/portfolio/project-images/actors-everywhere.png"
+  alt: Actors Everywhere
+  description: A marketing website for Actors Everywhere, a platform connecting actors
+    with opportunities. Designed to showcase services and attract potential clients
+    and talent.
+  tags:
+  - JavaScript
+  - Web Design
+  - UI/UX
+  - Marketing
+  filters:
+  - JavaScript
+  - UI/UX
+  - Web App
+  links:
+  - label: Visit Website
+    url: https://actorseverywhere.com/
+    icon: fa-regular fa-window-maximize
+  - label: View Screenshot
+    url: "/portfolio/project-images/actors-everywhere.png"
+    icon: fa-regular fa-image
+- title: Philips Baristina
+  year: '2024'
+  image: "/portfolio/project-images/baristina/baristina-base-color.png"
+  alt: Philips Baristina Configurator
+  description: Marketing page and interactive configuration tool for the Philips Baristina
+    espresso machine, allowing customers to customize their machine.
+  tags:
+  - JavaScript
+  - Interactive
+  - Shopify
+  filters:
+  - JavaScript
+  - UI/UX
+  - Web App
+  links:
+  - label: Base Color
+    url: "/portfolio/project-images/baristina/baristina-base-color.png"
+    icon: fa-regular fa-image
+  - label: Portafilter
+    url: "/portfolio/project-images/baristina/baristina-portafilter.png"
+    icon: fa-regular fa-image
+- title: Praedialert Revamp
+  year: '2023'
+  image: "/portfolio/project-images/praedialert/dashboard.png"
+  alt: Praedialert Dashboard
+  description: A comprehensive healthcare application for monitoring patient data
+    and managing healthcare workflows.
+  tags:
+  - Angular
+  - TypeScript
+  - Healthcare
+  - UI/UX
+  filters:
+  - Angular
+  - TypeScript
+  - UI/UX
+  links:
+  - label: Dashboard
+    url: "/portfolio/project-images/praedialert/dashboard.png"
+    icon: fa-regular fa-image
+  - label: Create Item
+    url: "/portfolio/project-images/praedialert/create-adhoc-item.png"
+    icon: fa-regular fa-image
+  - label: Patient Chart
+    url: "/portfolio/project-images/praedialert/patient-chart.png"
+    icon: fa-regular fa-image
+- title: Praedico Revamp
+  year: '2023'
+  image: "/portfolio/project-images/praedico/praedico-dark.png"
+  alt: Praedico Dark Theme
+  description: A modernized interface for the Praedico platform with light and dark
+    themes to enhance user experience.
+  tags:
+  - Angular
+  - TypeScript
+  - Dark Mode
+  - UI Design
+  filters:
+  - Angular
+  - TypeScript
+  - UI/UX
+  links:
+  - label: Dark Theme
+    url: "/portfolio/project-images/praedico/praedico-dark.png"
+    icon: fa-regular fa-image
+  - label: Light Theme
+    url: "/portfolio/project-images/praedico/praedico-light.png"
+    icon: fa-regular fa-image
+- title: Praedivault
+  year: '2023'
+  image: "/portfolio/project-images/praedivault/praedivault.png"
+  alt: Praedivault
+  description: A secure data storage and management solution for healthcare data,
+    ensuring compliance and accessibility.
+  tags:
+  - Angular
+  - Security
+  - Data Storage
+  - Healthcare
+  filters:
+  - Angular
+  links:
+  - label: View Screenshot
+    url: "/portfolio/project-images/praedivault/praedivault.png"
+    icon: fa-regular fa-image
+- title: Praedigene Revamp
+  year: '2022'
+  image: "/portfolio/project-images/praedigene/praedigene.png"
+  alt: Praedigene
+  description: A genetic data analysis platform with enhanced workflow management
+    for healthcare professionals.
+  tags:
+  - Angular
+  - Data Visualization
+  - Genetics
+  - Healthcare
+  filters:
+  - Angular
+  links:
+  - label: Dashboard
+    url: "/portfolio/project-images/praedigene/praedigene.png"
+    icon: fa-regular fa-image
+  - label: Work Items
+    url: "/portfolio/project-images/praedigene/work-items.png"
+    icon: fa-regular fa-image
+- title: Pointing Poker
+  year: '2019'
+  image: "/portfolio/project-images/pointing-poker.png"
+  alt: Pointing Poker
+  description: A real-time collaborative planning poker tool for agile teams, allowing
+    for remote estimation sessions.
+  tags:
+  - JavaScript
+  - Real-time
+  - Agile
+  - WebSockets
+  filters:
+  - JavaScript
+  - Open Source
+  links:
+  - label: View on GitHub
+    url: https://github.com/charlesabarnes/pointing-poker
+    icon: fa-brands fa-github
+  - label: View Screenshot
+    url: "/portfolio/project-images/pointing-poker.png"
+    icon: fa-regular fa-image
+- title: Career Portal Angular Upgrade
+  year: '2019'
+  image: "/portfolio/project-images/career-portal.png"
+  alt: Career Portal
+  description: Upgraded the Bullhorn Career Portal to Angular, enhancing performance
+    and user experience.
+  tags:
+  - Angular
+  - Migration
+  - Open Source
+  - Responsive Design
+  filters:
+  - Angular
+  - JavaScript
+  - Open Source
+  - UI/UX
+  links:
+  - label: View on GitHub
+    url: https://github.com/bullhorn/career-portal
+    icon: fa-brands fa-github
+  - label: View Screenshot
+    url: "/portfolio/project-images/career-portal.png"
+    icon: fa-regular fa-image
+- title: BoxlabBBO
+  year: '2019'
+  image: "/portfolio/project-images/boxlab.png"
+  alt: BoxlabBBO
+  description: A specialized application for boxing officials to track and analyze
+    boxing data and statistics.
+  tags:
+  - JavaScript
+  - Sports Tech
+  - Data Analysis
+  - Web App
+  filters:
+  - JavaScript
+  - Web App
+  links:
+  - label: View Screenshot
+    url: "/portfolio/project-images/boxlab.png"
+    icon: fa-regular fa-image
+- title: SPF Toolbox
+  year: '2017'
+  image: "/portfolio/project-images/spftoolbox.png"
+  alt: SPF Toolbox
+  description: An open-source utility for checking and validating SPF, DKIM, and DMARC
+    records for email security.
+  tags:
+  - PHP
+  - Email Security
+  - Open Source
+  - Utility
+  filters:
+  - Open Source
+  links:
+  - label: View on GitHub
+    url: https://github.com/charlesabarnes/SPFtoolbox
+    icon: fa-brands fa-github
+  - label: View Screenshot
+    url: "/portfolio/project-images/spftoolbox.png"
+    icon: fa-regular fa-image

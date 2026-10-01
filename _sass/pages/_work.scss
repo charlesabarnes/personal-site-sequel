@@ -1,0 +1,56 @@
+.project-grid {
+  display: grid;
+  gap: space(14);
+
+  @include bp(sm) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: space(18) space(12);
+  }
+
+  &--compact {
+    padding-top: space(8);
+
+    @include bp(sm) { gap: space(10); }
+  }
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: space(5);
+
+  &__head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: space(3);
+  }
+
+  &__title {
+    font-size: fs(lg);
+    line-height: 1.25;
+  }
+
+  &__text {
+    margin: space(2) 0 space(3);
+    line-height: 1.6;
+    opacity: .85;
+    @include line-clamp(3);
+
+    .project-grid--compact & { @include line-clamp(2); }
+  }
+
+  &__tags { margin-bottom: space(3); }
+}
+
+.filter-bar {
+  display: flex;
+  gap: space(3);
+  margin-bottom: space(8);
+  padding: 2px 6px space(2) 0;
+  overflow-x: auto;
+
+  @include bp(sm) { margin-bottom: space(12); }
+
+  .chip { flex: none; }
+}

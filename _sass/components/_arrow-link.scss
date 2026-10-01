@@ -1,0 +1,20 @@
+.arrow-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: fs(base);
+
+  i {
+    font-size: fs(xs);
+    transition: transform $dur-fast $ease;
+  }
+
+  &:hover i { transform: translateX(3px); }
+  &--back:hover i { transform: translateX(-3px); }
+}
+
+.link-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: space(2) space(5);
+}

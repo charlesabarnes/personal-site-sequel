@@ -1,0 +1,17 @@
+@function space($key) {
+  @if not map-has-key($space, $key) { @error "Unknown space step `#{$key}`."; }
+  @return map-get($space, $key);
+}
+
+@function fs($key) {
+  @if not map-has-key($type, $key) { @error "Unknown type step `#{$key}`."; }
+  @return map-get($type, $key);
+}
+
+@function radius($key) {
+  @return map-get($radius, $key);
+}
+
+@function color($key) {
+  @return map-get($palette, $key);
+}

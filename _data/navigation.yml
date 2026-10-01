@@ -1,0 +1,21 @@
+- id: resume
+  label: Resume
+  url: /resume
+  icon: fa-regular fa-file-lines
+- id: portfolio
+  label: Portfolio
+  url: /portfolio/
+  icon: fa-regular fa-briefcase
+- id: ai
+  label: AI Blog
+  url: https://chkb.ai
+  external: true
+  icon: fa-regular fa-microchip-ai
+- id: blog
+  label: Blog
+  url: /blog/
+  icon: fa-regular fa-pen-nib
+- id: photography
+  label: Photography
+  url: /photography/
+  icon: fa-regular fa-camera-retro

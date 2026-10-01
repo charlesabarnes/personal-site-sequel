@@ -1,0 +1,8 @@
+<header class="page-head{% if include.tight %} page-head--tight{% endif %}" data-rise>
+  <h1 class="page-head__title">{{ include.title }}</h1>
+  <div class="page-head__aside">
+    {% if include.sub %}<span class="meta">{{ include.sub }}</span>{% endif %}
+    {% if include.link_url %}<a class="arrow-link" href="{{ include.link_url | relative_url }}">{{ include.link_label }}<i class="fa-regular fa-arrow-right" aria-hidden="true"></i></a>{% endif %}
+    {% if include.contact %}<a class="button button--accent" href="mailto:{{ site.email }}"><i class="fa-regular fa-envelope" aria-hidden="true"></i>Contact</a>{% endif %}
+  </div>
+</header>

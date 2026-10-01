@@ -1,0 +1,67 @@
+.album-grid {
+  display: grid;
+  gap: space(14);
+
+  @include bp(sm) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: space(12);
+  }
+}
+
+.album-card {
+  &__head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: space(3);
+    margin-top: space(4);
+  }
+
+  &__title { font-size: fs(lg); }
+
+  &__text {
+    display: block;
+    margin-top: space(1);
+    opacity: .85;
+  }
+}
+
+.mosaic {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1px;
+  aspect-ratio: 3 / 2;
+  background: var(--border);
+
+  > :first-child { grid-row: span 2; }
+
+  img { object-position: center; }
+}
+
+.album-intro {
+  max-width: $measure;
+  margin: calc(-1 * #{space(3)}) 0 space(10);
+  font-size: fs(md);
+  line-height: 1.7;
+
+  p { margin-bottom: space(3); }
+}
+
+.album-back {
+  padding-top: space(8);
+
+  @include bp(sm) { padding-top: space(14); }
+}
+
+.photo-wall {
+  column-gap: space(6);
+
+  @include bp(sm) { column-count: 2; }
+  @include bp(md) { column-count: 3; }
+
+  &__item {
+    margin-bottom: space(6);
+    break-inside: avoid;
+  }
+}

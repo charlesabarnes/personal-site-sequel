@@ -1,0 +1,11 @@
+{% assign groups = include.items | group_by_exp: "p", "p.date | date: '%Y'" %}
+{% for group in groups %}
+  <section class="split year-group">
+    <h2 class="split__label year-group__year">{{ group.name }}</h2>
+    <div class="row-list" data-rise>
+      {% for item in group.items %}
+        {% include media_row.html item=item %}
+      {% endfor %}
+    </div>
+  </section>
+{% endfor %}

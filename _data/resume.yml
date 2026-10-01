@@ -1,0 +1,89 @@
+location: St. Louis, MO
+sections:
+- title: Experience
+  entries:
+  - company: Bullhorn, Inc
+    role: Staff Software Engineer
+    dates: Apr 2025 - Present
+    points:
+    - Presently delivering great work, check back later for the highlights
+  - company: Karmacheck
+    role: Senior Software Engineer
+    dates: Jul 2024 - Mar 2025
+    points:
+    - Delivered full-stack features across a TypeScript frontend and backend
+    - Migrated some application components from Vue to React for widescale initiative
+  - company: Bitscopic, Inc
+    role: Senior Software Engineer (Frontend Lead)
+    dates: Mar 2022 - Jul 2024
+    points:
+    - Set architectural and visual direction for the company's product portfolio,
+      built for the U.S. Department of Veterans Affairs, CDC, and FDA
+    - Migrated three of six frontend applications from Ember and jQuery to React and
+      TypeScript, and consolidated all six into an Nx monorepo
+    - Built the product design system and accessibility guidelines, bringing the portfolio
+      to WCAG 2.1 AA
+    - Modernized build and deployment with CI/CD pipelines and npm tooling
+    - Owned vendor selection and app integration for analytics and tutorial platforms
+  - company: Bullhorn, Inc
+    role: Junior Software Engineer → Senior Software Engineer
+    dates: Jun 2017 - Mar 2022
+    points:
+    - Core member of the frontend platform health team, driving architecture optimization,
+      cleanup, and widescale standardization and upgrades to improve performance and
+      reduce bundle sizes across JavaScript/TypeScript products
+    - Upgraded the Career Portal, deployed to thousands of customer sites, from AngularJS
+      to Angular 7+ with no regressions and migrated it onto the company component
+      library
+    - Maintained the company's Angular component library
+    - Delivered full-stack features across three products spanning Angular, Java/Spring,
+      SQL Server, PHP, and MySQL
+    - Automated tasks with CI/CD in GitHub Actions and Jenkins; reworked Protractor
+      tests and added Cypress coverage
+- title: Consulting
+  entries:
+  - company: Main Method, LLC
+    role: Technical Consultant / Owner
+    dates: 2020 - Present
+    points:
+    - Built AI-integrated web and mobile products for small businesses and startups
+    - Developed MCP server integrations exposing client product catalogs and business
+      data to LLM-based assistants
+    - Designed LLM pipelines that transform structured business data into human-readable
+      output
+    - Shipped cross-platform iOS, Android, and full stack web applications using Angular,
+      React, and Typescript
+- title: Projects
+  entries:
+  - company: Custom Store Platform/CMS
+    dates: 2024 - Present
+    points:
+    - Developed a custom multi-tenant ecommerce store serving tens of thousands of
+      customers monthly
+    - Designed and implemented a custom ETL process to efficiently load, link, and
+      manage a large product catalog
+skills:
+- group: Frontend Development
+  items:
+  - HTML
+  - CSS
+  - Javascript
+  - Typescript
+  - Angular
+  - React
+  - NextJS
+  - Three.js
+- group: Backend Development
+  items:
+  - NodeJS
+  - PHP
+  - MongoDB
+  - Java
+  - Spring
+  - SQL
+- group: Other
+  items:
+  - AWS
+  - Figma
+  - Claude Code
+  - Codex

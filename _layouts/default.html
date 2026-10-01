@@ -1,16 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     {% include head.html %}
   </head>
   <body>
-    <div class="container">
-      {% include header.html %}
-      
+    {% include header.html %}
+    <main class="site-main">
       {{ content }}
-    </div>
-
-    {% include menu_popup.html %}
+    </main>
     {% include footer.html %}
+    {% include menu_popup.html %}
   </body>
 </html>

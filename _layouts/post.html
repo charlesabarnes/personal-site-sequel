@@ -1,50 +1,64 @@
 ---
 layout: default
 ---
-{% assign wordcount = content | number_of_words %}
-{% assign readingtime = wordcount | divided_by: 200 | plus: 1 %}
-{% if page.description %}
-  {% assign meta_description = page.description %}
+{% assign is_review = false %}
+{% if page.collection == 'movie_reviews' or page.categories contains 'movies' %}{% assign is_review = true %}{% endif %}
+{% if is_review %}
+  {% assign back_url = '/movie-reviews/' %}{% assign back_label = 'Movie Reviews' %}
+  {% assign siblings = site.movie_reviews | sort: 'date' | reverse %}
 {% else %}
-  {% assign meta_description = content | strip_html | strip_newlines | truncate: 160 %}
+  {% assign back_url = '/blog/' %}{% assign back_label = 'Blog' %}
+  {% assign siblings = site.posts %}
 {% endif %}
-<article class="post" style="max-width: 100%; box-sizing: border-box; padding: 0 10px;">
-  <div class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-    <div class="post-meta">
-      <time datetime="{{ page.date | date_to_xmlschema }}">
-        {{ page.date | date: "%B %d, %Y" }}
-      </time>
-      <span class="reading-time">
-        <i class="fa-regular fa-clock" aria-hidden="true"></i> {{ readingtime }} min read
-      </span>
-      {% if page.categories.size > 0 %}
-      <span class="project-tags">
-        {% for category in page.categories %}
-        <span class="project-tag">{{ category }}</span>
+{% assign next = page.previous | default: siblings.first %}
+{% if next.url == page.url %}{% assign next = nil %}{% endif %}
+{% assign lede = page.excerpt | strip_html | strip_newlines | strip %}
+{% assign body_text = content | strip_html | strip_newlines %}
+{% capture reading %}{% include reading_time.html content=content %}{% endcapture %}
+<div class="read-progress" data-read-progress></div>
+<article class="container post{% if is_review %} post--review{% endif %}">
+  <aside class="post__aside" data-rise>
+    <a class="arrow-link arrow-link--back" href="{{ back_url | relative_url }}"><i class="fa-regular fa-arrow-left" aria-hidden="true"></i>{{ back_label }}</a>
+    <div class="post__facts meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+      <span><i class="fa-regular fa-clock" aria-hidden="true"></i> {{ reading }}</span>
+      {% if page.categories.size > 0 and is_review == false %}<span>{{ page.categories | join: ', ' }}</span>{% endif %}
+    </div>
+    <nav class="post__toc toc" aria-label="On this page" data-toc hidden></nav>
+  </aside>
+  <div class="post__body">
+    <header class="post__header" data-rise>
+      <div class="post__meta meta meta-list">
+        <span>{{ page.date | date: "%B %-d, %Y" }}</span>
+        <span>{{ reading }}</span>
+        {% if page.categories.size > 0 and is_review == false %}<span>{{ page.categories | join: ', ' }}</span>{% endif %}
+      </div>
+      <h1 class="post__title">{{ page.title }}</h1>
+      {% if is_review == false and lede != '' %}{% unless body_text contains lede %}<p class="post__lede">{{ lede }}</p>{% endunless %}{% endif %}
+    </header>
+    {% if page.image and is_review == false %}
+      <figure class="post__cover frame frame--wide frame--contain">
+        <img src="{{ page.image | relative_url }}" alt="">
+      </figure>
+    {% endif %}
+    <div class="prose" data-toc-source>
+      {{ content }}
+    </div>
+    {% if page.tags.size > 0 %}
+      <div class="post__tags chip-list">
+        {% for tag in page.tags %}
+          <a class="chip" href="{{ '/tag/' | append: tag | append: '/' | relative_url }}">{{ tag }}</a>
         {% endfor %}
-      </span>
-      {% endif %}
-    </div>
+      </div>
+    {% endif %}
+    {% if next %}
+      <a class="list-row list-row--next" href="{{ next.url | relative_url }}">
+        <span>
+          <span class="meta">Next {% if is_review %}review{% else %}post{% endif %}</span>
+          <span class="list-row__title">{{ next.title }}</span>
+        </span>
+        <i class="list-row__arrow fa-regular fa-arrow-right" aria-hidden="true"></i>
+      </a>
+    {% endif %}
   </div>
-
-  {% if page.image %}
-    {% unless page.categories contains 'movies' %}
-    <div class="post-featured-image">
-      <img src="{{ page.image }}" alt="{{ page.title }}">
-    </div>
-    {% endunless %}
-  {% endif %}
-
-  <div class="post-content">
-    {{ content }}
-  </div>
-
-  {% if page.tags.size > 0 %}
-  <div class="project-tags">
-    {% for tag in page.tags %}
-    <a href="{{ '/tag/' | append: tag | append: '/' | relative_url }}" class="project-tag">{{ tag }}</a>
-    {% endfor %}
-  </div>
-  {% endif %}
 </article>

@@ -1,0 +1,72 @@
+@mixin bp($name) {
+  @media (min-width: map-get($breakpoints, $name)) { @content; }
+}
+
+@mixin below($name) {
+  @media (max-width: map-get($breakpoints, $name) - 1px) { @content; }
+}
+
+@mixin hard-shadow($offset, $color: var(--shadow)) {
+  box-shadow: $offset $offset 0 $color;
+}
+
+@mixin outlined($r: md) {
+  border: 1px solid var(--border);
+  border-radius: radius($r);
+}
+
+@mixin pressable($rest, $hover: $rest + 1px, $active: $rest - 1px, $lift: 2px) {
+  @include hard-shadow($rest);
+  transition: transform $dur-fast $ease, box-shadow $dur-fast $ease;
+
+  &:hover {
+    transform: translateY(-1 * $lift);
+    @include hard-shadow($hover);
+  }
+
+  &:active {
+    transform: translateY(1px);
+    @include hard-shadow($active);
+  }
+}
+
+@mixin marker {
+  &::before {
+    content: "";
+    flex: none;
+    width: 6px;
+    height: 6px;
+    border-radius: radius(dot);
+    background: var(--accent);
+  }
+}
+
+@mixin line-clamp($lines) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@mixin reset-button {
+  appearance: none;
+  background: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
