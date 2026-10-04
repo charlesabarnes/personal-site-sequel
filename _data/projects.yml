@@ -6,6 +6,31 @@ filters:
 - UI/UX
 - Web App
 items:
+- title: Code Ducky
+  year: '2026'
+  image: "/portfolio/project-images/codeducky/review.jpg"
+  alt: Code Ducky reviewing a pull request in a split diff
+  description: A keyboard-driven code review app for pull requests and local branches.
+    It works offline as a PWA, tracks what you have already looked at, and hands notes
+    to Claude Code over MCP to review or fix.
+  tags:
+  - TypeScript
+  - React
+  - Bun
+  - PWA
+  - MCP
+  - Open Source
+  filters:
+  - TypeScript
+  - Open Source
+  - Web App
+  links:
+  - label: View on GitHub
+    url: https://github.com/charlesabarnes/codeducky
+    icon: fa-brands fa-github
+  - label: PR Review
+    url: "/portfolio/project-images/codeducky/review.jpg"
+    icon: fa-regular fa-image
 - title: gangway
   year: '2026'
   image: "/portfolio/project-images/gangway/previews.jpg"
